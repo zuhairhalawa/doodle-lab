@@ -5,27 +5,27 @@
   "date": "2026-11-09",
   "all": {
    "cases": 12,
-   "passed": 11,
+   "passed": 10,
    "detection": "12/12",
    "objectsFound": "22/22",
    "objectsInvented": 0,
    "surfaces": "19/19",
    "labels": "15/16",
    "links": "9/9",
-   "sameOutcome": "12/12",
+   "sameOutcome": "11/12",
    "meanPositionError": 0.7,
    "medianMs": 17077
   },
   "normal": {
    "cases": 12,
-   "passed": 11,
+   "passed": 10,
    "detection": "12/12",
    "objectsFound": "22/22",
    "objectsInvented": 0,
    "surfaces": "19/19",
    "labels": "15/16",
    "links": "9/9",
-   "sameOutcome": "12/12",
+   "sameOutcome": "11/12",
    "meanPositionError": 0.7,
    "medianMs": 17077
   },
@@ -81,7 +81,7 @@
    "meanPositionError": null,
    "medianMs": null
   },
-  "passRate": "92%"
+  "passRate": "83%"
  },
  "rows": [
   {
@@ -128,7 +128,7 @@
     },
     "outcome": {
      "ok": true,
-     "error": 20.244059020719455,
+     "error": 19.672640888314447,
      "note": ""
     },
     "pass": true,
@@ -221,7 +221,7 @@
     },
     "outcome": {
      "ok": true,
-     "error": 57.24308211855445,
+     "error": 56.45426087502664,
      "note": ""
     },
     "pass": false,
@@ -500,7 +500,7 @@
     },
     "outcome": {
      "ok": true,
-     "error": 4.628833828417386,
+     "error": 10.563696540853488,
      "note": ""
     },
     "pass": true,
@@ -591,7 +591,7 @@
     },
     "outcome": {
      "ok": true,
-     "error": 9.575425758148134,
+     "error": 10.89145557850757,
      "note": ""
     },
     "pass": true,
@@ -681,12 +681,14 @@
      "ratio": null
     },
     "outcome": {
-     "ok": true,
-     "error": 10.984044904275768,
-     "note": ""
+     "ok": false,
+     "error": 38.05894650019993,
+     "note": "bodies end 105/1000 apart after 1.5 s"
     },
-    "pass": true,
-    "reasons": []
+    "pass": false,
+    "reasons": [
+     "bodies end 105/1000 apart after 1.5 s"
+    ]
    },
    "scoreRaw": {
     "detectionOk": true,
@@ -775,7 +777,7 @@
     },
     "outcome": {
      "ok": true,
-     "error": 17.7060865043458,
+     "error": 14.337181360609893,
      "note": ""
     },
     "pass": true,
@@ -959,7 +961,7 @@
     },
     "outcome": {
      "ok": true,
-     "error": 0.7164463149034083,
+     "error": 0.6094602409963924,
      "note": ""
     },
     "pass": true,

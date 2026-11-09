@@ -54,6 +54,9 @@ function ringColour(data: ImageData, x: number, y: number, r0: number, r1: numbe
 
 const css = ([r, g, b]: RGB) => `rgb(${Math.round(r)}, ${Math.round(g)}, ${Math.round(b)})`;
 
+/** Where the body is drawn on the photo (the checker may have nudged the simulated one). */
+const drawn = (b: Body): Body => ({ ...b, x: b.drawnX, y: b.drawnY });
+
 function shapePath(ctx: CanvasRenderingContext2D, b: Body, grow: number) {
   ctx.beginPath();
   if (b.kind === 'ball') ctx.arc(b.x, b.y, b.r + grow, 0, Math.PI * 2);
@@ -80,7 +83,7 @@ export function cutOut(photo: HTMLCanvasElement, scene: Scene): Cutouts {
   const inks: number[] = [];
   let paperAll: RGB = [245, 245, 240];
 
-  const movers = scene.bodies.filter((b) => b.dynamic && (b.kind === 'ball' || b.kind === 'box'));
+  const movers = scene.bodies.filter((b) => b.dynamic && (b.kind === 'ball' || b.kind === 'box')).map(drawn);
   for (const b of movers) {
     const reach = b.kind === 'ball' ? b.r : Math.hypot(b.w, b.h) / 2;
     const paper = ringColour(data, b.x, b.y, reach + grow * 2, reach + grow * 4);
@@ -139,8 +142,21 @@ export function cutOut(photo: HTMLCanvasElement, scene: Scene): Cutouts {
 
   const inkL = inks.length ? median(inks) : 70;
   const ink = `rgba(${inkL * 0.9}, ${inkL * 0.9}, ${inkL}, 0.9)`;
-  // Erasing a block also erases the bit of ramp or floor under it: redraw the
-  // fixed lines, but only inside the erased patches.
+  // Erasing a block also erases the bit of ramp or floor under it. Put those lines
+  // back, but only where the original photo really had a dark line, so a surface the
+  // reader placed a little off never shows up as a stray stroke.
+  const darkAt = (x: number, y: number) => {
+    const xi = Math.round(x);
+    const yi = Math.round(y);
+    if (xi < 0 || yi < 0 || xi >= W || yi >= H) return false;
+    let best = 255;
+    for (let dy = -2; dy <= 2; dy++)
+      for (let dx = -2; dx <= 2; dx++) {
+        const i = (Math.min(H - 1, Math.max(0, yi + dy)) * W + Math.min(W - 1, Math.max(0, xi + dx))) * 4;
+        best = Math.min(best, lum([data.data[i]!, data.data[i + 1]!, data.data[i + 2]!]));
+      }
+    return best < lum(paperAll) * 0.72;
+  };
   bg.save();
   bg.beginPath();
   for (const b of movers) {
@@ -158,12 +174,22 @@ export function cutOut(photo: HTMLCanvasElement, scene: Scene): Cutouts {
   bg.strokeStyle = ink;
   bg.lineWidth = Math.max(1.6, Math.min(W, H) / 380);
   bg.lineCap = 'round';
-  bg.lineJoin = 'round';
   for (const s of scene.bodies) {
     if (s.kind !== 'surface') continue;
-    bg.beginPath();
-    s.points.forEach((p, i) => (i ? bg.lineTo(p.x, p.y) : bg.moveTo(p.x, p.y)));
-    bg.stroke();
+    for (let i = 1; i < s.points.length; i++) {
+      const a = s.points[i - 1]!;
+      const b = s.points[i]!;
+      const n = Math.max(1, Math.ceil(Math.hypot(b.x - a.x, b.y - a.y) / 3));
+      for (let k = 0; k < n; k++) {
+        const p = { x: a.x + ((b.x - a.x) * k) / n, y: a.y + ((b.y - a.y) * k) / n };
+        const q = { x: a.x + ((b.x - a.x) * (k + 1)) / n, y: a.y + ((b.y - a.y) * (k + 1)) / n };
+        if (!darkAt(p.x, p.y) || !darkAt(q.x, q.y)) continue;
+        bg.beginPath();
+        bg.moveTo(p.x, p.y);
+        bg.lineTo(q.x, q.y);
+        bg.stroke();
+      }
+    }
   }
   bg.restore();
   return { background, sprites, ink, paper: css(paperAll) };

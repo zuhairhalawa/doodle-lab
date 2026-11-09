@@ -134,11 +134,11 @@
         <ol class="steps">
           <li>
             <h3>Gemini reads the drawing</h3>
-            <p>The photo goes to Gemini 3 Flash with a strict JSON schema: every ball, box, surface, rope and spring, where it is, and the numbers written next to it. Gemini only describes; it never decides how anything moves.</p>
+            <p>The photo goes to Gemini 3 Flash with a strict JSON schema: every ball, box, surface, rope and spring, where it is, and the numbers written next to it. When the free daily quota runs out, a faster Gemini Flash-Lite model reads it instead, and the page says which one did. Gemini only describes; it never decides how anything moves.</p>
           </li>
           <li>
             <h3>Code checks the reading</h3>
-            <p>A checker fixes what a reader gets slightly wrong: it moves a ball out of the floor it was placed inside, lines a block up with its ramp, drops links to things that are not there, and fills in missing values. Every change is listed, so you can see it.</p>
+            <p>Code snaps each circle, box and line onto the pencil marks in the photo, then fixes what is left: it moves a ball out of a floor it was placed inside, lines a block up with its ramp, drops links to things that are not there, and fills in missing values. Every change is listed, so you can see it.</p>
           </li>
           <li>
             <h3>A physics engine runs it</h3>

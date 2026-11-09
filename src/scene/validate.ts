@@ -82,6 +82,8 @@ export function validate(reading: Partial<Reading> | null | undefined, width: nu
       dynamic: false,
       x: 0,
       y: 0,
+      drawnX: 0,
+      drawnY: 0,
       r: 0,
       w: 0,
       h: 0,
@@ -138,8 +140,8 @@ export function validate(reading: Partial<Reading> | null | undefined, width: nu
       ids.delete(id);
       continue;
     }
-    body.x = (bb.x0 + bb.x1) / 2;
-    body.y = (bb.y0 + bb.y1) / 2;
+    body.x = body.drawnX = (bb.x0 + bb.x1) / 2;
+    body.y = body.drawnY = (bb.y0 + bb.y1) / 2;
     const W = bb.x1 - bb.x0;
     const H = bb.y1 - bb.y0;
     if (kind !== 'anchor' && (W < minSize || H < minSize)) {

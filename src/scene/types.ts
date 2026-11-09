@@ -13,9 +13,12 @@ export interface Body {
   id: string;
   kind: BodyKind;
   dynamic: boolean;
-  /** Centre (ball, box, anchor). */
+  /** Centre (ball, box, anchor), after the checker moved it out of overlaps. */
   x: number;
   y: number;
+  /** Centre where it is drawn on the photo (before the checker moved it). */
+  drawnX: number;
+  drawnY: number;
   /** Ball radius. */
   r: number;
   /** Box size and tilt (radians, counterclockwise as seen). */

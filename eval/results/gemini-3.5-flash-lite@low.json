@@ -5,11 +5,11 @@
   "date": "2026-11-09",
   "all": {
    "cases": 45,
-   "passed": 35,
+   "passed": 34,
    "detection": "45/45",
    "objectsFound": "72/73",
    "objectsInvented": 1,
-   "surfaces": "59/64",
+   "surfaces": "57/64",
    "labels": "55/55",
    "links": "27/28",
    "sameOutcome": "33/41",
@@ -18,14 +18,14 @@
   },
   "normal": {
    "cases": 36,
-   "passed": 28,
+   "passed": 27,
    "detection": "36/36",
    "objectsFound": "63/64",
    "objectsInvented": 1,
-   "surfaces": "54/57",
+   "surfaces": "52/57",
    "labels": "47/47",
    "links": "26/27",
-   "sameOutcome": "30/36",
+   "sameOutcome": "29/36",
    "meanPositionError": 2.6,
    "medianMs": 2903
   },
@@ -51,7 +51,7 @@
    "surfaces": "5/7",
    "labels": "8/8",
    "links": "1/1",
-   "sameOutcome": "3/5",
+   "sameOutcome": "4/5",
    "meanPositionError": 1,
    "medianMs": 3230
   },
@@ -81,7 +81,7 @@
    "meanPositionError": 1.7,
    "medianMs": 3230
   },
-  "passRate": "78%"
+  "passRate": "76%"
  },
  "rows": [
   {
@@ -128,7 +128,7 @@
     },
     "outcome": {
      "ok": true,
-     "error": 41.83228436627398,
+     "error": 42.51703882871215,
      "note": ""
     },
     "pass": true,
@@ -221,7 +221,7 @@
     },
     "outcome": {
      "ok": true,
-     "error": 26.960699871623927,
+     "error": 24.88296523816666,
      "note": ""
     },
     "pass": true,
@@ -312,7 +312,7 @@
     },
     "outcome": {
      "ok": true,
-     "error": 18.71391719283602,
+     "error": 16.860893736976053,
      "note": ""
     },
     "pass": false,
@@ -407,7 +407,7 @@
     },
     "outcome": {
      "ok": true,
-     "error": 9.142138974836884,
+     "error": 50.76443713407635,
      "note": ""
     },
     "pass": false,
@@ -504,7 +504,7 @@
     },
     "outcome": {
      "ok": true,
-     "error": 18.701979576925098,
+     "error": 18.514558377694126,
      "note": ""
     },
     "pass": true,
@@ -597,13 +597,13 @@
     },
     "outcome": {
      "ok": false,
-     "error": 215.12820225863567,
-     "note": "bodies end 215/1000 apart after 1.5 s"
+     "error": 214.06902361590903,
+     "note": "bodies end 214/1000 apart after 1.5 s"
     },
     "pass": false,
     "reasons": [
      "surface floor off by 81",
-     "bodies end 215/1000 apart after 1.5 s"
+     "bodies end 214/1000 apart after 1.5 s"
     ]
    },
    "scoreRaw": {
@@ -973,7 +973,7 @@
     },
     "outcome": {
      "ok": true,
-     "error": 4.6849374828461166,
+     "error": 4.680469062675687,
      "note": ""
     },
     "pass": true,
@@ -1246,7 +1246,7 @@
     },
     "outcome": {
      "ok": true,
-     "error": 58.93851755200127,
+     "error": 58.75008117823732,
      "note": ""
     },
     "pass": true,
@@ -1337,7 +1337,7 @@
     },
     "outcome": {
      "ok": true,
-     "error": 2.63139690899082,
+     "error": 2.245949720548664,
      "note": ""
     },
     "pass": true,
@@ -1519,7 +1519,7 @@
     },
     "outcome": {
      "ok": true,
-     "error": 59.31564620570186,
+     "error": 55.47035902966337,
      "note": ""
     },
     "pass": true,
@@ -1704,7 +1704,7 @@
     },
     "outcome": {
      "ok": true,
-     "error": 28.245092578708707,
+     "error": 28.77639510265353,
      "note": ""
     },
     "pass": true,
@@ -1802,8 +1802,8 @@
     },
     "outcome": {
      "ok": false,
-     "error": 329.9589444672196,
-     "note": "bodies end 370/1000 apart after 1.5 s"
+     "error": 329.4478981440824,
+     "note": "bodies end 369/1000 apart after 1.5 s"
     },
     "pass": false,
     "reasons": [
@@ -1811,7 +1811,7 @@
      "invented box seesaw",
      "pin to plank not found",
      "1 extra link(s)",
-     "bodies end 370/1000 apart after 1.5 s"
+     "bodies end 369/1000 apart after 1.5 s"
     ]
    },
    "scoreRaw": {
@@ -1901,7 +1901,7 @@
     },
     "outcome": {
      "ok": true,
-     "error": 14.999526080581441,
+     "error": 15.148023578924187,
      "note": ""
     },
     "pass": true,
@@ -1991,12 +1991,14 @@
      "ratio": null
     },
     "outcome": {
-     "ok": true,
-     "error": 40.30560498288246,
-     "note": ""
+     "ok": false,
+     "error": 77.26357517777417,
+     "note": "bodies end 208/1000 apart after 1.5 s"
     },
-    "pass": true,
-    "reasons": []
+    "pass": false,
+    "reasons": [
+     "bodies end 208/1000 apart after 1.5 s"
+    ]
    },
    "scoreRaw": {
     "detectionOk": true,
@@ -2065,8 +2067,8 @@
     "angleError": 0.3249999999999999,
     "surfaces": {
      "expected": 1,
-     "matched": 1,
-     "extra": 0
+     "matched": 0,
+     "extra": 1
     },
     "labels": {
      "expected": 2,
@@ -2085,12 +2087,14 @@
     },
     "outcome": {
      "ok": false,
-     "error": 204.27777171882224,
-     "note": "bodies end 547/1000 apart after 0.4 s"
+     "error": 164.4140994693224,
+     "note": "bodies end 243/1000 apart after 0.4 s"
     },
     "pass": false,
     "reasons": [
-     "bodies end 547/1000 apart after 0.4 s"
+     "surface floor off by 112",
+     "1 extra surface(s)",
+     "bodies end 243/1000 apart after 0.4 s"
     ]
    },
    "scoreRaw": {
@@ -2180,12 +2184,12 @@
     },
     "outcome": {
      "ok": false,
-     "error": 104.5001688060089,
-     "note": "bodies end 168/1000 apart after 0.4 s"
+     "error": 104.32327618271422,
+     "note": "bodies end 169/1000 apart after 0.4 s"
     },
     "pass": false,
     "reasons": [
-     "bodies end 168/1000 apart after 0.4 s"
+     "bodies end 169/1000 apart after 0.4 s"
     ]
    },
    "scoreRaw": {
@@ -2255,8 +2259,8 @@
     "angleError": 0.20000000000000004,
     "surfaces": {
      "expected": 1,
-     "matched": 1,
-     "extra": 0
+     "matched": 0,
+     "extra": 1
     },
     "labels": {
      "expected": 2,
@@ -2275,12 +2279,14 @@
     },
     "outcome": {
      "ok": false,
-     "error": 199.80897687214005,
-     "note": "bodies end 391/1000 apart after 0.4 s"
+     "error": 411.2014930646789,
+     "note": "bodies end 540/1000 apart after 0.4 s"
     },
     "pass": false,
     "reasons": [
-     "bodies end 391/1000 apart after 0.4 s"
+     "surface floor off by 105",
+     "1 extra surface(s)",
+     "bodies end 540/1000 apart after 0.4 s"
     ]
    },
    "scoreRaw": {
@@ -2643,7 +2649,7 @@
     },
     "outcome": {
      "ok": true,
-     "error": 0.9359949893859678,
+     "error": 0.6698031707504111,
      "note": ""
     },
     "pass": true,
@@ -2734,7 +2740,7 @@
     },
     "outcome": {
      "ok": true,
-     "error": 0.9225112459999891,
+     "error": 0.9916716555474621,
      "note": ""
     },
     "pass": true,
@@ -2825,7 +2831,7 @@
     },
     "outcome": {
      "ok": true,
-     "error": 0.8746028519983736,
+     "error": 0.7003386590513081,
      "note": ""
     },
     "pass": true,
@@ -3808,8 +3814,8 @@
     "angleError": null,
     "surfaces": {
      "expected": 2,
-     "matched": 2,
-     "extra": 0
+     "matched": 1,
+     "extra": 1
     },
     "labels": {
      "expected": 1,
@@ -3828,11 +3834,14 @@
     },
     "outcome": {
      "ok": true,
-     "error": 69.94573877188176,
+     "error": 58.557986019821875,
      "note": ""
     },
-    "pass": true,
-    "reasons": []
+    "pass": false,
+    "reasons": [
+     "surface floor off by 52",
+     "1 extra surface(s)"
+    ]
    },
    "scoreRaw": {
     "detectionOk": true,
@@ -4010,7 +4019,7 @@
     },
     "outcome": {
      "ok": true,
-     "error": 8.595849365210865,
+     "error": 8.530550874660262,
      "note": ""
     },
     "pass": true,
@@ -4083,8 +4092,8 @@
     "angleError": 0.7666666666666666,
     "surfaces": {
      "expected": 1,
-     "matched": 1,
-     "extra": 0
+     "matched": 0,
+     "extra": 1
     },
     "labels": {
      "expected": 2,
@@ -4103,12 +4112,14 @@
     },
     "outcome": {
      "ok": false,
-     "error": 211.5546567096703,
-     "note": "bodies end 325/1000 apart after 0.4 s"
+     "error": 457.3705179932113,
+     "note": "bodies end 863/1000 apart after 0.4 s"
     },
     "pass": false,
     "reasons": [
-     "bodies end 325/1000 apart after 0.4 s"
+     "surface floor off by 64",
+     "1 extra surface(s)",
+     "bodies end 863/1000 apart after 0.4 s"
     ]
    },
    "scoreRaw": {
@@ -4178,7 +4189,7 @@
     "angleError": null,
     "surfaces": {
      "expected": 2,
-     "matched": 0,
+     "matched": 2,
      "extra": 0
     },
     "labels": {
@@ -4197,16 +4208,12 @@
      "ratio": null
     },
     "outcome": {
-     "ok": false,
-     "error": 709.3313358335606,
-     "note": "bodies end 709/1000 apart after 1.5 s"
+     "ok": true,
+     "error": 23.042645309733786,
+     "note": ""
     },
-    "pass": false,
-    "reasons": [
-     "surface floor off by 29",
-     "surface curve off by 35",
-     "bodies end 709/1000 apart after 1.5 s"
-    ]
+    "pass": true,
+    "reasons": []
    },
    "scoreRaw": {
     "detectionOk": true,

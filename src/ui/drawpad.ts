@@ -69,7 +69,10 @@ export class DrawPad {
     input.style.top = `${e.clientY - r.top}px`;
     this.labelLayer.append(input);
     input.focus();
+    let finished = false;
     const done = (keep: boolean) => {
+      if (finished) return;
+      finished = true;
       const text = input.value.trim();
       input.remove();
       if (keep && text) {

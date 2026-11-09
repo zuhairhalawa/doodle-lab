@@ -27,7 +27,7 @@ interface Data {
 }
 
 const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]!);
-const nice = (m: string) => m.replace('@low', ' (low thinking)').replace('gemini-', 'Gemini ').replace('-preview', '').replace('-flash-lite', ' Flash-Lite').replace('-flash', ' Flash');
+const nice = (m: string) => m.replace('@low', ' (low thinking)').replace('@high', ' (high thinking)').replace('gemini-', 'Gemini ').replace('-preview', '').replace('-flash-lite', ' Flash-Lite').replace('-flash', ' Flash');
 
 async function main() {
   const root = document.getElementById('report')!;
@@ -64,9 +64,19 @@ async function main() {
     <section>
       <h2>Scores</h2>
       <div class="table-wrap"><table class="objects report-table">
-        <thead><tr><th scope="col">Model</th><th scope="col">Answered</th><th scope="col">Normal drawings passed</th><th scope="col">Same, AI alone (no snapping)</th><th scope="col">Not physics, refused</th><th scope="col">Hard cases passed</th><th scope="col">Position error (/1000)</th><th scope="col">Median time</th></tr></thead>
+        <thead><tr><th scope="col">Model</th><th scope="col">Answered</th><th scope="col">Normal drawings passed (AI + snap)</th><th scope="col">Same, AI alone (no snapping)</th><th scope="col">Not physics, refused</th><th scope="col">Hard cases passed</th><th scope="col">Position error (/1000)</th><th scope="col">Median time</th></tr></thead>
         <tbody>${rowsHtml}</tbody></table></div>
       <p class="muted">"AI + snap" is what the app does: the AI's reading, with each shape snapped to the pencil lines in the photo. The free tier allows 20 requests a day for Gemini 3 Flash and 3.5 Flash, so not every model has answered every case yet.</p>
+    </section>
+    <section>
+      <h2>What fails, and why</h2>
+      <ul class="tested">
+        <li><strong>Towers of blocks fail every time.</strong> Knocking over a tower is chaotic: a block a few pixels wider topples a different way, so even a good reading ends up somewhere else. The app still runs it; it just cannot promise the same result as the drawing.</li>
+        <li><strong>Lines placed a little off.</strong> The faster Flash-Lite models sometimes put a floor or ramp 3–8% of the image away from the pencil line. Snapping fixes small errors (it searches about 3.5% of the image), not large ones. Searching wider made the overall score worse: it can jump onto hatching or ruled lines.</li>
+        <li><strong>Curved ramps</strong> need many points along the curve; the reader gives too few, so the ball rolls on a straighter slope than the one drawn.</li>
+        <li><strong>Collisions are sensitive.</strong> A 1-pixel change in where two balls touch tilts the bounce, so two nearly identical readings can end up apart.</li>
+        <li><strong>Only generated drawings so far.</strong> The 45 test drawings are rendered by code (pencil strokes, paper texture, desk, light, rotation, blur) so every answer is known exactly. Real phone photos of real pencil drawings have not been scored yet.</li>
+      </ul>
     </section>
     <section>
       <h2>How the rest is tested</h2>
@@ -128,7 +138,9 @@ async function main() {
     }
     if (!gallery.children.length) gallery.innerHTML = '<p>No failures for this model.</p>';
   };
-  document.getElementById('model-pick')!.addEventListener('change', render);
+  const pick = document.getElementById('model-pick') as HTMLSelectElement;
+  pick.value = String(data.models.reduce((best, m, i) => (m.rows.length > data.models[best]!.rows.length ? i : best), 0));
+  pick.addEventListener('change', render);
   document.getElementById('only-fail')!.addEventListener('change', render);
   render();
 }
