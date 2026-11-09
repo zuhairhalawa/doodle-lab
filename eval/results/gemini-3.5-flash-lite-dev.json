@@ -9,7 +9,7 @@
    "detection": "12/12",
    "objectsFound": "20/22",
    "objectsInvented": 2,
-   "surfaces": "18/19",
+   "surfaces": "17/19",
    "labels": "15/16",
    "links": "8/9",
    "sameOutcome": "6/12",
@@ -22,7 +22,7 @@
    "detection": "12/12",
    "objectsFound": "20/22",
    "objectsInvented": 2,
-   "surfaces": "18/19",
+   "surfaces": "17/19",
    "labels": "15/16",
    "links": "8/9",
    "sameOutcome": "6/12",
@@ -112,7 +112,7 @@
     "angleError": null,
     "surfaces": {
      "expected": 2,
-     "matched": 2,
+     "matched": 1,
      "extra": 0
     },
     "labels": {
@@ -141,6 +141,7 @@
     "reasons": [
      "missed ball",
      "invented ball ball1",
+     "surface floor off by 28",
      "ball mass: wanted 5, read nothing",
      "scale off by 11%"
     ]
@@ -243,13 +244,13 @@
     },
     "outcome": {
      "ok": false,
-     "error": 192.31084009067035,
-     "note": "bodies end 192/1000 apart after 1.5 s"
+     "error": 192.6426011810347,
+     "note": "bodies end 193/1000 apart after 1.5 s"
     },
     "pass": false,
     "reasons": [
      "surface ramp off by 22",
-     "bodies end 192/1000 apart after 1.5 s"
+     "bodies end 193/1000 apart after 1.5 s"
     ]
    },
    "scoreRaw": {
@@ -435,7 +436,7 @@
     },
     "outcome": {
      "ok": true,
-     "error": 1.4145805853303342,
+     "error": 1.334808815999515,
      "note": ""
     },
     "pass": true,
@@ -526,12 +527,12 @@
     },
     "outcome": {
      "ok": false,
-     "error": 65.87800872625012,
-     "note": "bodies end 112/1000 apart after 1.5 s"
+     "error": 66.1426215476325,
+     "note": "bodies end 113/1000 apart after 1.5 s"
     },
     "pass": false,
     "reasons": [
-     "bodies end 112/1000 apart after 1.5 s"
+     "bodies end 113/1000 apart after 1.5 s"
     ]
    },
    "scoreRaw": {
@@ -717,8 +718,8 @@
     },
     "outcome": {
      "ok": false,
-     "error": 336.37634059213406,
-     "note": "bodies end 369/1000 apart after 1.5 s"
+     "error": 368.6022955140294,
+     "note": "bodies end 370/1000 apart after 1.5 s"
     },
     "pass": false,
     "reasons": [
@@ -726,7 +727,7 @@
      "invented box seesaw_board",
      "pin to plank not found",
      "1 extra link(s)",
-     "bodies end 369/1000 apart after 1.5 s"
+     "bodies end 370/1000 apart after 1.5 s"
     ]
    },
    "scoreRaw": {
@@ -1002,7 +1003,7 @@
     },
     "outcome": {
      "ok": true,
-     "error": 0.7709947115000911,
+     "error": 0.37048541839919097,
      "note": ""
     },
     "pass": true,
