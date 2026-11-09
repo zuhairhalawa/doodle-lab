@@ -12,7 +12,7 @@
    "surfaces": "17/19",
    "labels": "15/16",
    "links": "8/9",
-   "sameOutcome": "7/12",
+   "sameOutcome": "6/12",
    "meanPositionError": 2.9,
    "medianMs": 2569
   },
@@ -25,7 +25,7 @@
    "surfaces": "17/19",
    "labels": "15/16",
    "links": "8/9",
-   "sameOutcome": "7/12",
+   "sameOutcome": "6/12",
    "meanPositionError": 2.9,
    "medianMs": 2569
   },
@@ -221,7 +221,7 @@
     },
     "positionError": 4.716990566028302,
     "radiusError": null,
-    "angleError": 89.4,
+    "angleError": 0.5999999999999943,
     "surfaces": {
      "expected": 2,
      "matched": 1,
@@ -243,14 +243,14 @@
      "ratio": null
     },
     "outcome": {
-     "ok": true,
-     "error": 3.57298593312166,
-     "note": ""
+     "ok": false,
+     "error": 192.6426011810347,
+     "note": "bodies end 193/1000 apart after 1.5 s"
     },
     "pass": false,
     "reasons": [
-     "box tilt off by 89°",
-     "surface ramp off by 22"
+     "surface ramp off by 22",
+     "bodies end 193/1000 apart after 1.5 s"
     ]
    },
    "scoreRaw": {
@@ -287,13 +287,13 @@
     },
     "outcome": {
      "ok": false,
-     "error": 339.3910300641537,
-     "note": "bodies end 339/1000 apart after 1.5 s"
+     "error": 181.76697132400693,
+     "note": "bodies end 182/1000 apart after 1.5 s"
     },
     "pass": false,
     "reasons": [
      "surface ramp off by 26",
-     "bodies end 339/1000 apart after 1.5 s"
+     "bodies end 182/1000 apart after 1.5 s"
     ]
    }
   },

@@ -88,7 +88,8 @@ const T: Record<string, (r: R) => Parts> = {
       shapes: [floorLine(), { kind: 'surface', id: 'ramp', pts: [[k.x0, 800], k.A, k.B] }, { kind: 'box', id: 'block', c, w, h, angle: -round(k.deg, 1) }],
       labels: [
         { on: 'block', text: massText(kg), at: [c[0] + 30, c[1] - 90], massKg: kg },
-        { on: 'block', text: `μ = ${mu}`, at: [k.B[0] - 40, 680], friction: mu },
+        // Written beside the ramp, so it is the ramp's friction.
+        { on: 'ramp', text: `μ = ${mu}`, at: [k.B[0] - 40, 680], friction: mu },
       ],
     };
   },

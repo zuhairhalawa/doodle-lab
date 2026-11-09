@@ -142,8 +142,9 @@ export function scoreCase(truth: Reading, read: Reading | null, width: number, h
       radErr.push(Math.abs(rr - rt) / rt);
     }
     if (t.kind === 'box') {
-      let e = Math.abs((r.angleDeg ?? 0) - (t.angleDeg ?? 0)) % 180;
-      if (e > 90) e = 180 - e;
+      // A rectangle turned 90° with its sides swapped is the same shape.
+      let e = Math.abs((r.angleDeg ?? 0) - (t.angleDeg ?? 0)) % 90;
+      if (e > 45) e = 90 - e;
       angErr.push(e);
     }
   }
@@ -192,6 +193,13 @@ export function scoreCase(truth: Reading, read: Reading | null, width: number, h
       if (ra && dA < (20 * Math.PI) / 180 && speedOk) s.labels.correct++;
       else s.labels.wrong.push(`${t.id} arrow: wanted ${t.arrow.speedMps} m/s at ${Math.round((-angT * 180) / Math.PI)}°, read ${ra ? `${ra.speedMps} m/s at ${Math.round((-angR * 180) / Math.PI)}°` : 'nothing'}`);
     }
+  }
+  // Friction written on a surface: read on that surface, or on the body resting on it.
+  for (const t of tSurf) {
+    if (t.friction === undefined) continue;
+    s.labels.expected++;
+    if (readObjs.some((o) => o.friction !== undefined && o.friction >= 0 && near(o.friction, t.friction!))) s.labels.correct++;
+    else s.labels.wrong.push(`${t.id} friction: wanted ${t.friction}, read nothing`);
   }
   if (s.labels.wrong.length) reasons.push(...s.labels.wrong);
 
@@ -243,9 +251,22 @@ export function scoreCase(truth: Reading, read: Reading | null, width: number, h
   if (rScene.runnable && tScene.runnable) {
     const simT = buildSim(tScene, { pageFloor: true });
     const simR = buildSim(rScene, { pageFloor: true });
-    simT.step(horizon);
+    // How far each drawn body travels, so fast movers get a proportional tolerance.
+    const travelled = new Map<string, number>();
+    const last = new Map<string, { x: number; y: number }>();
+    for (let t = 0; t < horizon - 1e-9; t += 1 / 60) {
+      simT.step(Math.min(1 / 60, horizon - t));
+      for (const [id, b] of simT.bodies) {
+        if (!b.isDynamic()) continue;
+        const p = simT.toImage(b.getPosition());
+        const q = last.get(id);
+        if (q) travelled.set(id, (travelled.get(id) ?? 0) + Math.hypot(((p.x - q.x) / width) * 1000, ((p.y - q.y) / height) * 1000));
+        last.set(id, p);
+      }
+    }
     simR.step(horizon);
     const errs: number[] = [];
+    const over: number[] = [];
     for (const t of tBodies) {
       const r = matched.get(t.id);
       if (!r) continue;
@@ -255,11 +276,14 @@ export function scoreCase(truth: Reading, read: Reading | null, width: number, h
       if (!tb || !rb) continue;
       const pt = simT.toImage(tb.getPosition());
       const pr = simR.toImage(rb.getPosition());
-      errs.push(Math.hypot(((pt.x - pr.x) / width) * 1000, ((pt.y - pr.y) / height) * 1000));
+      const e = Math.hypot(((pt.x - pr.x) / width) * 1000, ((pt.y - pr.y) / height) * 1000);
+      errs.push(e);
+      over.push(e - Math.max(80, 0.1 * (travelled.get(t.id) ?? 0)));
     }
     s.outcome.error = mean(errs);
-    // Same outcome: every matched body within 8% of the image of where the drawn scene puts it.
-    s.outcome.ok = errs.length > 0 && Math.max(...errs) <= 80 && s.objects.missing.length === 0;
+    // Same outcome: every matched body ends within 8% of the image, or 10% of the distance
+    // it travelled (whichever is larger), of where the drawn scene puts it.
+    s.outcome.ok = errs.length > 0 && Math.max(...over) <= 0 && s.objects.missing.length === 0;
     if (!s.outcome.ok && errs.length) {
       s.outcome.note = `bodies end ${Math.max(...errs).toFixed(0)}/1000 apart after ${horizon} s`;
       reasons.push(s.outcome.note);

@@ -59,7 +59,7 @@ async function main() {
     <section class="report-intro">
       <h1>Test report</h1>
       <p class="lede">Every number here comes from <code>npm run eval</code>: ${data.cases.length} pencil drawings generated from known scenes, each sent to Gemini with the app's own prompt and schema, then scored against the scene that was drawn. Generated ${esc(data.generated)}.</p>
-      <p>A case <strong>passes</strong> only when every ball and box is found and nothing is invented, every surface is traced within 2% of the image, every written mass, friction, speed and spring constant is read exactly, every rope, rod, spring and pivot is attached to the right thing, the scale is right, and the engine moves the read scene the same way as the drawn one (every object within 8% of the image after 1.5 s; 0.4 s for the chaotic tower and double pendulum). Drawings that are not physics pass when the reader says so.</p>
+      <p>A case <strong>passes</strong> only when every ball and box is found and nothing is invented, every surface is traced within 2% of the image, every written mass, friction, speed and spring constant is read exactly, every rope, rod, spring and pivot is attached to the right thing, the scale is right, and the engine moves the read scene the same way as the drawn one (after 1.5 s, or 0.4 s for the chaotic tower and double pendulum, every object ends within 8% of the image or 10% of the distance it travelled, whichever is larger). Drawings that are not physics pass when the reader says so.</p>
     </section>
     <section>
       <h2>Scores</h2>

@@ -12,7 +12,7 @@
    "surfaces": "16/16",
    "labels": "12/13",
    "links": "5/5",
-   "sameOutcome": "11/12",
+   "sameOutcome": "12/12",
    "meanPositionError": 0.9,
    "medianMs": 8608
   },
@@ -25,7 +25,7 @@
    "surfaces": "16/16",
    "labels": "12/13",
    "links": "5/5",
-   "sameOutcome": "11/12",
+   "sameOutcome": "12/12",
    "meanPositionError": 0.9,
    "medianMs": 8608
   },
@@ -64,7 +64,7 @@
    "surfaces": "16/16",
    "labels": "12/13",
    "links": "5/5",
-   "sameOutcome": "10/12",
+   "sameOutcome": "11/12",
    "meanPositionError": 1.2,
    "medianMs": 8608
   },
@@ -206,7 +206,7 @@
      "expected": 2,
      "correct": 1,
      "wrong": [
-      "block friction: wanted 0.2, read nothing"
+      "ramp friction: wanted 0.2, read nothing"
      ]
     },
     "links": {
@@ -220,14 +220,13 @@
      "ratio": null
     },
     "outcome": {
-     "ok": false,
-     "error": 247.65074975156418,
-     "note": "bodies end 248/1000 apart after 1.5 s"
+     "ok": true,
+     "error": 56.48477188761678,
+     "note": ""
     },
     "pass": false,
     "reasons": [
-     "block friction: wanted 0.2, read nothing",
-     "bodies end 248/1000 apart after 1.5 s"
+     "ramp friction: wanted 0.2, read nothing"
     ]
    },
    "scoreRaw": {
@@ -251,7 +250,7 @@
      "expected": 2,
      "correct": 1,
      "wrong": [
-      "block friction: wanted 0.2, read nothing"
+      "ramp friction: wanted 0.2, read nothing"
      ]
     },
     "links": {
@@ -265,14 +264,13 @@
      "ratio": null
     },
     "outcome": {
-     "ok": false,
-     "error": 256.49108857720495,
-     "note": "bodies end 256/1000 apart after 1.5 s"
+     "ok": true,
+     "error": 65.53065712340292,
+     "note": ""
     },
     "pass": false,
     "reasons": [
-     "block friction: wanted 0.2, read nothing",
-     "bodies end 256/1000 apart after 1.5 s"
+     "ramp friction: wanted 0.2, read nothing"
     ]
    }
   },

@@ -5,27 +5,27 @@
   "date": "2026-11-09",
   "all": {
    "cases": 12,
-   "passed": 5,
+   "passed": 4,
    "detection": "12/12",
    "objectsFound": "20/22",
    "objectsInvented": 2,
    "surfaces": "17/19",
    "labels": "14/16",
    "links": "7/9",
-   "sameOutcome": "6/12",
+   "sameOutcome": "5/12",
    "meanPositionError": 10.5,
    "medianMs": 10886
   },
   "normal": {
    "cases": 12,
-   "passed": 5,
+   "passed": 4,
    "detection": "12/12",
    "objectsFound": "20/22",
    "objectsInvented": 2,
    "surfaces": "17/19",
    "labels": "14/16",
    "links": "7/9",
-   "sameOutcome": "6/12",
+   "sameOutcome": "5/12",
    "meanPositionError": 10.5,
    "medianMs": 10886
   },
@@ -81,7 +81,7 @@
    "meanPositionError": null,
    "medianMs": null
   },
-  "passRate": "42%"
+  "passRate": "33%"
  },
  "rows": [
   {
@@ -220,12 +220,14 @@
      "ratio": null
     },
     "outcome": {
-     "ok": true,
-     "error": 46.78239167690698,
-     "note": ""
+     "ok": false,
+     "error": 236.6864939185122,
+     "note": "bodies end 237/1000 apart after 1.5 s"
     },
-    "pass": true,
-    "reasons": []
+    "pass": false,
+    "reasons": [
+     "bodies end 237/1000 apart after 1.5 s"
+    ]
    },
    "scoreRaw": {
     "detectionOk": true,
@@ -260,12 +262,14 @@
      "ratio": null
     },
     "outcome": {
-     "ok": true,
-     "error": 3.1313691388756926,
-     "note": ""
+     "ok": false,
+     "error": 190.61104842908045,
+     "note": "bodies end 191/1000 apart after 1.5 s"
     },
-    "pass": true,
-    "reasons": []
+    "pass": false,
+    "reasons": [
+     "bodies end 191/1000 apart after 1.5 s"
+    ]
    }
   },
   {
@@ -575,14 +579,12 @@
      "ratio": null
     },
     "outcome": {
-     "ok": false,
+     "ok": true,
      "error": 64.59637546996674,
-     "note": "bodies end 87/1000 apart after 1.5 s"
+     "note": ""
     },
-    "pass": false,
-    "reasons": [
-     "bodies end 87/1000 apart after 1.5 s"
-    ]
+    "pass": true,
+    "reasons": []
    }
   },
   {
@@ -735,12 +737,12 @@
     },
     "outcome": {
      "ok": false,
-     "error": 444.44281475175717,
-     "note": "bodies end 1098/1000 apart after 1.5 s"
+     "error": 266.2857016790629,
+     "note": "bodies end 516/1000 apart after 1.5 s"
     },
     "pass": false,
     "reasons": [
-     "bodies end 1098/1000 apart after 1.5 s"
+     "bodies end 516/1000 apart after 1.5 s"
     ]
    },
    "scoreRaw": {
@@ -777,12 +779,12 @@
     },
     "outcome": {
      "ok": false,
-     "error": 369.3752907923279,
-     "note": "bodies end 739/1000 apart after 1.5 s"
+     "error": 196.69499730675707,
+     "note": "bodies end 512/1000 apart after 1.5 s"
     },
     "pass": false,
     "reasons": [
-     "bodies end 739/1000 apart after 1.5 s"
+     "bodies end 512/1000 apart after 1.5 s"
     ]
    }
   },

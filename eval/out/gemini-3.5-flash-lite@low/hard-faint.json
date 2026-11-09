@@ -1,0 +1,82 @@
+{
+ "model": "gemini-3.5-flash-lite@low",
+ "ms": 2829,
+ "raw": {
+  "isPhysicsSketch": true,
+  "whatIsIt": "A 3 kg ball on a ramp above a floor with a height measurement of 0.5 m.",
+  "balls": [
+   {
+    "id": "ball1",
+    "box_2d": [
+     543,
+     171,
+     602,
+     219
+    ],
+    "label": "3 kg",
+    "massKg": 3,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false
+   }
+  ],
+  "boxes": [],
+  "surfaces": [
+   {
+    "id": "floor",
+    "points": [
+     [
+      838,
+      98
+     ],
+     [
+      838,
+      917
+     ]
+    ],
+    "label": "",
+    "friction": -1
+   },
+   {
+    "id": "ramp",
+    "points": [
+     [
+      579,
+      190
+     ],
+     [
+      838,
+      554
+     ],
+     [
+      838,
+      190
+     ],
+     [
+      579,
+      190
+     ]
+    ],
+    "label": "",
+    "friction": -1
+   }
+  ],
+  "anchors": [],
+  "links": [],
+  "measurements": [
+   {
+    "from": [
+     838,
+     140
+    ],
+    "to": [
+     579,
+     140
+    ],
+    "meters": 0.5,
+    "label": "0.5 m"
+   }
+  ],
+  "unreadable": []
+ }
+}

@@ -1,20 +1,21 @@
 {
- "model": "gemini-3-flash-preview",
- "ms": 16388,
+ "model": "gemini-3.5-flash-lite@low",
+ "ms": 4757,
+ "date": "2026-11-09",
  "raw": {
   "isPhysicsSketch": true,
-  "whatIsIt": "A physics setup featuring a ball in mid-air and a box on a horizontal plank balanced on a triangular fulcrum.",
+  "whatIsIt": "A seesaw with a block on it, a ball above, and a ground surface.",
   "balls": [
    {
     "id": "ball1",
     "box_2d": [
-     235,
-     666,
-     302,
-     718
+     230,
+     657,
+     299,
+     708
     ],
-    "label": "4 kg",
-    "massKg": 4,
+    "label": "3 kg",
+    "massKg": 3,
     "friction": -1,
     "bounce": -1,
     "fixed": false
@@ -22,16 +23,16 @@
   ],
   "boxes": [
    {
-    "id": "box1",
+    "id": "block1",
     "box_2d": [
-     658,
-     311,
-     742,
-     375
+     639,
+     276,
+     738,
+     335
     ],
-    "angleDeg": 0,
-    "label": "4 kg",
-    "massKg": 4,
+    "angleDeg": -2,
+    "label": "1 kg",
+    "massKg": 1,
     "friction": -1,
     "bounce": -1,
     "fixed": false
@@ -39,12 +40,12 @@
    {
     "id": "plank",
     "box_2d": [
-     724,
-     305,
-     768,
-     752
+     734,
+     267,
+     775,
+     726
     ],
-    "angleDeg": 0,
+    "angleDeg": -2,
     "label": "",
     "massKg": 0,
     "friction": -1,
@@ -54,40 +55,42 @@
   ],
   "surfaces": [
    {
-    "id": "fulcrum",
-    "points": [
-     [
-      754,
-      528
-     ],
-     [
-      869,
-      480
-     ],
-     [
-      866,
-      581
-     ],
-     [
-      754,
-      528
-     ]
-    ],
-    "label": ""
-   },
-   {
     "id": "floor",
     "points": [
      [
-      878,
-      88
+      871,
+      55
      ],
      [
-      853,
-      976
+      871,
+      935
      ]
     ],
-    "label": ""
+    "label": "",
+    "friction": -1
+   },
+   {
+    "id": "fulcrum",
+    "points": [
+     [
+      871,
+      480
+     ],
+     [
+      758,
+      500
+     ],
+     [
+      871,
+      520
+     ],
+     [
+      871,
+      480
+     ]
+    ],
+    "label": "",
+    "friction": -1
    }
   ],
   "anchors": [],
@@ -96,13 +99,13 @@
     "kind": "pin",
     "from": "",
     "fromPoint": [
-     754,
-     528
+     758,
+     500
     ],
     "to": "plank",
     "toPoint": [
-     754,
-     528
+     758,
+     500
     ],
     "stiffnessNpm": -1
    }

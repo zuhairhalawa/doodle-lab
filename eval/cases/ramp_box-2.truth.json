@@ -30,7 +30,7 @@
    {
     "id": "ramp",
     "kind": "surface",
-    "label": "",
+    "label": "μ = 0.3",
     "points": [
      [
       822,
@@ -44,12 +44,13 @@
       832,
       577
      ]
-    ]
+    ],
+    "friction": 0.3
    },
    {
     "id": "block",
     "kind": "box",
-    "label": "2 kg, μ = 0.3",
+    "label": "2 kg",
     "box_2d": [
      460,
      205,
@@ -57,8 +58,7 @@
      284
     ],
     "angleDeg": -32.7,
-    "massKg": 2,
-    "friction": 0.3
+    "massKg": 2
    }
   ],
   "links": [],

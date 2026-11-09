@@ -12,7 +12,7 @@
    "surfaces": "16/19",
    "labels": "13/16",
    "links": "7/9",
-   "sameOutcome": "5/12",
+   "sameOutcome": "6/12",
    "meanPositionError": 5.2,
    "medianMs": 2892
   },
@@ -25,7 +25,7 @@
    "surfaces": "16/19",
    "labels": "13/16",
    "links": "7/9",
-   "sameOutcome": "5/12",
+   "sameOutcome": "6/12",
    "meanPositionError": 5.2,
    "medianMs": 2892
   },
@@ -64,7 +64,7 @@
    "surfaces": "15/19",
    "labels": "13/16",
    "links": "7/9",
-   "sameOutcome": "5/12",
+   "sameOutcome": "6/12",
    "meanPositionError": 10.7,
    "medianMs": 2892
   },
@@ -213,7 +213,7 @@
      "expected": 2,
      "correct": 1,
      "wrong": [
-      "block friction: wanted 0.2, read nothing"
+      "ramp friction: wanted 0.2, read nothing"
      ]
     },
     "links": {
@@ -227,14 +227,13 @@
      "ratio": null
     },
     "outcome": {
-     "ok": false,
-     "error": 237.60457992467042,
-     "note": "bodies end 238/1000 apart after 1.5 s"
+     "ok": true,
+     "error": 46.60826566077888,
+     "note": ""
     },
     "pass": false,
     "reasons": [
-     "block friction: wanted 0.2, read nothing",
-     "bodies end 238/1000 apart after 1.5 s"
+     "ramp friction: wanted 0.2, read nothing"
     ]
    },
    "scoreRaw": {
@@ -248,7 +247,7 @@
     },
     "positionError": 9.861541461658009,
     "radiusError": null,
-    "angleError": 51.6,
+    "angleError": 38.4,
     "surfaces": {
      "expected": 2,
      "matched": 2,
@@ -258,7 +257,7 @@
      "expected": 2,
      "correct": 1,
      "wrong": [
-      "block friction: wanted 0.2, read nothing"
+      "ramp friction: wanted 0.2, read nothing"
      ]
     },
     "links": {
@@ -272,15 +271,14 @@
      "ratio": null
     },
     "outcome": {
-     "ok": false,
-     "error": 246.5204156892578,
-     "note": "bodies end 247/1000 apart after 1.5 s"
+     "ok": true,
+     "error": 58.87612744796811,
+     "note": ""
     },
     "pass": false,
     "reasons": [
-     "box tilt off by 52°",
-     "block friction: wanted 0.2, read nothing",
-     "bodies end 247/1000 apart after 1.5 s"
+     "box tilt off by 38°",
+     "ramp friction: wanted 0.2, read nothing"
     ]
    }
   },

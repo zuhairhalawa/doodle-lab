@@ -1,0 +1,101 @@
+{
+ "model": "gemini-3.5-flash-lite@low",
+ "ms": 4985,
+ "raw": {
+  "isPhysicsSketch": true,
+  "whatIsIt": "A ball of 1 kg on a curved ramp above a flat surface.",
+  "balls": [
+   {
+    "id": "ball1",
+    "box_2d": [
+     300,
+     188,
+     368,
+     239
+    ],
+    "label": "1 kg",
+    "massKg": 1,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false
+   }
+  ],
+  "boxes": [],
+  "surfaces": [
+   {
+    "id": "ramp",
+    "points": [
+     [
+      324,
+      134
+     ],
+     [
+      330,
+      200
+     ],
+     [
+      340,
+      250
+     ],
+     [
+      360,
+      310
+     ],
+     [
+      390,
+      370
+     ],
+     [
+      430,
+      430
+     ],
+     [
+      480,
+      480
+     ],
+     [
+      540,
+      520
+     ],
+     [
+      610,
+      545
+     ],
+     [
+      680,
+      555
+     ],
+     [
+      750,
+      555
+     ],
+     [
+      830,
+      555
+     ]
+    ],
+    "label": "",
+    "friction": -1
+   },
+   {
+    "id": "floor",
+    "points": [
+     [
+      855,
+      100
+     ],
+     [
+      855,
+      900
+     ]
+    ],
+    "label": "",
+    "friction": -1
+   }
+  ],
+  "anchors": [],
+  "links": [],
+  "measurements": [],
+  "unreadable": []
+ }
+}

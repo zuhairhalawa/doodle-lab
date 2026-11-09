@@ -1,0 +1,115 @@
+{
+ "model": "gemini-3.5-flash-lite@low",
+ "ms": 13306,
+ "date": "2026-11-09",
+ "raw": {
+  "isPhysicsSketch": true,
+  "whatIsIt": "A ball moving towards a stack of four blocks on a surface.",
+  "balls": [
+   {
+    "id": "ball1",
+    "box_2d": [
+     798,
+     165,
+     871,
+     218
+    ],
+    "label": "2 kg",
+    "massKg": 2,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false,
+    "arrow": {
+     "tip": [
+      835,
+      338
+     ],
+     "speedMps": 5
+    }
+   }
+  ],
+  "boxes": [
+   {
+    "id": "box1",
+    "box_2d": [
+     793,
+     630,
+     884,
+     724
+    ],
+    "angleDeg": 0,
+    "label": "",
+    "massKg": 0,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false
+   },
+   {
+    "id": "box2",
+    "box_2d": [
+     701,
+     631,
+     796,
+     718
+    ],
+    "angleDeg": 0,
+    "label": "",
+    "massKg": 0,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false
+   },
+   {
+    "id": "box3",
+    "box_2d": [
+     610,
+     642,
+     699,
+     720
+    ],
+    "angleDeg": 0,
+    "label": "",
+    "massKg": 0,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false
+   },
+   {
+    "id": "box4",
+    "box_2d": [
+     521,
+     641,
+     610,
+     728
+    ],
+    "angleDeg": 0,
+    "label": "",
+    "massKg": 0,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false
+   }
+  ],
+  "surfaces": [
+   {
+    "id": "floor",
+    "points": [
+     [
+      884,
+      53
+     ],
+     [
+      884,
+      930
+     ]
+    ],
+    "label": "",
+    "friction": -1
+   }
+  ],
+  "anchors": [],
+  "links": [],
+  "measurements": [],
+  "unreadable": []
+ }
+}

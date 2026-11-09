@@ -170,7 +170,11 @@ export function truthOf(d: Doodle): Reading {
     const labels = d.labels.filter((l) => l.on === s.id);
     const label = labels.map((l) => l.text).join(', ');
     const o: ReadObject = { id: s.id, kind: s.kind, label };
-    if (s.kind === 'surface') o.points = s.pts.map(P);
+    if (s.kind === 'surface') {
+      o.points = s.pts.map(P);
+      const fr = labels.find((l) => l.friction !== undefined)?.friction;
+      if (fr !== undefined) o.friction = fr;
+    }
     else {
       const pts: XY[] =
         s.kind === 'box'
