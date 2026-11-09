@@ -156,3 +156,19 @@ describe('geometry', () => {
     expect(c[1]!.y).toBeLessThan(c[0]!.y);
   });
 });
+
+describe('daily cap', () => {
+  it('stops reads after the daily limit and starts again the next day', async () => {
+    const { dailyCap } = await import('../src/server/guard.ts');
+    const store = new Map<string, string>();
+    const QUOTA = { get: async (k: string) => store.get(k) ?? null, put: async (k: string, v: string) => void store.set(k, v) } as unknown as import('../src/server/guard.ts').CounterStore;
+    const env = { GEMINI_API_KEY: 'x', QUOTA, DAILY_READS: '3' };
+    const day1 = new Date('2026-11-10T08:00:00Z');
+    for (let i = 0; i < 3; i++) expect(await dailyCap(env, day1)).toBeNull();
+    const blocked = await dailyCap(env, day1);
+    expect(blocked?.status).toBe(429);
+    expect(((await blocked!.json()) as { error: string }).error).toMatch(/tomorrow/);
+    expect(await dailyCap(env, new Date('2026-11-11T00:01:00Z'))).toBeNull();
+    expect(await dailyCap({ GEMINI_API_KEY: 'x' }, day1)).toBeNull();
+  });
+});

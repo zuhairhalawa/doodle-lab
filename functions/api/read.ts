@@ -5,7 +5,7 @@
  */
 import { GeminiError, geminiJson } from '../../src/read/gemini.ts';
 import { READ_SCHEMA, READ_SYSTEM } from '../../src/read/schema.ts';
-import { type Env, MAX_IMAGE_CHARS, guard, json, models } from '../../src/server/guard.ts';
+import { type Env, MAX_IMAGE_CHARS, dailyCap, guard, json, models } from '../../src/server/guard.ts';
 
 const TYPES = ['image/jpeg', 'image/png', 'image/webp'];
 
@@ -23,6 +23,8 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
   if (typeof mimeType !== 'string' || !TYPES.includes(mimeType)) return json({ error: 'Send a JPEG, PNG or WebP photo.' }, 415);
   if (typeof image !== 'string' || image.length < 500 || !/^[A-Za-z0-9+/=]+$/.test(image.slice(0, 2000))) return json({ error: 'That photo could not be read. Try another one.' }, 400);
   if (image.length > MAX_IMAGE_CHARS) return json({ error: 'This photo is too large. Try a smaller one.' }, 413);
+  const capped = await dailyCap(env);
+  if (capped) return capped;
   const started = Date.now();
   try {
     const { data, model } = await geminiJson<Record<string, unknown>>({

@@ -4,9 +4,34 @@
  * Drawings are never logged or stored.
  */
 
+/** The two Workers KV calls the daily cap needs (a KVNamespace binding fits). */
+export interface CounterStore {
+  get(key: string): Promise<string | null>;
+  put(key: string, value: string, options?: { expirationTtl?: number }): Promise<void>;
+}
+
 export interface Env {
   GEMINI_API_KEY: string;
   GEMINI_MODELS?: string;
+  /** Workers KV for the site-wide daily cap. Without it (local dev) there is no daily cap. */
+  QUOTA?: CounterStore;
+  /** Reads allowed per UTC day for the whole site (default 300). */
+  DAILY_READS?: string;
+}
+
+/**
+ * Site-wide daily cap on Gemini calls, so nobody can use up the shared free
+ * quota. KV is eventually consistent, so the cap is approximate (a few over at most).
+ * Returns an error response when today's reads are used up, or null.
+ */
+export async function dailyCap(env: Env, now = new Date()): Promise<Response | null> {
+  if (!env.QUOTA) return null;
+  const cap = Number(env.DAILY_READS ?? 300);
+  const key = `reads:${now.toISOString().slice(0, 10)}`;
+  const used = Number((await env.QUOTA.get(key)) ?? 0);
+  if (used >= cap) return json({ error: `Doodle Lab has read ${cap} drawings today, its daily limit. Try again tomorrow, or open a sample drawing.` }, 429);
+  await env.QUOTA.put(key, String(used + 1), { expirationTtl: 60 * 60 * 48 });
+  return null;
 }
 
 /** Base64 characters of one photo (about 1.5 MB of JPEG). The page sends about 200 KB. */

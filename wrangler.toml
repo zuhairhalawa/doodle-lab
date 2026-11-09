@@ -1,0 +1,8 @@
+name = "doodle-lab"
+pages_build_output_dir = "dist"
+compatibility_date = "2026-11-01"
+
+# Daily cap on Gemini calls for the whole site (the free API key is shared with other demos).
+[[kv_namespaces]]
+binding = "QUOTA"
+id = "e6147b3612d14c9db4cdcb2720ee72c3"
