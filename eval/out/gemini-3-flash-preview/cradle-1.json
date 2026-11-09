@@ -1,0 +1,116 @@
+{
+ "model": "gemini-3-flash-preview",
+ "ms": 10687,
+ "raw": {
+  "isPhysicsSketch": true,
+  "whatIsIt": "A diagram showing a Newton's cradle with three balls, where the leftmost ball is lifted and the others are hanging vertically.",
+  "balls": [
+   {
+    "id": "ball1",
+    "box_2d": [
+     451,
+     296,
+     515,
+     345
+    ],
+    "label": "",
+    "massKg": 0,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false
+   },
+   {
+    "id": "ball2",
+    "box_2d": [
+     507,
+     492,
+     572,
+     541
+    ],
+    "label": "",
+    "massKg": 0,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false
+   },
+   {
+    "id": "ball3",
+    "box_2d": [
+     507,
+     541,
+     572,
+     590
+    ],
+    "label": "",
+    "massKg": 0,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false
+   }
+  ],
+  "boxes": [],
+  "surfaces": [
+   {
+    "id": "ceiling",
+    "points": [
+     [
+      183,
+      281
+     ],
+     [
+      178,
+      744
+     ]
+    ],
+    "label": "ceiling"
+   }
+  ],
+  "anchors": [],
+  "links": [
+   {
+    "kind": "rope",
+    "from": "",
+    "fromPoint": [
+     185,
+     465
+    ],
+    "to": "ball1",
+    "toPoint": [
+     453,
+     321
+    ],
+    "stiffnessNpm": -1
+   },
+   {
+    "kind": "rope",
+    "from": "",
+    "fromPoint": [
+     182,
+     513
+    ],
+    "to": "ball2",
+    "toPoint": [
+     507,
+     516
+    ],
+    "stiffnessNpm": -1
+   },
+   {
+    "kind": "rope",
+    "from": "",
+    "fromPoint": [
+     182,
+     561
+    ],
+    "to": "ball3",
+    "toPoint": [
+     507,
+     566
+    ],
+    "stiffnessNpm": -1
+   }
+  ],
+  "measurements": [],
+  "unreadable": []
+ }
+}

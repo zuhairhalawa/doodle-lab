@@ -1,0 +1,84 @@
+{
+ "id": "cup-2",
+ "title": "A ball rolling down a slope towards a cup",
+ "tests": "open container outline, slope not touching the floor",
+ "split": "test",
+ "hard": false,
+ "physics": true,
+ "sample": false,
+ "width": 1280,
+ "height": 960,
+ "truth": {
+  "isPhysicsSketch": true,
+  "whatIsIt": "A ball rolling down a slope towards a cup",
+  "objects": [
+   {
+    "id": "floor",
+    "kind": "surface",
+    "label": "",
+    "points": [
+     [
+      833,
+      931
+     ],
+     [
+      842,
+      100
+     ]
+    ]
+   },
+   {
+    "id": "slope",
+    "kind": "surface",
+    "label": "",
+    "points": [
+     [
+      224,
+      896
+     ],
+     [
+      521,
+      527
+     ]
+    ]
+   },
+   {
+    "id": "cup",
+    "kind": "surface",
+    "label": "",
+    "points": [
+     [
+      653,
+      459
+     ],
+     [
+      838,
+      449
+     ],
+     [
+      839,
+      339
+     ],
+     [
+      655,
+      326
+     ]
+    ]
+   },
+   {
+    "id": "ball",
+    "kind": "ball",
+    "label": "",
+    "box_2d": [
+     203,
+     834,
+     254,
+     873
+    ]
+   }
+  ],
+  "links": [],
+  "measurements": [],
+  "unreadable": []
+ }
+}

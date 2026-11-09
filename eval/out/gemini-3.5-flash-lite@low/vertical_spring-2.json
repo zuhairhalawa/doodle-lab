@@ -1,0 +1,63 @@
+{
+ "model": "gemini-3.5-flash-lite@low",
+ "ms": 2443,
+ "raw": {
+  "isPhysicsSketch": true,
+  "whatIsIt": "A block of mass 2 kg suspended by a vertical spring with stiffness k = 40 N/m from a ceiling.",
+  "balls": [],
+  "boxes": [
+   {
+    "id": "block",
+    "box_2d": [
+     448,
+     469,
+     542,
+     560
+    ],
+    "angleDeg": 0,
+    "label": "2 kg",
+    "massKg": 2,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false
+   }
+  ],
+  "surfaces": [
+   {
+    "id": "ceiling",
+    "points": [
+     [
+      100,
+      300
+     ],
+     [
+      100,
+      750
+     ]
+    ],
+    "label": "",
+    "friction": -1
+   }
+  ],
+  "anchors": [],
+  "links": [
+   {
+    "kind": "spring",
+    "from": "ceiling",
+    "fromPoint": [
+     100,
+     525
+    ],
+    "to": "block",
+    "toPoint": [
+     448,
+     514
+    ],
+    "stiffnessNpm": 40,
+    "label": "k = 40 N/m"
+   }
+  ],
+  "measurements": [],
+  "unreadable": []
+ }
+}

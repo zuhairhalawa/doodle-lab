@@ -1,0 +1,113 @@
+{
+ "model": "gemini-3-flash-preview",
+ "ms": 53849,
+ "raw": {
+  "isPhysicsSketch": true,
+  "whatIsIt": "A ball with a mass of 2 kg moving at 8 m/s towards a stack of four boxes on a horizontal floor.",
+  "balls": [
+   {
+    "id": "ball1",
+    "box_2d": [
+     797,
+     722,
+     859,
+     772
+    ],
+    "label": "2 kg",
+    "massKg": 2,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false,
+    "arrow": {
+     "tip": [
+      834,
+      604
+     ],
+     "speedMps": 8
+    }
+   }
+  ],
+  "boxes": [
+   {
+    "id": "box_top",
+    "box_2d": [
+     541,
+     268,
+     633,
+     354
+    ],
+    "angleDeg": 0,
+    "label": "",
+    "massKg": 0,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false
+   },
+   {
+    "id": "box_mid_top",
+    "box_2d": [
+     628,
+     272,
+     711,
+     360
+    ],
+    "angleDeg": 0,
+    "label": "",
+    "massKg": 0,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false
+   },
+   {
+    "id": "box_mid_bot",
+    "box_2d": [
+     708,
+     279,
+     794,
+     360
+    ],
+    "angleDeg": 0,
+    "label": "",
+    "massKg": 0,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false
+   },
+   {
+    "id": "box_bot",
+    "box_2d": [
+     792,
+     283,
+     883,
+     364
+    ],
+    "angleDeg": 0,
+    "label": "",
+    "massKg": 0,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false
+   }
+  ],
+  "surfaces": [
+   {
+    "id": "floor",
+    "points": [
+     [
+      893,
+      58
+     ],
+     [
+      853,
+      908
+     ]
+    ],
+    "label": ""
+   }
+  ],
+  "anchors": [],
+  "links": [],
+  "measurements": [],
+  "unreadable": []
+ }
+}

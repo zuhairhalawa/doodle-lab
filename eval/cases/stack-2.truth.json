@@ -1,0 +1,90 @@
+{
+ "id": "stack-2",
+ "title": "A ball rolling at a tower of blocks",
+ "tests": "several stacked boxes, one arrow",
+ "split": "test",
+ "hard": false,
+ "physics": true,
+ "sample": false,
+ "width": 1280,
+ "height": 960,
+ "truth": {
+  "isPhysicsSketch": true,
+  "whatIsIt": "A ball rolling at a tower of blocks",
+  "objects": [
+   {
+    "id": "floor",
+    "kind": "surface",
+    "label": "",
+    "points": [
+     [
+      852,
+      105
+     ],
+     [
+      859,
+      922
+     ]
+    ]
+   },
+   {
+    "id": "box1",
+    "kind": "box",
+    "label": "",
+    "box_2d": [
+     781,
+     664,
+     857,
+     748
+    ],
+    "angleDeg": -0.4
+   },
+   {
+    "id": "box2",
+    "kind": "box",
+    "label": "",
+    "box_2d": [
+     710,
+     670,
+     782,
+     753
+    ],
+    "angleDeg": -0.4
+   },
+   {
+    "id": "box3",
+    "kind": "box",
+    "label": "",
+    "box_2d": [
+     620,
+     680,
+     711,
+     750
+    ],
+    "angleDeg": -0.4
+   },
+   {
+    "id": "ball",
+    "kind": "ball",
+    "label": "2 kg",
+    "box_2d": [
+     782,
+     220,
+     853,
+     274
+    ],
+    "massKg": 2,
+    "arrow": {
+     "tip": [
+      819,
+      387
+     ],
+     "speedMps": 6
+    }
+   }
+  ],
+  "links": [],
+  "measurements": [],
+  "unreadable": []
+ }
+}

@@ -1,0 +1,74 @@
+{
+ "model": "gemini-3.5-flash-lite@low",
+ "ms": 2798,
+ "raw": {
+  "isPhysicsSketch": true,
+  "whatIsIt": "Two balls moving towards each other on a flat surface.",
+  "balls": [
+   {
+    "id": "ball1",
+    "box_2d": [
+     785,
+     195,
+     866,
+     258
+    ],
+    "label": "5 kg",
+    "massKg": 5,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false,
+    "arrow": {
+     "tip": [
+      825,
+      372
+     ],
+     "speedMps": 5
+    }
+   },
+   {
+    "id": "ball2",
+    "box_2d": [
+     755,
+     552,
+     856,
+     629
+    ],
+    "label": "5 kg",
+    "massKg": 5,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false,
+    "arrow": {
+     "tip": [
+      806,
+      447
+     ],
+     "speedMps": 1
+    }
+   }
+  ],
+  "boxes": [],
+  "surfaces": [
+   {
+    "id": "floor",
+    "points": [
+     [
+      856,
+      57
+     ],
+     [
+      856,
+      915
+     ]
+    ],
+    "label": "",
+    "friction": -1
+   }
+  ],
+  "anchors": [],
+  "links": [],
+  "measurements": [],
+  "unreadable": []
+ }
+}

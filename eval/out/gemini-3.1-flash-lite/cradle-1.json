@@ -1,0 +1,116 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "ms": 8516,
+ "raw": {
+  "isPhysicsSketch": true,
+  "whatIsIt": "A drawing of three balls hanging from a ceiling, commonly associated with a Newton's cradle setup.",
+  "balls": [
+   {
+    "id": "ball1",
+    "box_2d": [
+     447,
+     296,
+     517,
+     345
+    ],
+    "label": "",
+    "massKg": 0,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false
+   },
+   {
+    "id": "ball2",
+    "box_2d": [
+     506,
+     492,
+     573,
+     541
+    ],
+    "label": "",
+    "massKg": 0,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false
+   },
+   {
+    "id": "ball3",
+    "box_2d": [
+     506,
+     541,
+     573,
+     590
+    ],
+    "label": "",
+    "massKg": 0,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false
+   }
+  ],
+  "boxes": [],
+  "surfaces": [
+   {
+    "id": "ceiling",
+    "points": [
+     [
+      182,
+      282
+     ],
+     [
+      182,
+      744
+     ]
+    ],
+    "label": "ceiling"
+   }
+  ],
+  "anchors": [],
+  "links": [
+   {
+    "kind": "rope",
+    "from": "",
+    "fromPoint": [
+     182,
+     463
+    ],
+    "to": "ball1",
+    "toPoint": [
+     447,
+     321
+    ],
+    "stiffnessNpm": -1
+   },
+   {
+    "kind": "rope",
+    "from": "",
+    "fromPoint": [
+     182,
+     516
+    ],
+    "to": "ball2",
+    "toPoint": [
+     506,
+     516
+    ],
+    "stiffnessNpm": -1
+   },
+   {
+    "kind": "rope",
+    "from": "",
+    "fromPoint": [
+     182,
+     566
+    ],
+    "to": "ball3",
+    "toPoint": [
+     506,
+     566
+    ],
+    "stiffnessNpm": -1
+   }
+  ],
+  "measurements": [],
+  "unreadable": []
+ }
+}

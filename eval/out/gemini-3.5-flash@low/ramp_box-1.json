@@ -1,0 +1,68 @@
+{
+ "model": "gemini-3.5-flash@low",
+ "ms": 22337,
+ "raw": {
+  "isPhysicsSketch": true,
+  "whatIsIt": "A block of mass 4 kg resting on an inclined ramp with friction coefficient mu = 0.2.",
+  "balls": [],
+  "boxes": [
+   {
+    "id": "block",
+    "box_2d": [
+     582,
+     251,
+     675,
+     328
+    ],
+    "angleDeg": -27,
+    "label": "4 kg",
+    "massKg": 4,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false
+   }
+  ],
+  "surfaces": [
+   {
+    "id": "ramp",
+    "points": [
+     [
+      573,
+      153
+     ],
+     [
+      851,
+      572
+     ],
+     [
+      851,
+      153
+     ],
+     [
+      573,
+      153
+     ]
+    ],
+    "label": "Δ = 0.2"
+   },
+   {
+    "id": "floor",
+    "points": [
+     [
+      851,
+      102
+     ],
+     [
+      851,
+      944
+     ]
+    ],
+    "label": ""
+   }
+  ],
+  "anchors": [],
+  "links": [],
+  "measurements": [],
+  "unreadable": []
+ }
+}

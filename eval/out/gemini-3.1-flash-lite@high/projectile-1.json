@@ -1,0 +1,73 @@
+{
+ "model": "gemini-3.1-flash-lite@high",
+ "ms": 7978,
+ "raw": {
+  "isPhysicsSketch": true,
+  "whatIsIt": "A ball resting on a ledge with an initial velocity vector, about to fall off.",
+  "balls": [
+   {
+    "id": "ball1",
+    "box_2d": [
+     326,
+     250,
+     400,
+     300
+    ],
+    "label": "",
+    "massKg": 0,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false,
+    "arrow": {
+     "tip": [
+      284,
+      335
+     ],
+     "speedMps": 3
+    }
+   }
+  ],
+  "boxes": [],
+  "surfaces": [
+   {
+    "id": "ledge_floor",
+    "points": [
+     [
+      400,
+      70
+     ],
+     [
+      400,
+      310
+     ],
+     [
+      850,
+      310
+     ],
+     [
+      850,
+      880
+     ]
+    ],
+    "label": ""
+   }
+  ],
+  "anchors": [],
+  "links": [],
+  "measurements": [
+   {
+    "from": [
+     400,
+     340
+    ],
+    "to": [
+     850,
+     340
+    ],
+    "meters": 2,
+    "label": "2 m"
+   }
+  ],
+  "unreadable": []
+ }
+}

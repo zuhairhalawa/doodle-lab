@@ -1,0 +1,55 @@
+{
+ "model": "gemini-3.5-flash-lite@low",
+ "ms": 2063,
+ "raw": {
+  "isPhysicsSketch": true,
+  "whatIsIt": "A block on a ramp with friction.",
+  "balls": [],
+  "boxes": [
+   {
+    "id": "block",
+    "box_2d": [
+     584,
+     258,
+     679,
+     329
+    ],
+    "angleDeg": 30,
+    "label": "4 kg",
+    "massKg": 4,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false
+   }
+  ],
+  "surfaces": [
+   {
+    "id": "ramp_and_floor",
+    "points": [
+     [
+      573,
+      153
+     ],
+     [
+      835,
+      573
+     ],
+     [
+      835,
+      940
+     ],
+     [
+      835,
+      59
+     ]
+    ],
+    "label": "mu = 0.2",
+    "friction": 0.2
+   }
+  ],
+  "anchors": [],
+  "links": [],
+  "measurements": [],
+  "unreadable": []
+ }
+}

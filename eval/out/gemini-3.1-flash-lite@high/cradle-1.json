@@ -1,0 +1,116 @@
+{
+ "model": "gemini-3.1-flash-lite@high",
+ "ms": 12102,
+ "raw": {
+  "isPhysicsSketch": true,
+  "whatIsIt": "Three pendulum balls hanging from a ceiling, with the left one displaced and the right two touching.",
+  "balls": [
+   {
+    "id": "ball1",
+    "box_2d": [
+     450,
+     281,
+     520,
+     351
+    ],
+    "label": "",
+    "massKg": 0,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false
+   },
+   {
+    "id": "ball2",
+    "box_2d": [
+     503,
+     458,
+     573,
+     528
+    ],
+    "label": "",
+    "massKg": 0,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false
+   },
+   {
+    "id": "ball3",
+    "box_2d": [
+     503,
+     529,
+     573,
+     599
+    ],
+    "label": "",
+    "massKg": 0,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false
+   }
+  ],
+  "boxes": [],
+  "surfaces": [
+   {
+    "id": "ceiling",
+    "points": [
+     [
+      182,
+      280
+     ],
+     [
+      182,
+      745
+     ]
+    ],
+    "label": "ceiling"
+   }
+  ],
+  "anchors": [],
+  "links": [
+   {
+    "kind": "rope",
+    "from": "",
+    "fromPoint": [
+     182,
+     457
+    ],
+    "to": "ball1",
+    "toPoint": [
+     485,
+     316
+    ],
+    "stiffnessNpm": -1
+   },
+   {
+    "kind": "rope",
+    "from": "",
+    "fromPoint": [
+     182,
+     510
+    ],
+    "to": "ball2",
+    "toPoint": [
+     538,
+     493
+    ],
+    "stiffnessNpm": -1
+   },
+   {
+    "kind": "rope",
+    "from": "",
+    "fromPoint": [
+     182,
+     563
+    ],
+    "to": "ball3",
+    "toPoint": [
+     538,
+     564
+    ],
+    "stiffnessNpm": -1
+   }
+  ],
+  "measurements": [],
+  "unreadable": []
+ }
+}

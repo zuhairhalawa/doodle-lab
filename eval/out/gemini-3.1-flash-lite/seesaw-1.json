@@ -1,0 +1,113 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "ms": 2890,
+ "raw": {
+  "isPhysicsSketch": true,
+  "whatIsIt": "A seesaw with a box on one side and a ball hovering above the other side.",
+  "balls": [
+   {
+    "id": "ball1",
+    "box_2d": [
+     233,
+     664,
+     304,
+     719
+    ],
+    "label": "4 kg",
+    "massKg": 4,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false
+   }
+  ],
+  "boxes": [
+   {
+    "id": "block",
+    "box_2d": [
+     654,
+     311,
+     725,
+     377
+    ],
+    "angleDeg": 0,
+    "label": "4 kg",
+    "massKg": 4,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false
+   },
+   {
+    "id": "seesaw",
+    "box_2d": [
+     725,
+     304,
+     768,
+     753
+    ],
+    "angleDeg": 0,
+    "label": "",
+    "massKg": 0,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false
+   }
+  ],
+  "surfaces": [
+   {
+    "id": "ground",
+    "points": [
+     [
+      872,
+      86
+     ],
+     [
+      872,
+      953
+     ]
+    ],
+    "label": ""
+   },
+   {
+    "id": "fulcrum",
+    "points": [
+     [
+      768,
+      487
+     ],
+     [
+      866,
+      435
+     ],
+     [
+      866,
+      540
+     ],
+     [
+      768,
+      487
+     ]
+    ],
+    "label": ""
+   }
+  ],
+  "anchors": [],
+  "links": [
+   {
+    "kind": "pin",
+    "from": "",
+    "fromPoint": [
+     768,
+     487
+    ],
+    "to": "seesaw",
+    "toPoint": [
+     768,
+     487
+    ],
+    "stiffnessNpm": -1
+   }
+  ],
+  "measurements": [],
+  "unreadable": []
+ }
+}

@@ -1,0 +1,114 @@
+{
+ "id": "cradle-3",
+ "title": "Three balls hanging side by side, the first pulled back (Newton's cradle)",
+ "tests": "three ropes, touching balls",
+ "split": "test",
+ "hard": false,
+ "physics": true,
+ "sample": false,
+ "width": 1280,
+ "height": 960,
+ "truth": {
+  "isPhysicsSketch": true,
+  "whatIsIt": "Three balls hanging side by side, the first pulled back (Newton's cradle)",
+  "objects": [
+   {
+    "id": "ceiling",
+    "kind": "surface",
+    "label": "",
+    "points": [
+     [
+      147,
+      277
+     ],
+     [
+      129,
+      763
+     ]
+    ]
+   },
+   {
+    "id": "ball1",
+    "kind": "ball",
+    "label": "",
+    "box_2d": [
+     433,
+     252,
+     498,
+     301
+    ]
+   },
+   {
+    "id": "ball2",
+    "kind": "ball",
+    "label": "",
+    "box_2d": [
+     522,
+     504,
+     587,
+     553
+    ]
+   },
+   {
+    "id": "ball3",
+    "kind": "ball",
+    "label": "",
+    "box_2d": [
+     520,
+     553,
+     585,
+     602
+    ]
+   }
+  ],
+  "links": [
+   {
+    "kind": "rope",
+    "from": "ceiling",
+    "fromPoint": [
+     140,
+     471
+    ],
+    "to": "ball1",
+    "toPoint": [
+     440,
+     292
+    ],
+    "stiffnessNpm": -1,
+    "label": ""
+   },
+   {
+    "kind": "rope",
+    "from": "ceiling",
+    "fromPoint": [
+     138,
+     520
+    ],
+    "to": "ball2",
+    "toPoint": [
+     522,
+     528
+    ],
+    "stiffnessNpm": -1,
+    "label": ""
+   },
+   {
+    "kind": "rope",
+    "from": "ceiling",
+    "fromPoint": [
+     136,
+     569
+    ],
+    "to": "ball3",
+    "toPoint": [
+     520,
+     577
+    ],
+    "stiffnessNpm": -1,
+    "label": ""
+   }
+  ],
+  "measurements": [],
+  "unreadable": []
+ }
+}

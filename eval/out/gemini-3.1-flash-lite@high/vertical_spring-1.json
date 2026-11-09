@@ -1,0 +1,62 @@
+{
+ "model": "gemini-3.1-flash-lite@high",
+ "ms": 55519,
+ "raw": {
+  "isPhysicsSketch": true,
+  "whatIsIt": "A mass hanging from a ceiling by a spring.",
+  "balls": [],
+  "boxes": [
+   {
+    "id": "box1",
+    "box_2d": [
+     630,
+     450,
+     730,
+     550
+    ],
+    "angleDeg": 0,
+    "label": "500 g",
+    "massKg": 0.5,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false
+   }
+  ],
+  "surfaces": [
+   {
+    "id": "ceiling",
+    "points": [
+     [
+      180,
+      250
+     ],
+     [
+      180,
+      750
+     ]
+    ],
+    "label": "ceiling"
+   }
+  ],
+  "anchors": [],
+  "links": [
+   {
+    "kind": "spring",
+    "from": "",
+    "fromPoint": [
+     180,
+     500
+    ],
+    "to": "box1",
+    "toPoint": [
+     630,
+     500
+    ],
+    "stiffnessNpm": 10,
+    "label": "k = 10 N/m"
+   }
+  ],
+  "measurements": [],
+  "unreadable": []
+ }
+}

@@ -1,0 +1,68 @@
+{
+ "id": "ramp_box-2",
+ "title": "A block on a ramp with friction",
+ "tests": "tilted box, friction label, mass label",
+ "split": "test",
+ "hard": false,
+ "physics": true,
+ "sample": false,
+ "width": 1280,
+ "height": 960,
+ "truth": {
+  "isPhysicsSketch": true,
+  "whatIsIt": "A block on a ramp with friction",
+  "objects": [
+   {
+    "id": "floor",
+    "kind": "surface",
+    "label": "",
+    "points": [
+     [
+      822,
+      113
+     ],
+     [
+      840,
+      926
+     ]
+    ]
+   },
+   {
+    "id": "ramp",
+    "kind": "surface",
+    "label": "",
+    "points": [
+     [
+      822,
+      154
+     ],
+     [
+      475,
+      158
+     ],
+     [
+      832,
+      577
+     ]
+    ]
+   },
+   {
+    "id": "block",
+    "kind": "box",
+    "label": "2 kg, μ = 0.3",
+    "box_2d": [
+     460,
+     205,
+     560,
+     284
+    ],
+    "angleDeg": -32.7,
+    "massKg": 2,
+    "friction": 0.3
+   }
+  ],
+  "links": [],
+  "measurements": [],
+  "unreadable": []
+ }
+}

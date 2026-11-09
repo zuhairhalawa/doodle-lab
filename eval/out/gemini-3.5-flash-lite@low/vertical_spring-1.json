@@ -1,0 +1,63 @@
+{
+ "model": "gemini-3.5-flash-lite@low",
+ "ms": 9687,
+ "raw": {
+  "isPhysicsSketch": true,
+  "whatIsIt": "A block suspended from a ceiling by a spring.",
+  "balls": [],
+  "boxes": [
+   {
+    "id": "block",
+    "box_2d": [
+     531,
+     440,
+     608,
+     521
+    ],
+    "angleDeg": 0,
+    "label": "500 g",
+    "massKg": 0.5,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false
+   }
+  ],
+  "surfaces": [
+   {
+    "id": "ceiling",
+    "points": [
+     [
+      182,
+      263
+     ],
+     [
+      182,
+      679
+     ]
+    ],
+    "label": "",
+    "friction": -1
+   }
+  ],
+  "anchors": [],
+  "links": [
+   {
+    "kind": "spring",
+    "from": "",
+    "fromPoint": [
+     182,
+     481
+    ],
+    "to": "block",
+    "toPoint": [
+     531,
+     481
+    ],
+    "stiffnessNpm": 10,
+    "label": "k = 10 N/m"
+   }
+  ],
+  "measurements": [],
+  "unreadable": []
+ }
+}

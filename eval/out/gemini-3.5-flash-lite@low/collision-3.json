@@ -1,0 +1,67 @@
+{
+ "model": "gemini-3.5-flash-lite@low",
+ "ms": 3587,
+ "raw": {
+  "isPhysicsSketch": true,
+  "whatIsIt": "Two balls on a flat surface, one with a mass of 3 kg and another with a mass of 2 kg moving left at 4 m/s.",
+  "balls": [
+   {
+    "id": "ball1",
+    "box_2d": [
+     792,
+     307,
+     888,
+     381
+    ],
+    "label": "3 kg",
+    "massKg": 3,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false
+   },
+   {
+    "id": "ball2",
+    "box_2d": [
+     799,
+     712,
+     887,
+     775
+    ],
+    "label": "2 kg",
+    "massKg": 2,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false,
+    "arrow": {
+     "tip": [
+      836,
+      579
+     ],
+     "speedMps": 4
+    }
+   }
+  ],
+  "boxes": [],
+  "surfaces": [
+   {
+    "id": "floor",
+    "points": [
+     [
+      888,
+      48
+     ],
+     [
+      888,
+      950
+     ]
+    ],
+    "label": "",
+    "friction": -1
+   }
+  ],
+  "anchors": [],
+  "links": [],
+  "measurements": [],
+  "unreadable": []
+ }
+}

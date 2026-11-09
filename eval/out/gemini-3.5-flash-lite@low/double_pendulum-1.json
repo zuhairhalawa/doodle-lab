@@ -1,0 +1,89 @@
+{
+ "model": "gemini-3.5-flash-lite@low",
+ "ms": 2540,
+ "raw": {
+  "isPhysicsSketch": true,
+  "whatIsIt": "A double pendulum hanging from a ceiling.",
+  "balls": [
+   {
+    "id": "ball1",
+    "box_2d": [
+     334,
+     552,
+     394,
+     595
+    ],
+    "label": "",
+    "massKg": 0,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false
+   },
+   {
+    "id": "ball2",
+    "box_2d": [
+     525,
+     469,
+     582,
+     511
+    ],
+    "label": "",
+    "massKg": 0,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false
+   }
+  ],
+  "boxes": [],
+  "surfaces": [
+   {
+    "id": "ceiling",
+    "points": [
+     [
+      150,
+      258
+     ],
+     [
+      150,
+      687
+     ]
+    ],
+    "label": "",
+    "friction": -1
+   }
+  ],
+  "anchors": [],
+  "links": [
+   {
+    "kind": "rod",
+    "from": "",
+    "fromPoint": [
+     150,
+     473
+    ],
+    "to": "ball1",
+    "toPoint": [
+     364,
+     574
+    ],
+    "stiffnessNpm": -1
+   },
+   {
+    "kind": "rod",
+    "from": "ball1",
+    "fromPoint": [
+     364,
+     574
+    ],
+    "to": "ball2",
+    "toPoint": [
+     554,
+     490
+    ],
+    "stiffnessNpm": -1
+   }
+  ],
+  "measurements": [],
+  "unreadable": []
+ }
+}

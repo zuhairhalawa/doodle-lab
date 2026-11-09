@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Doodle Lab: draw an experiment, watch it run</title>
+    <meta name="description" content="Photograph a pencil physics doodle. Gemini reads the drawing, a real physics engine runs it, and your own lines start to move." />
+    <meta name="theme-color" content="#e6efe1" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta property="og:title" content="Doodle Lab" />
+    <meta property="og:description" content="Draw an experiment. Watch it run." />
+    <meta property="og:image" content="/og.png" />
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to the app</a>
+    <header class="top">
+      <a class="brand" href="/" aria-label="Doodle Lab home">
+        <svg viewBox="0 0 40 40" aria-hidden="true" class="brand-mark"><path d="M5 31 L29 13" /><circle cx="27" cy="9" r="5.5" /><path d="M4 34 H36" /></svg>
+        <span>Doodle Lab</span>
+      </a>
+      <nav aria-label="Pages">
+        <a href="#how">How it works</a>
+        <a href="/report.html">Test report</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section id="home" class="home" aria-labelledby="home-title">
+        <div class="hero-copy">
+          <h1 id="home-title">Draw an experiment. <span class="nowrap">Watch it run.</span></h1>
+          <p class="lede">Sketch a ramp, a pendulum or two balls about to collide. Take a photo. Gemini reads the drawing, a real physics engine runs it, and your own pencil lines start to move.</p>
+          <div class="actions">
+            <label class="btn btn-primary">
+              <input type="file" accept="image/*" capture="environment" id="camera" class="visually-hidden" />
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z" /><circle cx="12" cy="13" r="3.5" /></svg>
+              Take a photo
+            </label>
+            <label class="btn">
+              <input type="file" accept="image/*" id="upload" class="visually-hidden" />
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V4M7 9l5-5 5 5M4 20h16" /></svg>
+              Upload a drawing
+            </label>
+            <button class="btn" id="open-pad" type="button">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l4-1L19 8l-3-3L5 16z" /></svg>
+              Draw on screen
+            </button>
+          </div>
+          <p class="fine">Pencil on plain, lined or squared paper works. Write masses (2 kg), friction (μ = 0.3), spring constants (k = 50 N/m), speeds on arrows (4 m/s) and one length (1 m) to set the scale.</p>
+        </div>
+        <figure class="hero-figure">
+          <canvas id="hero" aria-label="A pencil drawing of a block on a ramp. The block slides down when the page loads."></canvas>
+          <figcaption id="hero-caption">A sample drawing, read by Gemini and run by the engine.</figcaption>
+        </figure>
+        <div class="samples">
+          <h2>Start from a sample drawing</h2>
+          <ul id="sample-list" class="sample-list"></ul>
+        </div>
+      </section>
+
+      <section id="pad" class="pad" hidden aria-labelledby="pad-title">
+        <div class="pad-head">
+          <h2 id="pad-title">Draw your experiment</h2>
+          <p>Draw a floor or a ramp, then a ball or a box. Add a label with the Label tool.</p>
+        </div>
+        <div class="pad-tools" role="toolbar" aria-label="Drawing tools">
+          <button type="button" class="tool" data-tool="pencil" aria-pressed="true">Pencil</button>
+          <button type="button" class="tool" data-tool="eraser" aria-pressed="false">Eraser</button>
+          <button type="button" class="tool" data-tool="label" aria-pressed="false">Label</button>
+          <button type="button" class="tool" id="pad-undo">Undo</button>
+          <button type="button" class="tool" id="pad-clear">Clear</button>
+          <span class="spacer"></span>
+          <button type="button" class="btn" id="pad-cancel">Back</button>
+          <button type="button" class="btn btn-primary" id="pad-read" disabled>Read my drawing</button>
+        </div>
+        <div class="pad-surface" id="pad-layer">
+          <canvas id="pad-canvas" aria-label="Drawing area"></canvas>
+        </div>
+      </section>
+
+      <section id="lab" class="lab" hidden aria-label="Your experiment">
+        <div class="stage-col">
+          <div class="stage-wrap" id="stage-wrap">
+            <canvas id="stage" aria-describedby="stage-status"></canvas>
+            <div class="scan" id="scan" hidden><div class="scan-line"></div></div>
+          </div>
+          <p id="stage-status" class="stage-status" role="status" aria-live="polite"></p>
+          <div class="controls" role="toolbar" aria-label="Experiment controls">
+            <button type="button" class="btn btn-primary" id="play" disabled>
+              <svg viewBox="0 0 24 24" aria-hidden="true" class="i-play"><path d="M7 4l13 8-13 8z" /></svg>
+              <span>Run it</span>
+            </button>
+            <button type="button" class="btn" id="restart" disabled>Restart</button>
+            <button type="button" class="btn" id="predict" disabled aria-pressed="false">Predict first</button>
+            <span class="spacer"></span>
+            <label class="toggle"><input type="checkbox" id="slow" /> Slow motion</label>
+            <label class="toggle"><input type="checkbox" id="strobe" checked /> Strobe</label>
+            <label class="toggle"><input type="checkbox" id="show-read" checked /> AI reading</label>
+          </div>
+          <div class="readouts" id="readouts" hidden>
+            <div class="clock"><span class="num" id="clock">0.00</span> s</div>
+            <div class="energy" aria-label="Energy">
+              <div class="energy-bar" id="energy-bar" role="img" aria-label="Energy bar"></div>
+              <ul class="energy-key" id="energy-key"></ul>
+            </div>
+            <div class="graph">
+              <canvas id="graph" width="560" height="140" aria-label="Speed of the selected object over time"></canvas>
+              <p class="graph-label" id="graph-label"></p>
+            </div>
+          </div>
+        </div>
+
+        <aside class="sheet" aria-labelledby="sheet-title">
+          <h2 id="sheet-title">What Gemini read</h2>
+          <p class="what" id="what"></p>
+          <p class="meta" id="meta"></p>
+          <div id="checks" class="checks"></div>
+          <div id="objects"></div>
+          <div class="scale-row" id="scale-row"></div>
+          <h3>What the checker changed</h3>
+          <ul class="notes" id="notes"></ul>
+          <details class="raw">
+            <summary>Gemini's raw answer (JSON)</summary>
+            <pre id="raw"></pre>
+          </details>
+          <div class="sheet-actions">
+            <button type="button" class="btn" id="again">Read it again</button>
+            <button type="button" class="btn" id="new">New drawing</button>
+          </div>
+        </aside>
+      </section>
+
+      <section id="how" class="how" aria-labelledby="how-title">
+        <h2 id="how-title">How it works</h2>
+        <ol class="steps">
+          <li>
+            <h3>Gemini reads the drawing</h3>
+            <p>The photo goes to Gemini 3 Flash with a strict JSON schema: every ball, box, surface, rope and spring, where it is, and the numbers written next to it. Gemini only describes; it never decides how anything moves.</p>
+          </li>
+          <li>
+            <h3>Code checks the reading</h3>
+            <p>A checker fixes what a reader gets slightly wrong: it moves a ball out of the floor it was placed inside, lines a block up with its ramp, drops links to things that are not there, and fills in missing values. Every change is listed, so you can see it.</p>
+          </li>
+          <li>
+            <h3>A physics engine runs it</h3>
+            <p>Planck.js, a port of the Box2D engine, runs the scene in SI units. Your own lines are lifted off the photo and moved to where the engine puts them. Compare it with the textbook formula, or with your own guess.</p>
+          </li>
+        </ol>
+        <p class="how-foot">Tested on 45 generated pencil drawings with known answers, including drawings that are not physics and hard ones that fail. <a href="/report.html">See the test report and the failures.</a></p>
+      </section>
+    </main>
+
+    <footer class="foot">
+      <p>Doodle Lab. Drawings are sent to Google's Gemini API to be read and are not stored by this site. <a href="https://github.com/zuhairhalawa/doodle-lab">Source code</a> (MIT).</p>
+    </footer>
+    <script type="module" src="/src/ui/main.ts"></script>
+  </body>
+</html>

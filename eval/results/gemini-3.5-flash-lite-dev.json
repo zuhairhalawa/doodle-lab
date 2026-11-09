@@ -1,0 +1,1236 @@
+{
+ "summary": {
+  "model": "gemini-3.5-flash-lite",
+  "split": "dev",
+  "date": "2026-11-09",
+  "all": {
+   "cases": 12,
+   "passed": 6,
+   "detection": "12/12",
+   "objectsFound": "20/22",
+   "objectsInvented": 2,
+   "surfaces": "17/19",
+   "labels": "15/16",
+   "links": "8/9",
+   "sameOutcome": "7/12",
+   "meanPositionError": 2.9,
+   "medianMs": 2569
+  },
+  "normal": {
+   "cases": 12,
+   "passed": 6,
+   "detection": "12/12",
+   "objectsFound": "20/22",
+   "objectsInvented": 2,
+   "surfaces": "17/19",
+   "labels": "15/16",
+   "links": "8/9",
+   "sameOutcome": "7/12",
+   "meanPositionError": 2.9,
+   "medianMs": 2569
+  },
+  "notPhysics": {
+   "cases": 0,
+   "passed": 0,
+   "detection": "0/0",
+   "objectsFound": "0/0",
+   "objectsInvented": 0,
+   "surfaces": "0/0",
+   "labels": "0/0",
+   "links": "0/0",
+   "sameOutcome": "0/0",
+   "meanPositionError": null,
+   "medianMs": null
+  },
+  "hard": {
+   "cases": 0,
+   "passed": 0,
+   "detection": "0/0",
+   "objectsFound": "0/0",
+   "objectsInvented": 0,
+   "surfaces": "0/0",
+   "labels": "0/0",
+   "links": "0/0",
+   "sameOutcome": "0/0",
+   "meanPositionError": null,
+   "medianMs": null
+  },
+  "aiAloneNormal": {
+   "cases": 12,
+   "passed": 7,
+   "detection": "12/12",
+   "objectsFound": "21/22",
+   "objectsInvented": 1,
+   "surfaces": "16/19",
+   "labels": "15/16",
+   "links": "9/9",
+   "sameOutcome": "7/12",
+   "meanPositionError": 5.9,
+   "medianMs": 2569
+  },
+  "aiAloneHard": {
+   "cases": 0,
+   "passed": 0,
+   "detection": "0/0",
+   "objectsFound": "0/0",
+   "objectsInvented": 0,
+   "surfaces": "0/0",
+   "labels": "0/0",
+   "links": "0/0",
+   "sameOutcome": "0/0",
+   "meanPositionError": null,
+   "medianMs": null
+  },
+  "passRate": "50%"
+ },
+ "rows": [
+  {
+   "id": "ramp_ball-1",
+   "title": "A ball at the top of a ramp",
+   "tests": "circle on a slope, mass label, height measurement",
+   "split": "dev",
+   "hard": false,
+   "physics": true,
+   "sample": false,
+   "ms": 3091,
+   "error": "",
+   "score": {
+    "detectionOk": true,
+    "objects": {
+     "expected": 1,
+     "found": 0,
+     "extra": 1,
+     "missing": [
+      "ball"
+     ],
+     "invented": [
+      "ball ball1"
+     ]
+    },
+    "positionError": null,
+    "radiusError": null,
+    "angleError": null,
+    "surfaces": {
+     "expected": 2,
+     "matched": 1,
+     "extra": 0
+    },
+    "labels": {
+     "expected": 1,
+     "correct": 0,
+     "wrong": [
+      "ball mass: wanted 5, read nothing"
+     ]
+    },
+    "links": {
+     "expected": 0,
+     "correct": 0,
+     "wrong": []
+    },
+    "scale": {
+     "expected": true,
+     "ok": false,
+     "ratio": 1.1116763423803364
+    },
+    "outcome": {
+     "ok": false,
+     "error": null,
+     "note": ""
+    },
+    "pass": false,
+    "reasons": [
+     "missed ball",
+     "invented ball ball1",
+     "surface floor off by 28",
+     "ball mass: wanted 5, read nothing",
+     "scale off by 11%"
+    ]
+   },
+   "scoreRaw": {
+    "detectionOk": true,
+    "objects": {
+     "expected": 1,
+     "found": 0,
+     "extra": 1,
+     "missing": [
+      "ball"
+     ],
+     "invented": [
+      "ball ball1"
+     ]
+    },
+    "positionError": null,
+    "radiusError": null,
+    "angleError": null,
+    "surfaces": {
+     "expected": 2,
+     "matched": 0,
+     "extra": 0
+    },
+    "labels": {
+     "expected": 1,
+     "correct": 0,
+     "wrong": [
+      "ball mass: wanted 5, read nothing"
+     ]
+    },
+    "links": {
+     "expected": 0,
+     "correct": 0,
+     "wrong": []
+    },
+    "scale": {
+     "expected": true,
+     "ok": false,
+     "ratio": 1.1116763423803364
+    },
+    "outcome": {
+     "ok": false,
+     "error": null,
+     "note": ""
+    },
+    "pass": false,
+    "reasons": [
+     "missed ball",
+     "invented ball ball1",
+     "surface floor off by 43",
+     "surface ramp off by 21",
+     "ball mass: wanted 5, read nothing",
+     "scale off by 11%"
+    ]
+   }
+  },
+  {
+   "id": "ramp_box-1",
+   "title": "A block on a ramp with friction",
+   "tests": "tilted box, friction label, mass label",
+   "split": "dev",
+   "hard": false,
+   "physics": true,
+   "sample": false,
+   "ms": 2356,
+   "error": "",
+   "score": {
+    "detectionOk": true,
+    "objects": {
+     "expected": 1,
+     "found": 1,
+     "extra": 0,
+     "missing": [],
+     "invented": []
+    },
+    "positionError": 4.716990566028302,
+    "radiusError": null,
+    "angleError": 89.4,
+    "surfaces": {
+     "expected": 2,
+     "matched": 1,
+     "extra": 0
+    },
+    "labels": {
+     "expected": 2,
+     "correct": 2,
+     "wrong": []
+    },
+    "links": {
+     "expected": 0,
+     "correct": 0,
+     "wrong": []
+    },
+    "scale": {
+     "expected": false,
+     "ok": true,
+     "ratio": null
+    },
+    "outcome": {
+     "ok": true,
+     "error": 3.57298593312166,
+     "note": ""
+    },
+    "pass": false,
+    "reasons": [
+     "box tilt off by 89°",
+     "surface ramp off by 22"
+    ]
+   },
+   "scoreRaw": {
+    "detectionOk": true,
+    "objects": {
+     "expected": 1,
+     "found": 1,
+     "extra": 0,
+     "missing": [],
+     "invented": []
+    },
+    "positionError": 4.716990566028302,
+    "radiusError": null,
+    "angleError": 0.3999999999999986,
+    "surfaces": {
+     "expected": 2,
+     "matched": 1,
+     "extra": 0
+    },
+    "labels": {
+     "expected": 2,
+     "correct": 2,
+     "wrong": []
+    },
+    "links": {
+     "expected": 0,
+     "correct": 0,
+     "wrong": []
+    },
+    "scale": {
+     "expected": false,
+     "ok": true,
+     "ratio": null
+    },
+    "outcome": {
+     "ok": false,
+     "error": 339.3910300641537,
+     "note": "bodies end 339/1000 apart after 1.5 s"
+    },
+    "pass": false,
+    "reasons": [
+     "surface ramp off by 26",
+     "bodies end 339/1000 apart after 1.5 s"
+    ]
+   }
+  },
+  {
+   "id": "pendulum-1",
+   "title": "A pendulum hanging from the ceiling",
+   "tests": "rope from a fixed point, swing angle, length label",
+   "split": "dev",
+   "hard": false,
+   "physics": true,
+   "sample": false,
+   "ms": 2121,
+   "error": "",
+   "score": {
+    "detectionOk": true,
+    "objects": {
+     "expected": 1,
+     "found": 1,
+     "extra": 0,
+     "missing": [],
+     "invented": []
+    },
+    "positionError": 0.7650578965474066,
+    "radiusError": 0.010185185185184945,
+    "angleError": null,
+    "surfaces": {
+     "expected": 1,
+     "matched": 1,
+     "extra": 0
+    },
+    "labels": {
+     "expected": 1,
+     "correct": 1,
+     "wrong": []
+    },
+    "links": {
+     "expected": 1,
+     "correct": 1,
+     "wrong": []
+    },
+    "scale": {
+     "expected": true,
+     "ok": true,
+     "ratio": 0.9696343908135826
+    },
+    "outcome": {
+     "ok": false,
+     "error": 143.55798402305263,
+     "note": "bodies end 144/1000 apart after 1.5 s"
+    },
+    "pass": false,
+    "reasons": [
+     "bodies end 144/1000 apart after 1.5 s"
+    ]
+   },
+   "scoreRaw": {
+    "detectionOk": true,
+    "objects": {
+     "expected": 1,
+     "found": 1,
+     "extra": 0,
+     "missing": [],
+     "invented": []
+    },
+    "positionError": 6.3639610306789285,
+    "radiusError": 0.14285714285714285,
+    "angleError": null,
+    "surfaces": {
+     "expected": 1,
+     "matched": 1,
+     "extra": 0
+    },
+    "labels": {
+     "expected": 1,
+     "correct": 1,
+     "wrong": []
+    },
+    "links": {
+     "expected": 1,
+     "correct": 1,
+     "wrong": []
+    },
+    "scale": {
+     "expected": true,
+     "ok": true,
+     "ratio": 0.9696343908135826
+    },
+    "outcome": {
+     "ok": false,
+     "error": 131.84048886868607,
+     "note": "bodies end 132/1000 apart after 1.5 s"
+    },
+    "pass": false,
+    "reasons": [
+     "bodies end 132/1000 apart after 1.5 s"
+    ]
+   }
+  },
+  {
+   "id": "spring_wall-1",
+   "title": "A block on a spring attached to a wall",
+   "tests": "zigzag spring, spring constant label, velocity arrow",
+   "split": "dev",
+   "hard": false,
+   "physics": true,
+   "sample": false,
+   "ms": 2361,
+   "error": "",
+   "score": {
+    "detectionOk": true,
+    "objects": {
+     "expected": 1,
+     "found": 1,
+     "extra": 0,
+     "missing": [],
+     "invented": []
+    },
+    "positionError": 0.8620696390083575,
+    "radiusError": null,
+    "angleError": 1.4,
+    "surfaces": {
+     "expected": 2,
+     "matched": 2,
+     "extra": 0
+    },
+    "labels": {
+     "expected": 2,
+     "correct": 2,
+     "wrong": []
+    },
+    "links": {
+     "expected": 1,
+     "correct": 1,
+     "wrong": []
+    },
+    "scale": {
+     "expected": false,
+     "ok": true,
+     "ratio": null
+    },
+    "outcome": {
+     "ok": true,
+     "error": 1.334808815999515,
+     "note": ""
+    },
+    "pass": true,
+    "reasons": []
+   },
+   "scoreRaw": {
+    "detectionOk": true,
+    "objects": {
+     "expected": 1,
+     "found": 1,
+     "extra": 0,
+     "missing": [],
+     "invented": []
+    },
+    "positionError": 1.4142135623730951,
+    "radiusError": null,
+    "angleError": 1.7,
+    "surfaces": {
+     "expected": 2,
+     "matched": 2,
+     "extra": 0
+    },
+    "labels": {
+     "expected": 2,
+     "correct": 2,
+     "wrong": []
+    },
+    "links": {
+     "expected": 1,
+     "correct": 1,
+     "wrong": []
+    },
+    "scale": {
+     "expected": false,
+     "ok": true,
+     "ratio": null
+    },
+    "outcome": {
+     "ok": true,
+     "error": 15.76422932719937,
+     "note": ""
+    },
+    "pass": true,
+    "reasons": []
+   }
+  },
+  {
+   "id": "collision-1",
+   "title": "Two balls about to collide on the floor",
+   "tests": "two bodies, two masses, arrows in opposite directions",
+   "split": "dev",
+   "hard": false,
+   "physics": true,
+   "sample": false,
+   "ms": 10120,
+   "error": "",
+   "score": {
+    "detectionOk": true,
+    "objects": {
+     "expected": 2,
+     "found": 2,
+     "extra": 0,
+     "missing": [],
+     "invented": []
+    },
+    "positionError": 1.5425031242721503,
+    "radiusError": 0.0017886097820310868,
+    "angleError": null,
+    "surfaces": {
+     "expected": 1,
+     "matched": 1,
+     "extra": 0
+    },
+    "labels": {
+     "expected": 4,
+     "correct": 4,
+     "wrong": []
+    },
+    "links": {
+     "expected": 0,
+     "correct": 0,
+     "wrong": []
+    },
+    "scale": {
+     "expected": false,
+     "ok": true,
+     "ratio": null
+    },
+    "outcome": {
+     "ok": false,
+     "error": 66.1426215476325,
+     "note": "bodies end 113/1000 apart after 1.5 s"
+    },
+    "pass": false,
+    "reasons": [
+     "bodies end 113/1000 apart after 1.5 s"
+    ]
+   },
+   "scoreRaw": {
+    "detectionOk": true,
+    "objects": {
+     "expected": 2,
+     "found": 2,
+     "extra": 0,
+     "missing": [],
+     "invented": []
+    },
+    "positionError": 14.71924215843174,
+    "radiusError": 0.14832535885167464,
+    "angleError": null,
+    "surfaces": {
+     "expected": 1,
+     "matched": 1,
+     "extra": 0
+    },
+    "labels": {
+     "expected": 4,
+     "correct": 4,
+     "wrong": []
+    },
+    "links": {
+     "expected": 0,
+     "correct": 0,
+     "wrong": []
+    },
+    "scale": {
+     "expected": false,
+     "ok": true,
+     "ratio": null
+    },
+    "outcome": {
+     "ok": true,
+     "error": 30.62718937862307,
+     "note": ""
+    },
+    "pass": true,
+    "reasons": []
+   }
+  },
+  {
+   "id": "projectile-1",
+   "title": "A ball launched off a table",
+   "tests": "angled velocity arrow, ledge outline, height label",
+   "split": "dev",
+   "hard": false,
+   "physics": true,
+   "sample": false,
+   "ms": 2474,
+   "error": "",
+   "score": {
+    "detectionOk": true,
+    "objects": {
+     "expected": 1,
+     "found": 1,
+     "extra": 0,
+     "missing": [],
+     "invented": []
+    },
+    "positionError": 0.8504524173850919,
+    "radiusError": 0.013639184397163112,
+    "angleError": null,
+    "surfaces": {
+     "expected": 2,
+     "matched": 2,
+     "extra": 0
+    },
+    "labels": {
+     "expected": 1,
+     "correct": 1,
+     "wrong": []
+    },
+    "links": {
+     "expected": 0,
+     "correct": 0,
+     "wrong": []
+    },
+    "scale": {
+     "expected": true,
+     "ok": true,
+     "ratio": 0.9855961966031285
+    },
+    "outcome": {
+     "ok": true,
+     "error": 26.991971930981936,
+     "note": ""
+    },
+    "pass": true,
+    "reasons": []
+   },
+   "scoreRaw": {
+    "detectionOk": true,
+    "objects": {
+     "expected": 1,
+     "found": 1,
+     "extra": 0,
+     "missing": [],
+     "invented": []
+    },
+    "positionError": 6.96419413859206,
+    "radiusError": 0.1276595744680851,
+    "angleError": null,
+    "surfaces": {
+     "expected": 2,
+     "matched": 2,
+     "extra": 0
+    },
+    "labels": {
+     "expected": 1,
+     "correct": 1,
+     "wrong": []
+    },
+    "links": {
+     "expected": 0,
+     "correct": 0,
+     "wrong": []
+    },
+    "scale": {
+     "expected": true,
+     "ok": true,
+     "ratio": 0.9855961966031285
+    },
+    "outcome": {
+     "ok": true,
+     "error": 58.23188447952976,
+     "note": ""
+    },
+    "pass": true,
+    "reasons": []
+   }
+  },
+  {
+   "id": "seesaw-1",
+   "title": "A seesaw with a box on one end and a ball dropping on the other",
+   "tests": "pin joint on a fulcrum, long thin plank, drop from height",
+   "split": "dev",
+   "hard": false,
+   "physics": true,
+   "sample": false,
+   "ms": 3473,
+   "error": "",
+   "score": {
+    "detectionOk": true,
+    "objects": {
+     "expected": 3,
+     "found": 2,
+     "extra": 1,
+     "missing": [
+      "plank"
+     ],
+     "invented": [
+      "box seesaw_board"
+     ]
+    },
+    "positionError": 20.3012642642095,
+    "radiusError": 0.011379056047197855,
+    "angleError": 1.6,
+    "surfaces": {
+     "expected": 2,
+     "matched": 2,
+     "extra": 0
+    },
+    "labels": {
+     "expected": 2,
+     "correct": 2,
+     "wrong": []
+    },
+    "links": {
+     "expected": 1,
+     "correct": 0,
+     "wrong": [
+      "pin to plank not found",
+      "1 extra link(s)"
+     ]
+    },
+    "scale": {
+     "expected": false,
+     "ok": true,
+     "ratio": null
+    },
+    "outcome": {
+     "ok": false,
+     "error": 368.6022955140294,
+     "note": "bodies end 370/1000 apart after 1.5 s"
+    },
+    "pass": false,
+    "reasons": [
+     "missed plank",
+     "invented box seesaw_board",
+     "pin to plank not found",
+     "1 extra link(s)",
+     "bodies end 370/1000 apart after 1.5 s"
+    ]
+   },
+   "scoreRaw": {
+    "detectionOk": true,
+    "objects": {
+     "expected": 3,
+     "found": 3,
+     "extra": 0,
+     "missing": [],
+     "invented": []
+    },
+    "positionError": 24.184624933537364,
+    "radiusError": 0.061946902654867256,
+    "angleError": 1.6,
+    "surfaces": {
+     "expected": 2,
+     "matched": 2,
+     "extra": 0
+    },
+    "labels": {
+     "expected": 2,
+     "correct": 2,
+     "wrong": []
+    },
+    "links": {
+     "expected": 1,
+     "correct": 1,
+     "wrong": []
+    },
+    "scale": {
+     "expected": false,
+     "ok": true,
+     "ratio": null
+    },
+    "outcome": {
+     "ok": false,
+     "error": 88.41399381343467,
+     "note": "bodies end 180/1000 apart after 1.5 s"
+    },
+    "pass": false,
+    "reasons": [
+     "bodies end 180/1000 apart after 1.5 s"
+    ]
+   }
+  },
+  {
+   "id": "stack-1",
+   "title": "A ball rolling at a tower of blocks",
+   "tests": "several stacked boxes, one arrow",
+   "split": "dev",
+   "hard": false,
+   "physics": true,
+   "sample": false,
+   "ms": 3074,
+   "error": "",
+   "score": {
+    "detectionOk": true,
+    "objects": {
+     "expected": 5,
+     "found": 5,
+     "extra": 0,
+     "missing": [],
+     "invented": []
+    },
+    "positionError": 0.6716666358800616,
+    "radiusError": 0.009299242424241459,
+    "angleError": 0.37500000000000017,
+    "surfaces": {
+     "expected": 1,
+     "matched": 1,
+     "extra": 0
+    },
+    "labels": {
+     "expected": 2,
+     "correct": 2,
+     "wrong": []
+    },
+    "links": {
+     "expected": 0,
+     "correct": 0,
+     "wrong": []
+    },
+    "scale": {
+     "expected": false,
+     "ok": true,
+     "ratio": null
+    },
+    "outcome": {
+     "ok": false,
+     "error": 205.152312094407,
+     "note": "bodies end 543/1000 apart after 0.4 s"
+    },
+    "pass": false,
+    "reasons": [
+     "bodies end 543/1000 apart after 0.4 s"
+    ]
+   },
+   "scoreRaw": {
+    "detectionOk": true,
+    "objects": {
+     "expected": 5,
+     "found": 5,
+     "extra": 0,
+     "missing": [],
+     "invented": []
+    },
+    "positionError": 1.6119880240383395,
+    "radiusError": 0.09090909090909091,
+    "angleError": 2.2,
+    "surfaces": {
+     "expected": 1,
+     "matched": 1,
+     "extra": 0
+    },
+    "labels": {
+     "expected": 2,
+     "correct": 2,
+     "wrong": []
+    },
+    "links": {
+     "expected": 0,
+     "correct": 0,
+     "wrong": []
+    },
+    "scale": {
+     "expected": false,
+     "ok": true,
+     "ratio": null
+    },
+    "outcome": {
+     "ok": false,
+     "error": 202.81376015464582,
+     "note": "bodies end 543/1000 apart after 0.4 s"
+    },
+    "pass": false,
+    "reasons": [
+     "bodies end 543/1000 apart after 0.4 s"
+    ]
+   }
+  },
+  {
+   "id": "double_pendulum-1",
+   "title": "A double pendulum",
+   "tests": "a rod between two moving bodies (chaotic motion)",
+   "split": "dev",
+   "hard": false,
+   "physics": true,
+   "sample": false,
+   "ms": 2569,
+   "error": "",
+   "score": {
+    "detectionOk": true,
+    "objects": {
+     "expected": 2,
+     "found": 2,
+     "extra": 0,
+     "missing": [],
+     "invented": []
+    },
+    "positionError": 0.2819291212344546,
+    "radiusError": 0.010538983585859574,
+    "angleError": null,
+    "surfaces": {
+     "expected": 1,
+     "matched": 1,
+     "extra": 0
+    },
+    "labels": {
+     "expected": 0,
+     "correct": 0,
+     "wrong": []
+    },
+    "links": {
+     "expected": 2,
+     "correct": 2,
+     "wrong": []
+    },
+    "scale": {
+     "expected": false,
+     "ok": true,
+     "ratio": null
+    },
+    "outcome": {
+     "ok": true,
+     "error": 1.1265381252867388,
+     "note": ""
+    },
+    "pass": true,
+    "reasons": []
+   },
+   "scoreRaw": {
+    "detectionOk": true,
+    "objects": {
+     "expected": 2,
+     "found": 2,
+     "extra": 0,
+     "missing": [],
+     "invented": []
+    },
+    "positionError": 1.6035533905932737,
+    "radiusError": 0.10957792207792208,
+    "angleError": null,
+    "surfaces": {
+     "expected": 1,
+     "matched": 1,
+     "extra": 0
+    },
+    "labels": {
+     "expected": 0,
+     "correct": 0,
+     "wrong": []
+    },
+    "links": {
+     "expected": 2,
+     "correct": 2,
+     "wrong": []
+    },
+    "scale": {
+     "expected": false,
+     "ok": true,
+     "ratio": null
+    },
+    "outcome": {
+     "ok": true,
+     "error": 2.3820856996315793,
+     "note": ""
+    },
+    "pass": true,
+    "reasons": []
+   }
+  },
+  {
+   "id": "cup-1",
+   "title": "A ball rolling down a slope towards a cup",
+   "tests": "open container outline, slope not touching the floor",
+   "split": "dev",
+   "hard": false,
+   "physics": true,
+   "sample": false,
+   "ms": 2258,
+   "error": "",
+   "score": {
+    "detectionOk": true,
+    "objects": {
+     "expected": 1,
+     "found": 1,
+     "extra": 0,
+     "missing": [],
+     "invented": []
+    },
+    "positionError": 0.7355791324910257,
+    "radiusError": 0.02659657320872352,
+    "angleError": null,
+    "surfaces": {
+     "expected": 3,
+     "matched": 3,
+     "extra": 0
+    },
+    "labels": {
+     "expected": 0,
+     "correct": 0,
+     "wrong": []
+    },
+    "links": {
+     "expected": 0,
+     "correct": 0,
+     "wrong": []
+    },
+    "scale": {
+     "expected": false,
+     "ok": true,
+     "ratio": null
+    },
+    "outcome": {
+     "ok": true,
+     "error": 0.37048541839919097,
+     "note": ""
+    },
+    "pass": true,
+    "reasons": []
+   },
+   "scoreRaw": {
+    "detectionOk": true,
+    "objects": {
+     "expected": 1,
+     "found": 1,
+     "extra": 0,
+     "missing": [],
+     "invented": []
+    },
+    "positionError": 0.5,
+    "radiusError": 0.04672897196261682,
+    "angleError": null,
+    "surfaces": {
+     "expected": 3,
+     "matched": 3,
+     "extra": 0
+    },
+    "labels": {
+     "expected": 0,
+     "correct": 0,
+     "wrong": []
+    },
+    "links": {
+     "expected": 0,
+     "correct": 0,
+     "wrong": []
+    },
+    "scale": {
+     "expected": false,
+     "ok": true,
+     "ratio": null
+    },
+    "outcome": {
+     "ok": true,
+     "error": 7.2278515318178655,
+     "note": ""
+    },
+    "pass": true,
+    "reasons": []
+   }
+  },
+  {
+   "id": "cradle-1",
+   "title": "Three balls hanging side by side, the first pulled back (Newton's cradle)",
+   "tests": "three ropes, touching balls",
+   "split": "dev",
+   "hard": false,
+   "physics": true,
+   "sample": false,
+   "ms": 2709,
+   "error": "",
+   "score": {
+    "detectionOk": true,
+    "objects": {
+     "expected": 3,
+     "found": 3,
+     "extra": 0,
+     "missing": [],
+     "invented": []
+    },
+    "positionError": 0.9023689270621825,
+    "radiusError": 0.00597919347919348,
+    "angleError": null,
+    "surfaces": {
+     "expected": 1,
+     "matched": 1,
+     "extra": 0
+    },
+    "labels": {
+     "expected": 0,
+     "correct": 0,
+     "wrong": []
+    },
+    "links": {
+     "expected": 3,
+     "correct": 3,
+     "wrong": []
+    },
+    "scale": {
+     "expected": false,
+     "ok": true,
+     "ratio": null
+    },
+    "outcome": {
+     "ok": true,
+     "error": 0.8974920549259467,
+     "note": ""
+    },
+    "pass": true,
+    "reasons": []
+   },
+   "scoreRaw": {
+    "detectionOk": true,
+    "objects": {
+     "expected": 3,
+     "found": 3,
+     "extra": 0,
+     "missing": [],
+     "invented": []
+    },
+    "positionError": 0.9023689270621825,
+    "radiusError": 0.00597919347919348,
+    "angleError": null,
+    "surfaces": {
+     "expected": 1,
+     "matched": 1,
+     "extra": 0
+    },
+    "labels": {
+     "expected": 0,
+     "correct": 0,
+     "wrong": []
+    },
+    "links": {
+     "expected": 3,
+     "correct": 3,
+     "wrong": []
+    },
+    "scale": {
+     "expected": false,
+     "ok": true,
+     "ratio": null
+    },
+    "outcome": {
+     "ok": true,
+     "error": 8.295527844771337,
+     "note": ""
+    },
+    "pass": true,
+    "reasons": []
+   }
+  },
+  {
+   "id": "vertical_spring-1",
+   "title": "A mass hanging from a spring",
+   "tests": "vertical spring from the ceiling, mass and k labels",
+   "split": "dev",
+   "hard": false,
+   "physics": true,
+   "sample": false,
+   "ms": 2155,
+   "error": "",
+   "score": {
+    "detectionOk": true,
+    "objects": {
+     "expected": 1,
+     "found": 1,
+     "extra": 0,
+     "missing": [],
+     "invented": []
+    },
+    "positionError": 0.39703294442980935,
+    "radiusError": null,
+    "angleError": 1.8,
+    "surfaces": {
+     "expected": 1,
+     "matched": 1,
+     "extra": 0
+    },
+    "labels": {
+     "expected": 1,
+     "correct": 1,
+     "wrong": []
+    },
+    "links": {
+     "expected": 1,
+     "correct": 1,
+     "wrong": []
+    },
+    "scale": {
+     "expected": false,
+     "ok": true,
+     "ratio": null
+    },
+    "outcome": {
+     "ok": true,
+     "error": 15.906598697083941,
+     "note": ""
+    },
+    "pass": true,
+    "reasons": []
+   },
+   "scoreRaw": {
+    "detectionOk": true,
+    "objects": {
+     "expected": 1,
+     "found": 1,
+     "extra": 0,
+     "missing": [],
+     "invented": []
+    },
+    "positionError": 1.5,
+    "radiusError": null,
+    "angleError": 1.7,
+    "surfaces": {
+     "expected": 1,
+     "matched": 1,
+     "extra": 0
+    },
+    "labels": {
+     "expected": 1,
+     "correct": 1,
+     "wrong": []
+    },
+    "links": {
+     "expected": 1,
+     "correct": 1,
+     "wrong": []
+    },
+    "scale": {
+     "expected": false,
+     "ok": true,
+     "ratio": null
+    },
+    "outcome": {
+     "ok": true,
+     "error": 15.651722969763313,
+     "note": ""
+    },
+    "pass": true,
+    "reasons": []
+   }
+  }
+ ]
+}

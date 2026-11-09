@@ -1,0 +1,113 @@
+{
+ "model": "gemini-3.5-flash@low",
+ "ms": 9813,
+ "raw": {
+  "isPhysicsSketch": true,
+  "whatIsIt": "A ball with an initial leftward velocity rolling on the ground towards a stack of four blocks.",
+  "balls": [
+   {
+    "id": "ball1",
+    "box_2d": [
+     796,
+     725,
+     859,
+     773
+    ],
+    "label": "2 kg\n8 m/s",
+    "massKg": 2,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false,
+    "arrow": {
+     "tip": [
+      835,
+      607
+     ],
+     "speedMps": 8
+    }
+   }
+  ],
+  "boxes": [
+   {
+    "id": "box1",
+    "box_2d": [
+     791,
+     283,
+     881,
+     363
+    ],
+    "angleDeg": 0,
+    "label": "",
+    "massKg": 0,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false
+   },
+   {
+    "id": "box2",
+    "box_2d": [
+     709,
+     283,
+     795,
+     359
+    ],
+    "angleDeg": 0,
+    "label": "",
+    "massKg": 0,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false
+   },
+   {
+    "id": "box3",
+    "box_2d": [
+     625,
+     274,
+     710,
+     361
+    ],
+    "angleDeg": 0,
+    "label": "",
+    "massKg": 0,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false
+   },
+   {
+    "id": "box4",
+    "box_2d": [
+     541,
+     269,
+     631,
+     353
+    ],
+    "angleDeg": 0,
+    "label": "",
+    "massKg": 0,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false
+   }
+  ],
+  "surfaces": [
+   {
+    "id": "floor",
+    "points": [
+     [
+      893,
+      58
+     ],
+     [
+      851,
+      905
+     ]
+    ],
+    "label": ""
+   }
+  ],
+  "anchors": [],
+  "links": [],
+  "measurements": [],
+  "unreadable": []
+ }
+}

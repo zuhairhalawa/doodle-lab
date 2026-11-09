@@ -1,0 +1,76 @@
+{
+ "id": "hard-rotated",
+ "title": "A pendulum hanging from the ceiling",
+ "tests": "photo rotated 14° and small in the frame",
+ "split": "test",
+ "hard": true,
+ "physics": true,
+ "sample": false,
+ "width": 1280,
+ "height": 960,
+ "truth": {
+  "isPhysicsSketch": true,
+  "whatIsIt": "A pendulum hanging from the ceiling",
+  "objects": [
+   {
+    "id": "ceiling",
+    "kind": "surface",
+    "label": "",
+    "points": [
+     [
+      200,
+      438
+     ],
+     [
+      309,
+      765
+     ]
+    ]
+   },
+   {
+    "id": "bob",
+    "kind": "ball",
+    "label": "3 kg",
+    "box_2d": [
+     474,
+     422,
+     533,
+     466
+    ],
+    "massKg": 3
+   }
+  ],
+  "links": [
+   {
+    "kind": "rope",
+    "from": "ceiling",
+    "fromPoint": [
+     254,
+     601
+    ],
+    "to": "bob",
+    "toPoint": [
+     481,
+     458
+    ],
+    "stiffnessNpm": -1,
+    "label": ""
+   }
+  ],
+  "measurements": [
+   {
+    "from": [
+     254,
+     601
+    ],
+    "to": [
+     504,
+     444
+    ],
+    "meters": 0.5,
+    "label": "0.5 m"
+   }
+  ],
+  "unreadable": []
+ }
+}

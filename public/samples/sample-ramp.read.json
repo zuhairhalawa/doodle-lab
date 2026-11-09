@@ -1,0 +1,71 @@
+{
+ "model": "gemini-3.5-flash@low",
+ "ms": 34139,
+ "date": "2026-11-09",
+ "raw": {
+  "isPhysicsSketch": true,
+  "whatIsIt": "A 1 kg block on an inclined ramp with friction.",
+  "balls": [],
+  "boxes": [
+   {
+    "id": "block1",
+    "box_2d": [
+     558,
+     161,
+     663,
+     250
+    ],
+    "angleDeg": -24,
+    "label": "1 kg",
+    "massKg": 1,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false
+   }
+  ],
+  "surfaces": [
+   {
+    "id": "ramp",
+    "points": [
+     [
+      574,
+      82
+     ],
+     [
+      881,
+      82
+     ],
+     [
+      881,
+      597
+     ],
+     [
+      574,
+      82
+     ]
+    ],
+    "label": "μ = 0.2",
+    "friction": 0.2
+   },
+   {
+    "id": "floor",
+    "points": [
+     [
+      881,
+      597
+     ],
+     [
+      891,
+      932
+     ]
+    ],
+    "label": "",
+    "friction": -1
+   }
+  ],
+  "anchors": [],
+  "links": [],
+  "measurements": [],
+  "unreadable": []
+ }
+}

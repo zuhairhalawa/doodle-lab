@@ -1,0 +1,83 @@
+{
+ "model": "gemini-3.1-flash-lite@high",
+ "ms": 10572,
+ "raw": {
+  "isPhysicsSketch": true,
+  "whatIsIt": "A box of mass 1 kg on a horizontal surface, connected to a vertical wall by a spring, moving with an initial velocity.",
+  "balls": [],
+  "boxes": [
+   {
+    "id": "box1",
+    "box_2d": [
+     750,
+     520,
+     850,
+     670
+    ],
+    "angleDeg": 0,
+    "label": "1 kg",
+    "massKg": 1,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false,
+    "arrow": {
+     "tip": [
+      800,
+      420
+     ],
+     "speedMps": 4
+    }
+   }
+  ],
+  "surfaces": [
+   {
+    "id": "floor",
+    "points": [
+     [
+      850,
+      80
+     ],
+     [
+      850,
+      900
+     ]
+    ],
+    "label": ""
+   },
+   {
+    "id": "wall",
+    "points": [
+     [
+      850,
+      900
+     ],
+     [
+      500,
+      900
+     ]
+    ],
+    "label": ""
+   }
+  ],
+  "anchors": [],
+  "links": [
+   {
+    "kind": "spring",
+    "from": "",
+    "fromPoint": [
+     800,
+     900
+    ],
+    "to": "box1",
+    "toPoint": [
+     800,
+     670
+    ],
+    "stiffnessNpm": 50,
+    "label": "k = 50 N/m"
+   }
+  ],
+  "measurements": [],
+  "unreadable": []
+ }
+}

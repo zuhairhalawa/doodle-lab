@@ -1,0 +1,81 @@
+{
+ "model": "gemini-3-flash-preview@low",
+ "ms": 8484,
+ "raw": {
+  "isPhysicsSketch": true,
+  "whatIsIt": "A ball rests on an inclined ramp above a cup on a flat floor.",
+  "balls": [
+   {
+    "id": "ball1",
+    "box_2d": [
+     272,
+     812,
+     335,
+     858
+    ],
+    "label": "",
+    "massKg": 0,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false
+   }
+  ],
+  "boxes": [],
+  "surfaces": [
+   {
+    "id": "floor",
+    "points": [
+     [
+      908,
+      48
+     ],
+     [
+      902,
+      919
+     ]
+    ],
+    "label": ""
+   },
+   {
+    "id": "ramp",
+    "points": [
+     [
+      620,
+      483
+     ],
+     [
+      300,
+      885
+     ]
+    ],
+    "label": ""
+   },
+   {
+    "id": "cup",
+    "points": [
+     [
+      710,
+      273
+     ],
+     [
+      899,
+      286
+     ],
+     [
+      899,
+      413
+     ],
+     [
+      707,
+      424
+     ]
+    ],
+    "label": ""
+   }
+  ],
+  "anchors": [],
+  "links": [],
+  "measurements": [],
+  "unreadable": []
+ }
+}

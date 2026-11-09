@@ -1,0 +1,79 @@
+{
+ "id": "ramp_ball-3",
+ "title": "A ball at the top of a ramp",
+ "tests": "circle on a slope, mass label, height measurement",
+ "split": "test",
+ "hard": false,
+ "physics": true,
+ "sample": false,
+ "width": 1280,
+ "height": 960,
+ "truth": {
+  "isPhysicsSketch": true,
+  "whatIsIt": "A ball at the top of a ramp",
+  "objects": [
+   {
+    "id": "floor",
+    "kind": "surface",
+    "label": "",
+    "points": [
+     [
+      902,
+      84
+     ],
+     [
+      866,
+      977
+     ]
+    ]
+   },
+   {
+    "id": "ramp",
+    "kind": "surface",
+    "label": "",
+    "points": [
+     [
+      900,
+      125
+     ],
+     [
+      524,
+      116
+     ],
+     [
+      885,
+      485
+     ]
+    ]
+   },
+   {
+    "id": "ball",
+    "kind": "ball",
+    "label": "4 kg",
+    "box_2d": [
+     485,
+     134,
+     560,
+     190
+    ],
+    "massKg": 4
+   }
+  ],
+  "links": [],
+  "measurements": [
+   {
+    "from": [
+     524,
+     116
+    ],
+    "to": [
+     900,
+     125
+    ],
+    "meters": 0.5,
+    "label": "0.5 m"
+   }
+  ],
+  "unreadable": []
+ }
+}

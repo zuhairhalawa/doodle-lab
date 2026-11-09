@@ -1,0 +1,64 @@
+{
+ "id": "vertical_spring-2",
+ "title": "A mass hanging from a spring",
+ "tests": "vertical spring from the ceiling, mass and k labels",
+ "split": "test",
+ "hard": false,
+ "physics": true,
+ "sample": false,
+ "width": 1280,
+ "height": 960,
+ "truth": {
+  "isPhysicsSketch": true,
+  "whatIsIt": "A mass hanging from a spring",
+  "objects": [
+   {
+    "id": "ceiling",
+    "kind": "surface",
+    "label": "",
+    "points": [
+     [
+      114,
+      302
+     ],
+     [
+      138,
+      751
+     ]
+    ]
+   },
+   {
+    "id": "mass",
+    "kind": "box",
+    "label": "2 kg",
+    "box_2d": [
+     455,
+     471,
+     540,
+     560
+    ],
+    "angleDeg": -2.4,
+    "massKg": 2
+   }
+  ],
+  "links": [
+   {
+    "kind": "spring",
+    "from": "ceiling",
+    "fromPoint": [
+     126,
+     527
+    ],
+    "to": "mass",
+    "toPoint": [
+     457,
+     516
+    ],
+    "stiffnessNpm": 40,
+    "label": "k = 40 N/m"
+   }
+  ],
+  "measurements": [],
+  "unreadable": []
+ }
+}

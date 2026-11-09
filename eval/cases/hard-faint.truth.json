@@ -1,0 +1,79 @@
+{
+ "id": "hard-faint",
+ "title": "A ball at the top of a ramp",
+ "tests": "very faint pencil",
+ "split": "test",
+ "hard": true,
+ "physics": true,
+ "sample": false,
+ "width": 1280,
+ "height": 960,
+ "truth": {
+  "isPhysicsSketch": true,
+  "whatIsIt": "A ball at the top of a ramp",
+  "objects": [
+   {
+    "id": "floor",
+    "kind": "surface",
+    "label": "",
+    "points": [
+     [
+      859,
+      101
+     ],
+     [
+      812,
+      918
+     ]
+    ]
+   },
+   {
+    "id": "ramp",
+    "kind": "surface",
+    "label": "",
+    "points": [
+     [
+      855,
+      173
+     ],
+     [
+      584,
+      164
+     ],
+     [
+      833,
+      551
+     ]
+    ]
+   },
+   {
+    "id": "ball",
+    "kind": "ball",
+    "label": "3 kg",
+    "box_2d": [
+     546,
+     175,
+     602,
+     217
+    ],
+    "massKg": 3
+   }
+  ],
+  "links": [],
+  "measurements": [
+   {
+    "from": [
+     584,
+     164
+    ],
+    "to": [
+     855,
+     173
+    ],
+    "meters": 0.5,
+    "label": "0.5 m"
+   }
+  ],
+  "unreadable": []
+ }
+}

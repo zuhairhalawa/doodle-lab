@@ -1,0 +1,32 @@
+{
+  "name": "doodle-lab",
+  "version": "0.1.0",
+  "description": "Photograph a pencil physics doodle and watch it run",
+  "license": "MIT",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && tsc --noEmit -p functions && vite build",
+    "test": "vitest run",
+    "gen": "node eval/gen/make.mjs",
+    "eval": "node --experimental-strip-types eval/run.ts",
+    "pages:dev": "npm run build && wrangler pages dev dist --compatibility-date=2026-11-01"
+  },
+  "dependencies": {
+    "@fontsource-variable/recursive": "^5.3.0",
+    "planck": "^1.5.1"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20261109.1",
+    "@types/node": "^26.6.6",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.7",
+    "vitest": "^5.1.0",
+    "wrangler": "^4.159.0"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true,
+    "workerd@1.20261109.1": true
+  }
+}

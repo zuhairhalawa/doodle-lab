@@ -1,0 +1,107 @@
+{
+ "id": "seesaw-2",
+ "title": "A seesaw with a box on one end and a ball dropping on the other",
+ "tests": "pin joint on a fulcrum, long thin plank, drop from height",
+ "split": "test",
+ "hard": false,
+ "physics": true,
+ "sample": false,
+ "width": 1280,
+ "height": 960,
+ "truth": {
+  "isPhysicsSketch": true,
+  "whatIsIt": "A seesaw with a box on one end and a ball dropping on the other",
+  "objects": [
+   {
+    "id": "floor",
+    "kind": "surface",
+    "label": "",
+    "points": [
+     [
+      870,
+      108
+     ],
+     [
+      854,
+      954
+     ]
+    ]
+   },
+   {
+    "id": "fulcrum",
+    "kind": "surface",
+    "label": "",
+    "points": [
+     [
+      863,
+      484
+     ],
+     [
+      757,
+      530
+     ],
+     [
+      861,
+      578
+     ]
+    ]
+   },
+   {
+    "id": "plank",
+    "kind": "box",
+    "label": "",
+    "box_2d": [
+     730,
+     315,
+     761,
+     745
+    ],
+    "angleDeg": 0.8
+   },
+   {
+    "id": "box",
+    "kind": "box",
+    "label": "1 kg",
+    "box_2d": [
+     668,
+     322,
+     738,
+     375
+    ],
+    "angleDeg": 0.8,
+    "massKg": 1
+   },
+   {
+    "id": "ball",
+    "kind": "ball",
+    "label": "500 g",
+    "box_2d": [
+     315,
+     672,
+     372,
+     715
+    ],
+    "massKg": 0.5
+   }
+  ],
+  "links": [
+   {
+    "kind": "pin",
+    "from": "",
+    "fromPoint": [
+     757,
+     530
+    ],
+    "to": "plank",
+    "toPoint": [
+     757,
+     530
+    ],
+    "stiffnessNpm": -1,
+    "label": ""
+   }
+  ],
+  "measurements": [],
+  "unreadable": []
+ }
+}

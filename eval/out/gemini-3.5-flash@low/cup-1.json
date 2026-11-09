@@ -1,0 +1,81 @@
+{
+ "model": "gemini-3.5-flash@low",
+ "ms": 17129,
+ "raw": {
+  "isPhysicsSketch": true,
+  "whatIsIt": "A ball resting near the top of an inclined ramp pointing toward a cup resting on the ground.",
+  "balls": [
+   {
+    "id": "ball1",
+    "box_2d": [
+     270,
+     812,
+     338,
+     860
+    ],
+    "label": "",
+    "massKg": 0,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false
+   }
+  ],
+  "boxes": [],
+  "surfaces": [
+   {
+    "id": "ground",
+    "points": [
+     [
+      904,
+      48
+     ],
+     [
+      904,
+      921
+     ]
+    ],
+    "label": ""
+   },
+   {
+    "id": "ramp",
+    "points": [
+     [
+      620,
+      483
+     ],
+     [
+      297,
+      887
+     ]
+    ],
+    "label": ""
+   },
+   {
+    "id": "cup",
+    "points": [
+     [
+      708,
+      272
+     ],
+     [
+      896,
+      286
+     ],
+     [
+      896,
+      412
+     ],
+     [
+      707,
+      425
+     ]
+    ],
+    "label": ""
+   }
+  ],
+  "anchors": [],
+  "links": [],
+  "measurements": [],
+  "unreadable": []
+ }
+}

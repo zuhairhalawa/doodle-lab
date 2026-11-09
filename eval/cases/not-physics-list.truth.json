@@ -1,0 +1,19 @@
+{
+ "id": "not-physics-list",
+ "title": "A handwritten shopping list",
+ "tests": "not a physics drawing",
+ "split": "test",
+ "hard": false,
+ "physics": false,
+ "sample": false,
+ "width": 1280,
+ "height": 960,
+ "truth": {
+  "isPhysicsSketch": false,
+  "whatIsIt": "A handwritten shopping list",
+  "objects": [],
+  "links": [],
+  "measurements": [],
+  "unreadable": []
+ }
+}

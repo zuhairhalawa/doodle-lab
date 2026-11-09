@@ -1,0 +1,86 @@
+{
+ "id": "spring_wall-1",
+ "title": "A block on a spring attached to a wall",
+ "tests": "zigzag spring, spring constant label, velocity arrow",
+ "split": "dev",
+ "hard": false,
+ "physics": true,
+ "sample": false,
+ "width": 1280,
+ "height": 960,
+ "truth": {
+  "isPhysicsSketch": true,
+  "whatIsIt": "A block on a spring attached to a wall",
+  "objects": [
+   {
+    "id": "wall",
+    "kind": "surface",
+    "label": "",
+    "points": [
+     [
+      520,
+      893
+     ],
+     [
+      862,
+      900
+     ]
+    ]
+   },
+   {
+    "id": "floor",
+    "kind": "surface",
+    "label": "",
+    "points": [
+     [
+      862,
+      900
+     ],
+     [
+      894,
+      81
+     ]
+    ]
+   },
+   {
+    "id": "block",
+    "kind": "box",
+    "label": "1 kg",
+    "box_2d": [
+     783,
+     579,
+     875,
+     675
+    ],
+    "angleDeg": 1.7,
+    "massKg": 1,
+    "arrow": {
+     "tip": [
+      835,
+      475
+     ],
+     "speedMps": 4
+    }
+   }
+  ],
+  "links": [
+   {
+    "kind": "spring",
+    "from": "wall",
+    "fromPoint": [
+     818,
+     899
+    ],
+    "to": "block",
+    "toPoint": [
+     827,
+     674
+    ],
+    "stiffnessNpm": 50,
+    "label": "k = 50 N/m"
+   }
+  ],
+  "measurements": [],
+  "unreadable": []
+ }
+}

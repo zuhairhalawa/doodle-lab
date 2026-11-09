@@ -1,0 +1,62 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "ms": 2495,
+ "raw": {
+  "isPhysicsSketch": true,
+  "whatIsIt": "A spring hanging from a ceiling with a block attached to it.",
+  "balls": [],
+  "boxes": [
+   {
+    "id": "block",
+    "box_2d": [
+     643,
+     442,
+     739,
+     521
+    ],
+    "angleDeg": 0,
+    "label": "500 g",
+    "massKg": 0.5,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false
+   }
+  ],
+  "surfaces": [
+   {
+    "id": "ceiling",
+    "points": [
+     [
+      189,
+      264
+     ],
+     [
+      189,
+      681
+     ]
+    ],
+    "label": ""
+   }
+  ],
+  "anchors": [],
+  "links": [
+   {
+    "kind": "spring",
+    "from": "",
+    "fromPoint": [
+     189,
+     483
+    ],
+    "to": "block",
+    "toPoint": [
+     643,
+     483
+    ],
+    "stiffnessNpm": 10,
+    "label": "k = 10 N/m"
+   }
+  ],
+  "measurements": [],
+  "unreadable": []
+ }
+}

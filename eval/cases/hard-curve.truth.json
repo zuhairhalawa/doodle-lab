@@ -1,0 +1,98 @@
+{
+ "id": "hard-curve",
+ "title": "A ball on a curved ramp",
+ "tests": "a curved surface that must be followed with many points",
+ "split": "test",
+ "hard": true,
+ "physics": true,
+ "sample": false,
+ "width": 1280,
+ "height": 960,
+ "truth": {
+  "isPhysicsSketch": true,
+  "whatIsIt": "A ball on a curved ramp",
+  "objects": [
+   {
+    "id": "floor",
+    "kind": "surface",
+    "label": "",
+    "points": [
+     [
+      903,
+      106
+     ],
+     [
+      862,
+      947
+     ]
+    ]
+   },
+   {
+    "id": "curve",
+    "kind": "surface",
+    "label": "",
+    "points": [
+     [
+      361,
+      138
+     ],
+     [
+      364,
+      202
+     ],
+     [
+      381,
+      264
+     ],
+     [
+      411,
+      324
+     ],
+     [
+      452,
+      379
+     ],
+     [
+      505,
+      429
+     ],
+     [
+      567,
+      472
+     ],
+     [
+      638,
+      507
+     ],
+     [
+      715,
+      534
+     ],
+     [
+      797,
+      551
+     ],
+     [
+      881,
+      558
+     ]
+    ]
+   },
+   {
+    "id": "ball",
+    "kind": "ball",
+    "label": "1 kg",
+    "box_2d": [
+     304,
+     191,
+     366,
+     238
+    ],
+    "massKg": 1
+   }
+  ],
+  "links": [],
+  "measurements": [],
+  "unreadable": []
+ }
+}

@@ -1,0 +1,84 @@
+{
+ "model": "gemini-3.5-flash-lite@low",
+ "ms": 2793,
+ "raw": {
+  "isPhysicsSketch": true,
+  "whatIsIt": "A ball on an inclined ramp above a cup on the ground.",
+  "balls": [
+   {
+    "id": "ball1",
+    "box_2d": [
+     223,
+     147,
+     287,
+     196
+    ],
+    "label": "",
+    "massKg": 0,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false
+   }
+  ],
+  "boxes": [],
+  "surfaces": [
+   {
+    "id": "ramp",
+    "points": [
+     [
+      238,
+      122
+     ],
+     [
+      547,
+      502
+     ]
+    ],
+    "label": "",
+    "friction": -1
+   },
+   {
+    "id": "cup",
+    "points": [
+     [
+      690,
+      569
+     ],
+     [
+      892,
+      584
+     ],
+     [
+      892,
+      712
+     ],
+     [
+      700,
+      725
+     ]
+    ],
+    "label": "",
+    "friction": -1
+   },
+   {
+    "id": "ground",
+    "points": [
+     [
+      892,
+      73
+     ],
+     [
+      892,
+      963
+     ]
+    ],
+    "label": "",
+    "friction": -1
+   }
+  ],
+  "anchors": [],
+  "links": [],
+  "measurements": [],
+  "unreadable": []
+ }
+}

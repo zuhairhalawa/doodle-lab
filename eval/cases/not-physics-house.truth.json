@@ -1,0 +1,19 @@
+{
+ "id": "not-physics-house",
+ "title": "A house with a tree and the sun",
+ "tests": "not a physics drawing",
+ "split": "test",
+ "hard": false,
+ "physics": false,
+ "sample": false,
+ "width": 1280,
+ "height": 960,
+ "truth": {
+  "isPhysicsSketch": false,
+  "whatIsIt": "A house with a tree and the sun",
+  "objects": [],
+  "links": [],
+  "measurements": [],
+  "unreadable": []
+ }
+}

@@ -1,0 +1,100 @@
+{
+ "model": "gemini-3.5-flash-lite@low",
+ "ms": 2487,
+ "raw": {
+  "isPhysicsSketch": true,
+  "whatIsIt": "A ball on a table with an initial velocity near the edge, above a lower floor.",
+  "balls": [
+   {
+    "id": "ball1",
+    "box_2d": [
+     448,
+     283,
+     532,
+     337
+    ],
+    "label": "",
+    "massKg": 0,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false,
+    "arrow": {
+     "tip": [
+      368,
+      401
+     ],
+     "speedMps": 6
+    }
+   }
+  ],
+  "boxes": [],
+  "surfaces": [
+   {
+    "id": "table",
+    "points": [
+     [
+      503,
+      350
+     ],
+     [
+      503,
+      49
+     ],
+     [
+      503,
+      0
+     ]
+    ],
+    "label": "",
+    "friction": -1
+   },
+   {
+    "id": "cliff",
+    "points": [
+     [
+      503,
+      350
+     ],
+     [
+      880,
+      350
+     ]
+    ],
+    "label": "",
+    "friction": -1
+   },
+   {
+    "id": "ground",
+    "points": [
+     [
+      880,
+      350
+     ],
+     [
+      880,
+      970
+     ]
+    ],
+    "label": "",
+    "friction": -1
+   }
+  ],
+  "anchors": [],
+  "links": [],
+  "measurements": [
+   {
+    "from": [
+     503,
+     375
+    ],
+    "to": [
+     880,
+     375
+    ],
+    "meters": 2,
+    "label": "2 m"
+   }
+  ],
+  "unreadable": []
+ }
+}

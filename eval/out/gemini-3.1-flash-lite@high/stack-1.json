@@ -1,0 +1,114 @@
+{
+ "model": "gemini-3.1-flash-lite@high",
+ "ms": 11847,
+ "raw": {
+  "isPhysicsSketch": true,
+  "whatIsIt": "A stack of four blocks on a surface with a ball approaching them from the right.",
+  "balls": [
+   {
+    "id": "ball1",
+    "box_2d": [
+     790,
+     715,
+     860,
+     785
+    ],
+    "label": "2 kg",
+    "massKg": 2,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false,
+    "arrow": {
+     "tip": [
+      825,
+      610
+     ],
+     "speedMps": 8
+    }
+   }
+  ],
+  "boxes": [
+   {
+    "id": "box1",
+    "box_2d": [
+     540,
+     270,
+     625,
+     360
+    ],
+    "angleDeg": 0,
+    "label": "",
+    "massKg": 0,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false
+   },
+   {
+    "id": "box2",
+    "box_2d": [
+     625,
+     270,
+     710,
+     360
+    ],
+    "angleDeg": 0,
+    "label": "",
+    "massKg": 0,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false
+   },
+   {
+    "id": "box3",
+    "box_2d": [
+     710,
+     270,
+     795,
+     360
+    ],
+    "angleDeg": 0,
+    "label": "",
+    "massKg": 0,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false
+   },
+   {
+    "id": "box4",
+    "box_2d": [
+     795,
+     270,
+     860,
+     360
+    ],
+    "angleDeg": 0,
+    "label": "",
+    "massKg": 0,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false
+   }
+  ],
+  "surfaces": [
+   {
+    "id": "ground",
+    "points": [
+     [
+      860,
+      60
+     ],
+     [
+      860,
+      910
+     ]
+    ],
+    "label": "",
+    "friction": -1
+   }
+  ],
+  "anchors": [],
+  "links": [],
+  "measurements": [],
+  "unreadable": []
+ }
+}

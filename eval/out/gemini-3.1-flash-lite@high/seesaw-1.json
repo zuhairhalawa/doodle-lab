@@ -1,0 +1,121 @@
+{
+ "model": "gemini-3.1-flash-lite@high",
+ "ms": 11762,
+ "raw": {
+  "isPhysicsSketch": true,
+  "whatIsIt": "A 4 kg box rests on the left end of a seesaw supported by a triangular fulcrum, with a 4 kg ball positioned in the air above the right end of the seesaw.",
+  "balls": [
+   {
+    "id": "ball1",
+    "box_2d": [
+     195,
+     655,
+     265,
+     725
+    ],
+    "label": "4 kg",
+    "massKg": 4,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false
+   }
+  ],
+  "boxes": [
+   {
+    "id": "plank",
+    "box_2d": [
+     745,
+     305,
+     785,
+     755
+    ],
+    "angleDeg": 0,
+    "label": "",
+    "massKg": 0,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false
+   },
+   {
+    "id": "block1",
+    "box_2d": [
+     660,
+     310,
+     745,
+     395
+    ],
+    "angleDeg": 0,
+    "label": "4 kg",
+    "massKg": 4,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false
+   }
+  ],
+  "surfaces": [
+   {
+    "id": "ground",
+    "points": [
+     [
+      850,
+      80
+     ],
+     [
+      850,
+      950
+     ]
+    ],
+    "label": "ground"
+   },
+   {
+    "id": "fulcrum",
+    "points": [
+     [
+      780,
+      530
+     ],
+     [
+      850,
+      470
+     ],
+     [
+      850,
+      590
+     ],
+     [
+      780,
+      530
+     ]
+    ],
+    "label": "fulcrum"
+   }
+  ],
+  "anchors": [
+   {
+    "id": "pivot1",
+    "point": [
+     780,
+     530
+    ]
+   }
+  ],
+  "links": [
+   {
+    "kind": "pin",
+    "from": "",
+    "fromPoint": [
+     780,
+     530
+    ],
+    "to": "plank",
+    "toPoint": [
+     780,
+     530
+    ],
+    "stiffnessNpm": -1
+   }
+  ],
+  "measurements": [],
+  "unreadable": []
+ }
+}

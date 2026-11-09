@@ -1,0 +1,73 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "ms": 2614,
+ "raw": {
+  "isPhysicsSketch": true,
+  "whatIsIt": "A ball sitting on the edge of a cliff above a ground surface.",
+  "balls": [
+   {
+    "id": "ball1",
+    "box_2d": [
+     414,
+     267,
+     458,
+     305
+    ],
+    "label": "",
+    "massKg": 0,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false,
+    "arrow": {
+     "tip": [
+      314,
+      355
+     ],
+     "speedMps": 3
+    }
+   }
+  ],
+  "boxes": [],
+  "surfaces": [
+   {
+    "id": "cliff",
+    "points": [
+     [
+      458,
+      71
+     ],
+     [
+      458,
+      305
+     ],
+     [
+      835,
+      305
+     ],
+     [
+      835,
+      876
+     ]
+    ],
+    "label": ""
+   }
+  ],
+  "anchors": [],
+  "links": [],
+  "measurements": [
+   {
+    "from": [
+     463,
+     335
+    ],
+    "to": [
+     835,
+     335
+    ],
+    "meters": 2,
+    "label": "2 m"
+   }
+  ],
+  "unreadable": []
+ }
+}

@@ -1,0 +1,63 @@
+{
+ "model": "gemini-3.5-flash-lite@low",
+ "ms": 10169,
+ "raw": {
+  "isPhysicsSketch": true,
+  "whatIsIt": "A block of mass 2 kg hanging from a spring attached to a ceiling.",
+  "balls": [],
+  "boxes": [
+   {
+    "id": "block",
+    "box_2d": [
+     512,
+     428,
+     582,
+     521
+    ],
+    "angleDeg": 0,
+    "label": "2 kg",
+    "massKg": 2,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false
+   }
+  ],
+  "surfaces": [
+   {
+    "id": "ceiling",
+    "points": [
+     [
+      120,
+      276
+     ],
+     [
+      120,
+      696
+     ]
+    ],
+    "label": "",
+    "friction": -1
+   }
+  ],
+  "anchors": [],
+  "links": [
+   {
+    "kind": "spring",
+    "from": "ceiling",
+    "fromPoint": [
+     120,
+     485
+    ],
+    "to": "block",
+    "toPoint": [
+     512,
+     485
+    ],
+    "stiffnessNpm": 20,
+    "label": "k = 20 N/m"
+   }
+  ],
+  "measurements": [],
+  "unreadable": []
+ }
+}

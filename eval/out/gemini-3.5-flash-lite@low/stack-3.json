@@ -1,0 +1,120 @@
+{
+ "model": "gemini-3.5-flash-lite@low",
+ "ms": 2903,
+ "raw": {
+  "isPhysicsSketch": true,
+  "whatIsIt": "A ball moving to the right towards a stack of three boxes on a flat surface.",
+  "balls": [
+   {
+    "id": "ball1",
+    "box_2d": [
+     835,
+     277,
+     908,
+     334
+    ],
+    "label": "2 kg",
+    "massKg": 2,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false,
+    "arrow": {
+     "tip": [
+      872,
+      449
+     ],
+     "speedMps": 5
+    }
+   }
+  ],
+  "boxes": [
+   {
+    "id": "box1",
+    "box_2d": [
+     645,
+     613,
+     729,
+     701
+    ],
+    "angleDeg": 0,
+    "label": "",
+    "massKg": 0,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false,
+    "arrow": {
+     "tip": [
+      0,
+      0
+     ],
+     "speedMps": -1
+    }
+   },
+   {
+    "id": "box2",
+    "box_2d": [
+     725,
+     620,
+     808,
+     693
+    ],
+    "angleDeg": 0,
+    "label": "",
+    "massKg": 0,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false,
+    "arrow": {
+     "tip": [
+      0,
+      0
+     ],
+     "speedMps": -1
+    }
+   },
+   {
+    "id": "box3",
+    "box_2d": [
+     804,
+     613,
+     891,
+     705
+    ],
+    "angleDeg": 0,
+    "label": "",
+    "massKg": 0,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false,
+    "arrow": {
+     "tip": [
+      0,
+      0
+     ],
+     "speedMps": -1
+    }
+   }
+  ],
+  "surfaces": [
+   {
+    "id": "floor",
+    "points": [
+     [
+      908,
+      102
+     ],
+     [
+      908,
+      915
+     ]
+    ],
+    "label": "",
+    "friction": -1
+   }
+  ],
+  "anchors": [],
+  "links": [],
+  "measurements": [],
+  "unreadable": []
+ }
+}

@@ -1,0 +1,84 @@
+{
+ "model": "gemini-3.5-flash@low",
+ "ms": 58331,
+ "date": "2026-11-09",
+ "raw": {
+  "isPhysicsSketch": true,
+  "whatIsIt": "A pendulum with a 5 kg bob suspended by a string of length 1 m from a ceiling.",
+  "balls": [
+   {
+    "id": "bob",
+    "box_2d": [
+     498,
+     683,
+     573,
+     737
+    ],
+    "label": "5 kg",
+    "massKg": 5,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false
+   }
+  ],
+  "boxes": [],
+  "surfaces": [
+   {
+    "id": "ceiling",
+    "points": [
+     [
+      134,
+      285
+     ],
+     [
+      134,
+      725
+     ]
+    ],
+    "label": "",
+    "friction": -1
+   }
+  ],
+  "anchors": [
+   {
+    "id": "pivot",
+    "point": [
+     134,
+     508
+    ]
+   }
+  ],
+  "links": [
+   {
+    "kind": "rope",
+    "from": "pivot",
+    "fromPoint": [
+     134,
+     508
+    ],
+    "to": "bob",
+    "toPoint": [
+     506,
+     695
+    ],
+    "stiffnessNpm": -1,
+    "label": ""
+   }
+  ],
+  "measurements": [
+   {
+    "from": [
+     134,
+     465
+    ],
+    "to": [
+     532,
+     672
+    ],
+    "meters": 1,
+    "label": "1 m"
+   }
+  ],
+  "unreadable": []
+ }
+}

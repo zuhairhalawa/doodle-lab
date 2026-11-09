@@ -1,0 +1,75 @@
+{
+ "model": "gemini-3.5-flash@low",
+ "ms": 16364,
+ "date": "2026-11-09",
+ "raw": {
+  "isPhysicsSketch": true,
+  "whatIsIt": "Two 1 kg balls on a horizontal surface moving towards each other with speeds of 4 m/s and 2 m/s.",
+  "balls": [
+   {
+    "id": "ball1",
+    "box_2d": [
+     798,
+     213,
+     869,
+     267
+    ],
+    "label": "1 kg",
+    "massKg": 1,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false,
+    "arrow": {
+     "tip": [
+      837,
+      390
+     ],
+     "speedMps": 4
+    }
+   },
+   {
+    "id": "ball2",
+    "box_2d": [
+     803,
+     597,
+     879,
+     656
+    ],
+    "label": "1 kg",
+    "massKg": 1,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false,
+    "arrow": {
+     "tip": [
+      837,
+      492
+     ],
+     "speedMps": 2
+    }
+   }
+  ],
+  "boxes": [],
+  "surfaces": [
+   {
+    "id": "floor",
+    "points": [
+     [
+      867,
+      54
+     ],
+     [
+      885,
+      925
+     ]
+    ],
+    "label": "",
+    "friction": -1
+   }
+  ],
+  "anchors": [],
+  "links": [],
+  "measurements": [],
+  "unreadable": []
+ }
+}

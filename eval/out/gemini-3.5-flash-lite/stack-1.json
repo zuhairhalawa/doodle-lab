@@ -1,0 +1,114 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "ms": 3074,
+ "raw": {
+  "isPhysicsSketch": true,
+  "whatIsIt": "A ball with mass and initial velocity moving toward a stack of boxes on a flat surface.",
+  "balls": [
+   {
+    "id": "ball1",
+    "box_2d": [
+     797,
+     715,
+     861,
+     771
+    ],
+    "label": "2 kg",
+    "massKg": 2,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false,
+    "arrow": {
+     "tip": [
+      832,
+      601
+     ],
+     "speedMps": 8
+    }
+   }
+  ],
+  "boxes": [
+   {
+    "id": "box1",
+    "box_2d": [
+     542,
+     269,
+     633,
+     356
+    ],
+    "angleDeg": 0,
+    "label": "",
+    "massKg": 0,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false
+   },
+   {
+    "id": "box2",
+    "box_2d": [
+     630,
+     275,
+     712,
+     361
+    ],
+    "angleDeg": 0,
+    "label": "",
+    "massKg": 0,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false
+   },
+   {
+    "id": "box3",
+    "box_2d": [
+     709,
+     281,
+     795,
+     364
+    ],
+    "angleDeg": 0,
+    "label": "",
+    "massKg": 0,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false
+   },
+   {
+    "id": "box4",
+    "box_2d": [
+     792,
+     283,
+     883,
+     365
+    ],
+    "angleDeg": 0,
+    "label": "",
+    "massKg": 0,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false
+   }
+  ],
+  "surfaces": [
+   {
+    "id": "floor",
+    "points": [
+     [
+      883,
+      58
+     ],
+     [
+      883,
+      908
+     ]
+    ],
+    "label": "",
+    "friction": -1
+   }
+  ],
+  "anchors": [],
+  "links": [],
+  "measurements": [],
+  "unreadable": []
+ }
+}

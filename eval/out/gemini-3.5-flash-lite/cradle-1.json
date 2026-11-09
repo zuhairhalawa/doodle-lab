@@ -1,0 +1,120 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "ms": 2709,
+ "raw": {
+  "isPhysicsSketch": true,
+  "whatIsIt": "A Newton's cradle setup with three swinging balls suspended from a ceiling.",
+  "balls": [
+   {
+    "id": "ball1",
+    "box_2d": [
+     452,
+     297,
+     514,
+     345
+    ],
+    "label": "",
+    "massKg": 0,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false
+   },
+   {
+    "id": "ball2",
+    "box_2d": [
+     508,
+     493,
+     571,
+     541
+    ],
+    "label": "",
+    "massKg": 0,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false
+   },
+   {
+    "id": "ball3",
+    "box_2d": [
+     508,
+     541,
+     571,
+     589
+    ],
+    "label": "",
+    "massKg": 0,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false
+   }
+  ],
+  "boxes": [],
+  "surfaces": [
+   {
+    "id": "ceiling",
+    "points": [
+     [
+      180,
+      283
+     ],
+     [
+      180,
+      745
+     ]
+    ],
+    "label": "",
+    "friction": -1
+   }
+  ],
+  "anchors": [],
+  "links": [
+   {
+    "kind": "rope",
+    "from": "",
+    "fromPoint": [
+     180,
+     452
+    ],
+    "to": "ball1",
+    "toPoint": [
+     483,
+     321
+    ],
+    "stiffnessNpm": -1,
+    "label": ""
+   },
+   {
+    "kind": "rope",
+    "from": "",
+    "fromPoint": [
+     180,
+     517
+    ],
+    "to": "ball2",
+    "toPoint": [
+     539,
+     517
+    ],
+    "stiffnessNpm": -1,
+    "label": ""
+   },
+   {
+    "kind": "rope",
+    "from": "",
+    "fromPoint": [
+     180,
+     565
+    ],
+    "to": "ball3",
+    "toPoint": [
+     539,
+     565
+    ],
+    "stiffnessNpm": -1,
+    "label": ""
+   }
+  ],
+  "measurements": [],
+  "unreadable": []
+ }
+}

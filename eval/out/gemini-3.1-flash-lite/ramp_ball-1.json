@@ -1,0 +1,84 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "ms": 7409,
+ "raw": {
+  "isPhysicsSketch": true,
+  "whatIsIt": "A 5 kg ball sits on a ramp of height 1 meter.",
+  "balls": [
+   {
+    "id": "ball1",
+    "box_2d": [
+     485,
+     146,
+     561,
+     222
+    ],
+    "label": "5 kg",
+    "massKg": 5,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false
+   }
+  ],
+  "boxes": [],
+  "surfaces": [
+   {
+    "id": "surface1",
+    "points": [
+     [
+      525,
+      136
+     ],
+     [
+      525,
+      136
+     ],
+     [
+      851,
+      436
+     ],
+     [
+      851,
+      921
+     ]
+    ],
+    "label": "ramp and floor"
+   },
+   {
+    "id": "surface2",
+    "points": [
+     [
+      525,
+      136
+     ],
+     [
+      851,
+      136
+     ],
+     [
+      851,
+      136
+     ]
+    ],
+    "label": "vertical side of ramp"
+   }
+  ],
+  "anchors": [],
+  "links": [],
+  "measurements": [
+   {
+    "from": [
+     525,
+     122
+    ],
+    "to": [
+     851,
+     122
+    ],
+    "meters": 1,
+    "label": "1 m"
+   }
+  ],
+  "unreadable": []
+ }
+}

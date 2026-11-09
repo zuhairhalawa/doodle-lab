@@ -1,0 +1,75 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "ms": 2121,
+ "raw": {
+  "isPhysicsSketch": true,
+  "whatIsIt": "A pendulum consisting of a ball suspended by a rod or string from a ceiling.",
+  "balls": [
+   {
+    "id": "ball1",
+    "box_2d": [
+     555,
+     303,
+     642,
+     360
+    ],
+    "label": "500 g",
+    "massKg": 0.5,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false
+   }
+  ],
+  "boxes": [],
+  "surfaces": [
+   {
+    "id": "ceiling",
+    "points": [
+     [
+      167,
+      297
+     ],
+     [
+      167,
+      722
+     ]
+    ],
+    "label": "",
+    "friction": -1
+   }
+  ],
+  "anchors": [],
+  "links": [
+   {
+    "kind": "rod",
+    "from": "",
+    "fromPoint": [
+     167,
+     583
+    ],
+    "to": "ball1",
+    "toPoint": [
+     587,
+     344
+    ],
+    "stiffnessNpm": -1,
+    "label": ""
+   }
+  ],
+  "measurements": [
+   {
+    "from": [
+     174,
+     597
+    ],
+    "to": [
+     587,
+     360
+    ],
+    "meters": 1,
+    "label": "1 m"
+   }
+  ],
+  "unreadable": []
+ }
+}

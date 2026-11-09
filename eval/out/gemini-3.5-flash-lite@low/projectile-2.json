@@ -1,0 +1,78 @@
+{
+ "model": "gemini-3.5-flash-lite@low",
+ "ms": 2542,
+ "raw": {
+  "isPhysicsSketch": true,
+  "whatIsIt": "A ball on a ledge with an initial velocity vector pointing upwards and to the left, above a horizontal ground.",
+  "balls": [
+   {
+    "id": "ball1",
+    "box_2d": [
+     445,
+     663,
+     508,
+     717
+    ],
+    "label": "",
+    "massKg": 0,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false,
+    "arrow": {
+     "tip": [
+      336,
+      608
+     ],
+     "speedMps": 3
+    }
+   }
+  ],
+  "boxes": [],
+  "surfaces": [
+   {
+    "id": "ledge_and_wall",
+    "points": [
+     [
+      508,
+      650
+     ],
+     [
+      508,
+      980
+     ],
+     [
+      508,
+      650
+     ],
+     [
+      890,
+      650
+     ],
+     [
+      890,
+      65
+     ]
+    ],
+    "label": "",
+    "friction": -1
+   }
+  ],
+  "anchors": [],
+  "links": [],
+  "measurements": [
+   {
+    "from": [
+     508,
+     608
+    ],
+    "to": [
+     890,
+     608
+    ],
+    "meters": 1.5,
+    "label": "1.5 m"
+   }
+  ],
+  "unreadable": []
+ }
+}

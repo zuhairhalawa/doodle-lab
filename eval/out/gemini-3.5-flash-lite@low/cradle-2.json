@@ -1,0 +1,117 @@
+{
+ "model": "gemini-3.5-flash-lite@low",
+ "ms": 3758,
+ "raw": {
+  "isPhysicsSketch": true,
+  "whatIsIt": "A set of pendulums suspended from a ceiling.",
+  "balls": [
+   {
+    "id": "ball1",
+    "box_2d": [
+     386,
+     269,
+     451,
+     319
+    ],
+    "label": "",
+    "massKg": 0,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false
+   },
+   {
+    "id": "ball2",
+    "box_2d": [
+     456,
+     483,
+     523,
+     532
+    ],
+    "label": "",
+    "massKg": 0,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false
+   },
+   {
+    "id": "ball3",
+    "box_2d": [
+     456,
+     532,
+     521,
+     581
+    ],
+    "label": "",
+    "massKg": 0,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false
+   }
+  ],
+  "boxes": [],
+  "surfaces": [
+   {
+    "id": "ceiling",
+    "points": [
+     [
+      127,
+      269
+     ],
+     [
+      127,
+      740
+     ]
+    ],
+    "label": "",
+    "friction": -1
+   }
+  ],
+  "anchors": [],
+  "links": [
+   {
+    "kind": "rope",
+    "from": "",
+    "fromPoint": [
+     127,
+     500
+    ],
+    "to": "ball1",
+    "toPoint": [
+     386,
+     294
+    ],
+    "stiffnessNpm": -1
+   },
+   {
+    "kind": "rope",
+    "from": "",
+    "fromPoint": [
+     127,
+     500
+    ],
+    "to": "ball2",
+    "toPoint": [
+     456,
+     507
+    ],
+    "stiffnessNpm": -1
+   },
+   {
+    "kind": "rope",
+    "from": "",
+    "fromPoint": [
+     127,
+     542
+    ],
+    "to": "ball3",
+    "toPoint": [
+     456,
+     556
+    ],
+    "stiffnessNpm": -1
+   }
+  ],
+  "measurements": [],
+  "unreadable": []
+ }
+}

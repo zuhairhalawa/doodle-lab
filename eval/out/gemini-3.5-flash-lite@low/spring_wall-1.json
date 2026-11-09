@@ -1,0 +1,85 @@
+{
+ "model": "gemini-3.5-flash-lite@low",
+ "ms": 2174,
+ "raw": {
+  "isPhysicsSketch": true,
+  "whatIsIt": "A block of mass 1 kg resting on a horizontal surface is connected to a vertical wall by a spring and moving with an initial velocity.",
+  "balls": [],
+  "boxes": [
+   {
+    "id": "block",
+    "box_2d": [
+     773,
+     582,
+     876,
+     670
+    ],
+    "angleDeg": 0,
+    "label": "1 kg",
+    "massKg": 1,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false,
+    "arrow": {
+     "tip": [
+      826,
+      472
+     ],
+     "speedMps": 4
+    }
+   }
+  ],
+  "surfaces": [
+   {
+    "id": "floor",
+    "points": [
+     [
+      876,
+      79
+     ],
+     [
+      876,
+      891
+     ]
+    ],
+    "label": "",
+    "friction": -1
+   },
+   {
+    "id": "wall",
+    "points": [
+     [
+      515,
+      891
+     ],
+     [
+      876,
+      891
+     ]
+    ],
+    "label": "",
+    "friction": -1
+   }
+  ],
+  "anchors": [],
+  "links": [
+   {
+    "kind": "spring",
+    "from": "wall",
+    "fromPoint": [
+     826,
+     891
+    ],
+    "to": "block",
+    "toPoint": [
+     826,
+     670
+    ],
+    "stiffnessNpm": 50,
+    "label": "k = 50 N/m"
+   }
+  ],
+  "measurements": [],
+  "unreadable": []
+ }
+}

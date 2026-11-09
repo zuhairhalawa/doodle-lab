@@ -1,0 +1,407 @@
+[
+ {
+  "id": "ramp_ball-1",
+  "title": "A ball at the top of a ramp",
+  "tests": "circle on a slope, mass label, height measurement",
+  "split": "dev",
+  "hard": false,
+  "physics": true,
+  "sample": false
+ },
+ {
+  "id": "ramp_ball-2",
+  "title": "A ball at the top of a ramp",
+  "tests": "circle on a slope, mass label, height measurement",
+  "split": "test",
+  "hard": false,
+  "physics": true,
+  "sample": false
+ },
+ {
+  "id": "ramp_ball-3",
+  "title": "A ball at the top of a ramp",
+  "tests": "circle on a slope, mass label, height measurement",
+  "split": "test",
+  "hard": false,
+  "physics": true,
+  "sample": false
+ },
+ {
+  "id": "ramp_box-1",
+  "title": "A block on a ramp with friction",
+  "tests": "tilted box, friction label, mass label",
+  "split": "dev",
+  "hard": false,
+  "physics": true,
+  "sample": false
+ },
+ {
+  "id": "ramp_box-2",
+  "title": "A block on a ramp with friction",
+  "tests": "tilted box, friction label, mass label",
+  "split": "test",
+  "hard": false,
+  "physics": true,
+  "sample": false
+ },
+ {
+  "id": "ramp_box-3",
+  "title": "A block on a ramp with friction",
+  "tests": "tilted box, friction label, mass label",
+  "split": "test",
+  "hard": false,
+  "physics": true,
+  "sample": false
+ },
+ {
+  "id": "pendulum-1",
+  "title": "A pendulum hanging from the ceiling",
+  "tests": "rope from a fixed point, swing angle, length label",
+  "split": "dev",
+  "hard": false,
+  "physics": true,
+  "sample": false
+ },
+ {
+  "id": "pendulum-2",
+  "title": "A pendulum hanging from the ceiling",
+  "tests": "rope from a fixed point, swing angle, length label",
+  "split": "test",
+  "hard": false,
+  "physics": true,
+  "sample": false
+ },
+ {
+  "id": "pendulum-3",
+  "title": "A pendulum hanging from the ceiling",
+  "tests": "rope from a fixed point, swing angle, length label",
+  "split": "test",
+  "hard": false,
+  "physics": true,
+  "sample": false
+ },
+ {
+  "id": "spring_wall-1",
+  "title": "A block on a spring attached to a wall",
+  "tests": "zigzag spring, spring constant label, velocity arrow",
+  "split": "dev",
+  "hard": false,
+  "physics": true,
+  "sample": false
+ },
+ {
+  "id": "spring_wall-2",
+  "title": "A block on a spring attached to a wall",
+  "tests": "zigzag spring, spring constant label, velocity arrow",
+  "split": "test",
+  "hard": false,
+  "physics": true,
+  "sample": false
+ },
+ {
+  "id": "spring_wall-3",
+  "title": "A block on a spring attached to a wall",
+  "tests": "zigzag spring, spring constant label, velocity arrow",
+  "split": "test",
+  "hard": false,
+  "physics": true,
+  "sample": false
+ },
+ {
+  "id": "collision-1",
+  "title": "Two balls about to collide on the floor",
+  "tests": "two bodies, two masses, arrows in opposite directions",
+  "split": "dev",
+  "hard": false,
+  "physics": true,
+  "sample": false
+ },
+ {
+  "id": "collision-2",
+  "title": "Two balls about to collide on the floor",
+  "tests": "two bodies, two masses, arrows in opposite directions",
+  "split": "test",
+  "hard": false,
+  "physics": true,
+  "sample": false
+ },
+ {
+  "id": "collision-3",
+  "title": "Two balls about to collide on the floor",
+  "tests": "two bodies, two masses, arrows in opposite directions",
+  "split": "test",
+  "hard": false,
+  "physics": true,
+  "sample": false
+ },
+ {
+  "id": "projectile-1",
+  "title": "A ball launched off a table",
+  "tests": "angled velocity arrow, ledge outline, height label",
+  "split": "dev",
+  "hard": false,
+  "physics": true,
+  "sample": false
+ },
+ {
+  "id": "projectile-2",
+  "title": "A ball launched off a table",
+  "tests": "angled velocity arrow, ledge outline, height label",
+  "split": "test",
+  "hard": false,
+  "physics": true,
+  "sample": false
+ },
+ {
+  "id": "projectile-3",
+  "title": "A ball launched off a table",
+  "tests": "angled velocity arrow, ledge outline, height label",
+  "split": "test",
+  "hard": false,
+  "physics": true,
+  "sample": false
+ },
+ {
+  "id": "seesaw-1",
+  "title": "A seesaw with a box on one end and a ball dropping on the other",
+  "tests": "pin joint on a fulcrum, long thin plank, drop from height",
+  "split": "dev",
+  "hard": false,
+  "physics": true,
+  "sample": false
+ },
+ {
+  "id": "seesaw-2",
+  "title": "A seesaw with a box on one end and a ball dropping on the other",
+  "tests": "pin joint on a fulcrum, long thin plank, drop from height",
+  "split": "test",
+  "hard": false,
+  "physics": true,
+  "sample": false
+ },
+ {
+  "id": "seesaw-3",
+  "title": "A seesaw with a box on one end and a ball dropping on the other",
+  "tests": "pin joint on a fulcrum, long thin plank, drop from height",
+  "split": "test",
+  "hard": false,
+  "physics": true,
+  "sample": false
+ },
+ {
+  "id": "stack-1",
+  "title": "A ball rolling at a tower of blocks",
+  "tests": "several stacked boxes, one arrow",
+  "split": "dev",
+  "hard": false,
+  "physics": true,
+  "sample": false
+ },
+ {
+  "id": "stack-2",
+  "title": "A ball rolling at a tower of blocks",
+  "tests": "several stacked boxes, one arrow",
+  "split": "test",
+  "hard": false,
+  "physics": true,
+  "sample": false
+ },
+ {
+  "id": "stack-3",
+  "title": "A ball rolling at a tower of blocks",
+  "tests": "several stacked boxes, one arrow",
+  "split": "test",
+  "hard": false,
+  "physics": true,
+  "sample": false
+ },
+ {
+  "id": "double_pendulum-1",
+  "title": "A double pendulum",
+  "tests": "a rod between two moving bodies (chaotic motion)",
+  "split": "dev",
+  "hard": false,
+  "physics": true,
+  "sample": false
+ },
+ {
+  "id": "double_pendulum-2",
+  "title": "A double pendulum",
+  "tests": "a rod between two moving bodies (chaotic motion)",
+  "split": "test",
+  "hard": false,
+  "physics": true,
+  "sample": false
+ },
+ {
+  "id": "double_pendulum-3",
+  "title": "A double pendulum",
+  "tests": "a rod between two moving bodies (chaotic motion)",
+  "split": "test",
+  "hard": false,
+  "physics": true,
+  "sample": false
+ },
+ {
+  "id": "cup-1",
+  "title": "A ball rolling down a slope towards a cup",
+  "tests": "open container outline, slope not touching the floor",
+  "split": "dev",
+  "hard": false,
+  "physics": true,
+  "sample": false
+ },
+ {
+  "id": "cup-2",
+  "title": "A ball rolling down a slope towards a cup",
+  "tests": "open container outline, slope not touching the floor",
+  "split": "test",
+  "hard": false,
+  "physics": true,
+  "sample": false
+ },
+ {
+  "id": "cup-3",
+  "title": "A ball rolling down a slope towards a cup",
+  "tests": "open container outline, slope not touching the floor",
+  "split": "test",
+  "hard": false,
+  "physics": true,
+  "sample": false
+ },
+ {
+  "id": "cradle-1",
+  "title": "Three balls hanging side by side, the first pulled back (Newton's cradle)",
+  "tests": "three ropes, touching balls",
+  "split": "dev",
+  "hard": false,
+  "physics": true,
+  "sample": false
+ },
+ {
+  "id": "cradle-2",
+  "title": "Three balls hanging side by side, the first pulled back (Newton's cradle)",
+  "tests": "three ropes, touching balls",
+  "split": "test",
+  "hard": false,
+  "physics": true,
+  "sample": false
+ },
+ {
+  "id": "cradle-3",
+  "title": "Three balls hanging side by side, the first pulled back (Newton's cradle)",
+  "tests": "three ropes, touching balls",
+  "split": "test",
+  "hard": false,
+  "physics": true,
+  "sample": false
+ },
+ {
+  "id": "vertical_spring-1",
+  "title": "A mass hanging from a spring",
+  "tests": "vertical spring from the ceiling, mass and k labels",
+  "split": "dev",
+  "hard": false,
+  "physics": true,
+  "sample": false
+ },
+ {
+  "id": "vertical_spring-2",
+  "title": "A mass hanging from a spring",
+  "tests": "vertical spring from the ceiling, mass and k labels",
+  "split": "test",
+  "hard": false,
+  "physics": true,
+  "sample": false
+ },
+ {
+  "id": "vertical_spring-3",
+  "title": "A mass hanging from a spring",
+  "tests": "vertical spring from the ceiling, mass and k labels",
+  "split": "test",
+  "hard": false,
+  "physics": true,
+  "sample": false
+ },
+ {
+  "id": "not-physics-house",
+  "title": "A house with a tree and the sun",
+  "tests": "not a physics drawing",
+  "split": "test",
+  "hard": false,
+  "physics": false,
+  "sample": false
+ },
+ {
+  "id": "not-physics-list",
+  "title": "A handwritten shopping list",
+  "tests": "not a physics drawing",
+  "split": "test",
+  "hard": false,
+  "physics": false,
+  "sample": false
+ },
+ {
+  "id": "not-physics-tictactoe",
+  "title": "A game of noughts and crosses",
+  "tests": "not a physics drawing",
+  "split": "test",
+  "hard": false,
+  "physics": false,
+  "sample": false
+ },
+ {
+  "id": "not-physics-blank",
+  "title": "A blank page",
+  "tests": "not a physics drawing",
+  "split": "test",
+  "hard": false,
+  "physics": false,
+  "sample": false
+ },
+ {
+  "id": "hard-faint",
+  "title": "A ball at the top of a ramp",
+  "tests": "very faint pencil",
+  "split": "test",
+  "hard": true,
+  "physics": true,
+  "sample": false
+ },
+ {
+  "id": "hard-rotated",
+  "title": "A pendulum hanging from the ceiling",
+  "tests": "photo rotated 14° and small in the frame",
+  "split": "test",
+  "hard": true,
+  "physics": true,
+  "sample": false
+ },
+ {
+  "id": "hard-crossed",
+  "title": "Two balls about to collide on the floor",
+  "tests": "a crossed-out ball that must be ignored",
+  "split": "test",
+  "hard": true,
+  "physics": true,
+  "sample": false
+ },
+ {
+  "id": "hard-portrait",
+  "title": "A ball rolling at a tower of blocks",
+  "tests": "portrait photo with the page small in the middle",
+  "split": "test",
+  "hard": true,
+  "physics": true,
+  "sample": false
+ },
+ {
+  "id": "hard-curve",
+  "title": "A ball on a curved ramp",
+  "tests": "a curved surface that must be followed with many points",
+  "split": "test",
+  "hard": true,
+  "physics": true,
+  "sample": false
+ }
+]

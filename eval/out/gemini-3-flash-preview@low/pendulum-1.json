@@ -1,0 +1,73 @@
+{
+ "model": "gemini-3-flash-preview@low",
+ "ms": 3528,
+ "raw": {
+  "isPhysicsSketch": true,
+  "whatIsIt": "A simple pendulum hanging from a fixed ceiling with a 500g mass and a 1m long string.",
+  "balls": [
+   {
+    "id": "ball1",
+    "box_2d": [
+     567,
+     297,
+     638,
+     354
+    ],
+    "label": "500 g",
+    "massKg": 0.5,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false
+   }
+  ],
+  "boxes": [],
+  "surfaces": [
+   {
+    "id": "ceiling",
+    "points": [
+     [
+      169,
+      298
+     ],
+     [
+      151,
+      720
+     ]
+    ],
+    "label": ""
+   }
+  ],
+  "anchors": [],
+  "links": [
+   {
+    "kind": "rope",
+    "from": "ceiling",
+    "fromPoint": [
+     159,
+     511
+    ],
+    "to": "ball1",
+    "toPoint": [
+     586,
+     335
+    ],
+    "stiffnessNpm": -1
+   }
+  ],
+  "measurements": [
+   {
+    "from": [
+     156,
+     552
+    ],
+    "to": [
+     604,
+     363
+    ],
+    "meters": 1,
+    "label": "1 m"
+   }
+  ],
+  "unreadable": []
+ }
+}

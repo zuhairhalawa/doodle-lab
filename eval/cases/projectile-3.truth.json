@@ -1,0 +1,85 @@
+{
+ "id": "projectile-3",
+ "title": "A ball launched off a table",
+ "tests": "angled velocity arrow, ledge outline, height label",
+ "split": "test",
+ "hard": false,
+ "physics": true,
+ "sample": false,
+ "width": 1280,
+ "height": 960,
+ "truth": {
+  "isPhysicsSketch": true,
+  "whatIsIt": "A ball launched off a table",
+  "objects": [
+   {
+    "id": "table",
+    "kind": "surface",
+    "label": "",
+    "points": [
+     [
+      529,
+      50
+     ],
+     [
+      529,
+      355
+     ],
+     [
+      889,
+      355
+     ]
+    ]
+   },
+   {
+    "id": "floor",
+    "kind": "surface",
+    "label": "",
+    "points": [
+     [
+      889,
+      355
+     ],
+     [
+      889,
+      950
+     ]
+    ]
+   },
+   {
+    "id": "ball",
+    "kind": "ball",
+    "label": "",
+    "box_2d": [
+     462,
+     288,
+     529,
+     338
+    ],
+    "arrow": {
+     "tip": [
+      369,
+      419
+     ],
+     "speedMps": 6
+    }
+   }
+  ],
+  "links": [],
+  "measurements": [
+   {
+    "from": [
+     529,
+     355
+    ],
+    "to": [
+     889,
+     355
+    ],
+    "meters": 2,
+    "label": "2 m"
+   }
+  ],
+  "unreadable": []
+ }
+}

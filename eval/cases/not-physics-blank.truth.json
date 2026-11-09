@@ -1,0 +1,19 @@
+{
+ "id": "not-physics-blank",
+ "title": "A blank page",
+ "tests": "not a physics drawing",
+ "split": "test",
+ "hard": false,
+ "physics": false,
+ "sample": false,
+ "width": 1280,
+ "height": 960,
+ "truth": {
+  "isPhysicsSketch": false,
+  "whatIsIt": "A blank page",
+  "objects": [],
+  "links": [],
+  "measurements": [],
+  "unreadable": []
+ }
+}

@@ -1,0 +1,115 @@
+{
+ "model": "gemini-3.5-flash-lite@low",
+ "ms": 5003,
+ "raw": {
+  "isPhysicsSketch": true,
+  "whatIsIt": "A ball above a seesaw with a box on it, resting on a fulcrum and ground.",
+  "balls": [
+   {
+    "id": "ball1",
+    "box_2d": [
+     314,
+     290,
+     388,
+     347
+    ],
+    "label": "500 g",
+    "massKg": 0.5,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false
+   }
+  ],
+  "boxes": [
+   {
+    "id": "box1",
+    "box_2d": [
+     689,
+     689,
+     762,
+     739
+    ],
+    "angleDeg": 0,
+    "label": "4 kg",
+    "massKg": 4,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false
+   },
+   {
+    "id": "seesaw",
+    "box_2d": [
+     744,
+     256,
+     799,
+     747
+    ],
+    "angleDeg": 0,
+    "label": "",
+    "massKg": 0,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false
+   }
+  ],
+  "surfaces": [
+   {
+    "id": "ground",
+    "points": [
+     [
+      890,
+      48
+     ],
+     [
+      890,
+      951
+     ]
+    ],
+    "label": "",
+    "friction": -1
+   },
+   {
+    "id": "fulcrum",
+    "points": [
+     [
+      775,
+      500
+     ],
+     [
+      890,
+      535
+     ],
+     [
+      890,
+      465
+     ],
+     [
+      775,
+      500
+     ]
+    ],
+    "label": "",
+    "friction": -1
+   }
+  ],
+  "anchors": [],
+  "links": [
+   {
+    "kind": "pin",
+    "from": "",
+    "fromPoint": [
+     775,
+     500
+    ],
+    "to": "seesaw",
+    "toPoint": [
+     775,
+     500
+    ],
+    "stiffnessNpm": -1
+   }
+  ],
+  "measurements": [],
+  "unreadable": []
+ }
+}

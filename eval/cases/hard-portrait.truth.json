@@ -1,0 +1,90 @@
+{
+ "id": "hard-portrait",
+ "title": "A ball rolling at a tower of blocks",
+ "tests": "portrait photo with the page small in the middle",
+ "split": "test",
+ "hard": true,
+ "physics": true,
+ "sample": false,
+ "width": 960,
+ "height": 1280,
+ "truth": {
+  "isPhysicsSketch": true,
+  "whatIsIt": "A ball rolling at a tower of blocks",
+  "objects": [
+   {
+    "id": "floor",
+    "kind": "surface",
+    "label": "",
+    "points": [
+     [
+      718,
+      82
+     ],
+     [
+      751,
+      936
+     ]
+    ]
+   },
+   {
+    "id": "box1",
+    "kind": "box",
+    "label": "",
+    "box_2d": [
+     696,
+     632,
+     742,
+     712
+    ],
+    "angleDeg": -3
+   },
+   {
+    "id": "box2",
+    "kind": "box",
+    "label": "",
+    "box_2d": [
+     643,
+     631,
+     699,
+     717
+    ],
+    "angleDeg": -3
+   },
+   {
+    "id": "box3",
+    "kind": "box",
+    "label": "",
+    "box_2d": [
+     599,
+     640,
+     646,
+     734
+    ],
+    "angleDeg": -3
+   },
+   {
+    "id": "ball",
+    "kind": "ball",
+    "label": "2 kg",
+    "box_2d": [
+     689,
+     256,
+     725,
+     304
+    ],
+    "massKg": 2,
+    "arrow": {
+     "tip": [
+      713,
+      422
+     ],
+     "speedMps": 6
+    }
+   }
+  ],
+  "links": [],
+  "measurements": [],
+  "unreadable": []
+ }
+}

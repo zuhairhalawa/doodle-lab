@@ -1,0 +1,99 @@
+{
+ "model": "gemini-3.5-flash-lite@low",
+ "ms": 3737,
+ "raw": {
+  "isPhysicsSketch": true,
+  "whatIsIt": "A ball with an initial velocity moving towards a stack of three boxes on a surface.",
+  "balls": [
+   {
+    "id": "ball1",
+    "box_2d": [
+     780,
+     218,
+     852,
+     274
+    ],
+    "label": "2 kg",
+    "massKg": 2,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false,
+    "arrow": {
+     "tip": [
+      816,
+      383
+     ],
+     "speedMps": 6
+    }
+   }
+  ],
+  "boxes": [
+   {
+    "id": "box1",
+    "box_2d": [
+     777,
+     663,
+     858,
+     752
+    ],
+    "angleDeg": 0,
+    "label": "",
+    "massKg": 0,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false
+   },
+   {
+    "id": "box2",
+    "box_2d": [
+     709,
+     668,
+     781,
+     755
+    ],
+    "angleDeg": 0,
+    "label": "",
+    "massKg": 0,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false
+   },
+   {
+    "id": "box3",
+    "box_2d": [
+     617,
+     679,
+     710,
+     751
+    ],
+    "angleDeg": 0,
+    "label": "",
+    "massKg": 0,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false
+   }
+  ],
+  "surfaces": [
+   {
+    "id": "floor",
+    "points": [
+     [
+      858,
+      100
+     ],
+     [
+      858,
+      900
+     ]
+    ],
+    "label": "",
+    "friction": -1
+   }
+  ],
+  "anchors": [],
+  "links": [],
+  "measurements": [],
+  "unreadable": []
+ }
+}

@@ -1,0 +1,55 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "ms": 2356,
+ "raw": {
+  "isPhysicsSketch": true,
+  "whatIsIt": "A box of mass 4 kg resting on an inclined plane with friction.",
+  "balls": [],
+  "boxes": [
+   {
+    "id": "block",
+    "box_2d": [
+     576,
+     255,
+     679,
+     329
+    ],
+    "angleDeg": -27,
+    "label": "4 kg",
+    "massKg": 4,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false
+   }
+  ],
+  "surfaces": [
+   {
+    "id": "ramp_and_ground",
+    "points": [
+     [
+      570,
+      150
+     ],
+     [
+      838,
+      580
+     ],
+     [
+      838,
+      100
+     ],
+     [
+      838,
+      940
+     ]
+    ],
+    "label": "mu = 0.2",
+    "friction": 0.2
+   }
+  ],
+  "anchors": [],
+  "links": [],
+  "measurements": [],
+  "unreadable": []
+ }
+}

@@ -1,0 +1,83 @@
+{
+ "model": "gemini-3-flash-preview@low",
+ "ms": 3203,
+ "raw": {
+  "isPhysicsSketch": true,
+  "whatIsIt": "A ball on a ledge is launched diagonally with a velocity of 3 m/s, with the ledge being 2 meters above the ground.",
+  "balls": [
+   {
+    "id": "ball1",
+    "box_2d": [
+     400,
+     266,
+     455,
+     309
+    ],
+    "label": "3 m/s",
+    "massKg": 0,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false,
+    "arrow": {
+     "tip": [
+      304,
+      374
+     ],
+     "speedMps": 3
+    }
+   }
+  ],
+  "boxes": [],
+  "surfaces": [
+   {
+    "id": "ledge",
+    "points": [
+     [
+      446,
+      75
+     ],
+     [
+      457,
+      322
+     ],
+     [
+      855,
+      313
+     ]
+    ],
+    "label": ""
+   },
+   {
+    "id": "floor",
+    "points": [
+     [
+      853,
+      313
+     ],
+     [
+      878,
+      881
+     ]
+    ],
+    "label": ""
+   }
+  ],
+  "anchors": [],
+  "links": [],
+  "measurements": [
+   {
+    "from": [
+     457,
+     354
+    ],
+    "to": [
+     855,
+     346
+    ],
+    "meters": 2,
+    "label": "2 m"
+   }
+  ],
+  "unreadable": []
+ }
+}

@@ -1,0 +1,118 @@
+{
+ "model": "gemini-3.5-flash@low",
+ "ms": 40818,
+ "date": "2026-11-09",
+ "raw": {
+  "isPhysicsSketch": true,
+  "whatIsIt": "A diagram of three pendulum bobs suspended from a ceiling, with the leftmost bob pulled to the side.",
+  "balls": [
+   {
+    "id": "ball1",
+    "box_2d": [
+     405,
+     206,
+     483,
+     264
+    ],
+    "label": "",
+    "massKg": 0,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false
+   },
+   {
+    "id": "ball2",
+    "box_2d": [
+     520,
+     471,
+     597,
+     529
+    ],
+    "label": "",
+    "massKg": 0,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false
+   },
+   {
+    "id": "ball3",
+    "box_2d": [
+     520,
+     529,
+     597,
+     587
+    ],
+    "label": "",
+    "massKg": 0,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false
+   }
+  ],
+  "boxes": [],
+  "surfaces": [
+   {
+    "id": "ceiling",
+    "points": [
+     [
+      138,
+      256
+     ],
+     [
+      138,
+      750
+     ]
+    ],
+    "label": "",
+    "friction": -1
+   }
+  ],
+  "anchors": [],
+  "links": [
+   {
+    "kind": "rope",
+    "from": "ceiling",
+    "fromPoint": [
+     138,
+     446
+    ],
+    "to": "ball1",
+    "toPoint": [
+     412,
+     256
+    ],
+    "stiffnessNpm": -1
+   },
+   {
+    "kind": "rope",
+    "from": "ceiling",
+    "fromPoint": [
+     138,
+     506
+    ],
+    "to": "ball2",
+    "toPoint": [
+     520,
+     500
+    ],
+    "stiffnessNpm": -1
+   },
+   {
+    "kind": "rope",
+    "from": "ceiling",
+    "fromPoint": [
+     138,
+     560
+    ],
+    "to": "ball3",
+    "toPoint": [
+     520,
+     558
+    ],
+    "stiffnessNpm": -1
+   }
+  ],
+  "measurements": [],
+  "unreadable": []
+ }
+}

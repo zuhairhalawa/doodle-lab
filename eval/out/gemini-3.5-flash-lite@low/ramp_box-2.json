@@ -1,0 +1,70 @@
+{
+ "model": "gemini-3.5-flash-lite@low",
+ "ms": 2748,
+ "raw": {
+  "isPhysicsSketch": true,
+  "whatIsIt": "A 2 kg block on an inclined plane with friction.",
+  "balls": [],
+  "boxes": [
+   {
+    "id": "block",
+    "box_2d": [
+     443,
+     215,
+     545,
+     298
+    ],
+    "angleDeg": 30,
+    "label": "2 kg",
+    "massKg": 2,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false
+   }
+  ],
+  "surfaces": [
+   {
+    "id": "ramp",
+    "points": [
+     [
+      475,
+      160
+     ],
+     [
+      832,
+      585
+     ],
+     [
+      832,
+      160
+     ],
+     [
+      475,
+      160
+     ]
+    ],
+    "label": "",
+    "friction": 0.3
+   },
+   {
+    "id": "floor",
+    "points": [
+     [
+      832,
+      110
+     ],
+     [
+      832,
+      920
+     ]
+    ],
+    "label": "",
+    "friction": -1
+   }
+  ],
+  "anchors": [],
+  "links": [],
+  "measurements": [],
+  "unreadable": []
+ }
+}

@@ -1,0 +1,81 @@
+{
+ "model": "gemini-3-flash-preview",
+ "ms": 6716,
+ "raw": {
+  "isPhysicsSketch": true,
+  "whatIsIt": "A ball on an inclined ramp positioned above a bucket on a floor.",
+  "balls": [
+   {
+    "id": "ball1",
+    "box_2d": [
+     272,
+     810,
+     335,
+     862
+    ],
+    "label": "",
+    "massKg": 0,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false
+   }
+  ],
+  "boxes": [],
+  "surfaces": [
+   {
+    "id": "ramp",
+    "points": [
+     [
+      297,
+      885
+     ],
+     [
+      622,
+      484
+     ]
+    ],
+    "label": ""
+   },
+   {
+    "id": "cup",
+    "points": [
+     [
+      711,
+      274
+     ],
+     [
+      905,
+      287
+     ],
+     [
+      905,
+      412
+     ],
+     [
+      709,
+      423
+     ]
+    ],
+    "label": ""
+   },
+   {
+    "id": "floor",
+    "points": [
+     [
+      905,
+      48
+     ],
+     [
+      905,
+      920
+     ]
+    ],
+    "label": ""
+   }
+  ],
+  "anchors": [],
+  "links": [],
+  "measurements": [],
+  "unreadable": []
+ }
+}

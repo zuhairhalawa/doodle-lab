@@ -1,0 +1,76 @@
+{
+ "id": "pendulum-3",
+ "title": "A pendulum hanging from the ceiling",
+ "tests": "rope from a fixed point, swing angle, length label",
+ "split": "test",
+ "hard": false,
+ "physics": true,
+ "sample": false,
+ "width": 1280,
+ "height": 960,
+ "truth": {
+  "isPhysicsSketch": true,
+  "whatIsIt": "A pendulum hanging from the ceiling",
+  "objects": [
+   {
+    "id": "ceiling",
+    "kind": "surface",
+    "label": "",
+    "points": [
+     [
+      122,
+      275
+     ],
+     [
+      122,
+      725
+     ]
+    ]
+   },
+   {
+    "id": "bob",
+    "kind": "ball",
+    "label": "5 kg",
+    "box_2d": [
+     602,
+     289,
+     666,
+     337
+    ],
+    "massKg": 5
+   }
+  ],
+  "links": [
+   {
+    "kind": "rope",
+    "from": "ceiling",
+    "fromPoint": [
+     122,
+     500
+    ],
+    "to": "bob",
+    "toPoint": [
+     605,
+     323
+    ],
+    "stiffnessNpm": -1,
+    "label": ""
+   }
+  ],
+  "measurements": [
+   {
+    "from": [
+     122,
+     500
+    ],
+    "to": [
+     634,
+     313
+    ],
+    "meters": 2,
+    "label": "2 m"
+   }
+  ],
+  "unreadable": []
+ }
+}

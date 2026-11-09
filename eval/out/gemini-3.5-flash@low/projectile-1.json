@@ -1,0 +1,73 @@
+{
+ "model": "gemini-3.5-flash@low",
+ "ms": 24710,
+ "raw": {
+  "isPhysicsSketch": true,
+  "whatIsIt": "A ball sitting at the edge of a cliff with an initial velocity vector angled upwards and rightwards.",
+  "balls": [
+   {
+    "id": "ball1",
+    "box_2d": [
+     400,
+     266,
+     455,
+     309
+    ],
+    "label": "3 m/s",
+    "massKg": 0,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false,
+    "arrow": {
+     "tip": [
+      303,
+      370
+     ],
+     "speedMps": 3
+    }
+   }
+  ],
+  "boxes": [],
+  "surfaces": [
+   {
+    "id": "ledge_and_floor",
+    "points": [
+     [
+      446,
+      75
+     ],
+     [
+      455,
+      329
+     ],
+     [
+      857,
+      316
+     ],
+     [
+      867,
+      881
+     ]
+    ],
+    "label": ""
+   }
+  ],
+  "anchors": [],
+  "links": [],
+  "measurements": [
+   {
+    "from": [
+     455,
+     350
+    ],
+    "to": [
+     857,
+     345
+    ],
+    "meters": 2,
+    "label": "2 m"
+   }
+  ],
+  "unreadable": []
+ }
+}

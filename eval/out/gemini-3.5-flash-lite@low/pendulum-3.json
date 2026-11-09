@@ -1,0 +1,75 @@
+{
+ "model": "gemini-3.5-flash-lite@low",
+ "ms": 3221,
+ "raw": {
+  "isPhysicsSketch": true,
+  "whatIsIt": "A 5 kg ball suspended by a 2 m string from a ceiling.",
+  "balls": [
+   {
+    "id": "ball1",
+    "box_2d": [
+     600,
+     287,
+     668,
+     340
+    ],
+    "label": "5 kg",
+    "massKg": 5,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false
+   }
+  ],
+  "boxes": [],
+  "surfaces": [
+   {
+    "id": "ceiling",
+    "points": [
+     [
+      150,
+      275
+     ],
+     [
+      150,
+      725
+     ]
+    ],
+    "label": "",
+    "friction": -1
+   }
+  ],
+  "anchors": [],
+  "links": [
+   {
+    "kind": "rope",
+    "from": "",
+    "fromPoint": [
+     150,
+     532
+    ],
+    "to": "ball1",
+    "toPoint": [
+     614,
+     313
+    ],
+    "stiffnessNpm": -1,
+    "label": ""
+   }
+  ],
+  "measurements": [
+   {
+    "from": [
+     150,
+     545
+    ],
+    "to": [
+     643,
+     353
+    ],
+    "meters": 2,
+    "label": "2 m"
+   }
+  ],
+  "unreadable": []
+ }
+}

@@ -1,0 +1,73 @@
+{
+ "model": "gemini-3.5-flash@low",
+ "ms": 16510,
+ "raw": {
+  "isPhysicsSketch": true,
+  "whatIsIt": "A block of mass 1 kg attached to a spring connected to a wall, moving left at 4 m/s.",
+  "balls": [],
+  "boxes": [
+   {
+    "id": "block",
+    "box_2d": [
+     780,
+     580,
+     873,
+     674
+    ],
+    "angleDeg": 0,
+    "label": "1 kg",
+    "massKg": 1,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false,
+    "arrow": {
+     "tip": [
+      832,
+      476
+     ],
+     "speedMps": 4
+    }
+   }
+  ],
+  "surfaces": [
+   {
+    "id": "floor_wall",
+    "points": [
+     [
+      893,
+      76
+     ],
+     [
+      866,
+      901
+     ],
+     [
+      518,
+      892
+     ]
+    ],
+    "label": ""
+   }
+  ],
+  "anchors": [],
+  "links": [
+   {
+    "kind": "spring",
+    "from": "floor_wall",
+    "fromPoint": [
+     822,
+     895
+    ],
+    "to": "block",
+    "toPoint": [
+     826,
+     674
+    ],
+    "stiffnessNpm": 50,
+    "label": "k = 50 N/m"
+   }
+  ],
+  "measurements": [],
+  "unreadable": []
+ }
+}

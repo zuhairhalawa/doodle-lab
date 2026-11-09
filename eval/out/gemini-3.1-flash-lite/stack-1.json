@@ -1,0 +1,113 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "ms": 3184,
+ "raw": {
+  "isPhysicsSketch": true,
+  "whatIsIt": "A 2 kg ball moving leftwards on a horizontal floor towards a stack of four boxes.",
+  "balls": [
+   {
+    "id": "ball1",
+    "box_2d": [
+     795,
+     719,
+     861,
+     775
+    ],
+    "label": "2 kg",
+    "massKg": 2,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false,
+    "arrow": {
+     "tip": [
+      820,
+      608
+     ],
+     "speedMps": 8
+    }
+   }
+  ],
+  "boxes": [
+   {
+    "id": "box1",
+    "box_2d": [
+     538,
+     268,
+     631,
+     355
+    ],
+    "angleDeg": 0,
+    "label": "",
+    "massKg": 0,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false
+   },
+   {
+    "id": "box2",
+    "box_2d": [
+     631,
+     273,
+     712,
+     360
+    ],
+    "angleDeg": 0,
+    "label": "",
+    "massKg": 0,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false
+   },
+   {
+    "id": "box3",
+    "box_2d": [
+     712,
+     282,
+     795,
+     361
+    ],
+    "angleDeg": 0,
+    "label": "",
+    "massKg": 0,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false
+   },
+   {
+    "id": "box4",
+    "box_2d": [
+     795,
+     282,
+     883,
+     363
+    ],
+    "angleDeg": 0,
+    "label": "",
+    "massKg": 0,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false
+   }
+  ],
+  "surfaces": [
+   {
+    "id": "floor",
+    "points": [
+     [
+      883,
+      85
+     ],
+     [
+      883,
+      915
+     ]
+    ],
+    "label": "ground"
+   }
+  ],
+  "anchors": [],
+  "links": [],
+  "measurements": [],
+  "unreadable": []
+ }
+}

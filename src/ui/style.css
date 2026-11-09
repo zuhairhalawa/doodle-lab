@@ -1,0 +1,992 @@
+/*
+ * Doodle Lab: an engineering pad.
+ * Graphite = your drawing. Blue ballpoint = what the AI read.
+ * Yellow highlighter = your guess. Red pencil = what the engine measured.
+ */
+:root {
+  --pad: #e6efe1;
+  --pad-deep: #d6e3cf;
+  --grid: rgba(92, 140, 100, 0.16);
+  --sheet: #fbfdf9;
+  --graphite: #2f3237;
+  --graphite-soft: #5b6157;
+  --ink: #2448c8;
+  --ink-soft: #e3e9fb;
+  --mark: #f2d43c;
+  --red: #c8362c;
+  --line: #b9cbb2;
+  --radius: 6px;
+  --font: 'Recursive Variable', system-ui, sans-serif;
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  font-size: 1.0625rem;
+  line-height: 1.55;
+  color: var(--graphite);
+  background-color: var(--pad);
+  background-image:
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 24px 24px;
+  font-variation-settings: 'CASL' 0, 'MONO' 0;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.15;
+  margin: 0 0 0.5em;
+  font-variation-settings: 'CASL' 1;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: clamp(2.3rem, 5.4vw, 4.1rem);
+  letter-spacing: -0.02em;
+  font-weight: 800;
+}
+
+h2 {
+  font-size: 1.45rem;
+}
+
+h3 {
+  font-size: 1.1rem;
+}
+
+a {
+  color: var(--ink);
+  text-underline-offset: 3px;
+}
+
+.num {
+  font-variation-settings: 'MONO' 1, 'CASL' 0;
+  font-variant-numeric: tabular-nums;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.muted {
+  color: var(--graphite-soft);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.skip {
+  position: absolute;
+  left: -999px;
+  top: 8px;
+  background: var(--sheet);
+  padding: 8px 12px;
+  z-index: 10;
+}
+
+.skip:focus {
+  left: 8px;
+}
+
+:focus-visible {
+  outline: 3px solid var(--ink);
+  outline-offset: 2px;
+}
+
+/* ---- Header ---------------------------------------------------------- */
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px clamp(16px, 4vw, 40px);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--graphite);
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 1.3rem;
+  font-variation-settings: 'CASL' 1;
+}
+
+.brand-mark {
+  width: 34px;
+  height: 34px;
+  fill: none;
+  stroke: var(--graphite);
+  stroke-width: 2.4;
+  stroke-linecap: round;
+}
+
+.top nav {
+  display: flex;
+  gap: 18px;
+  font-size: 0.98rem;
+}
+
+.top nav a {
+  color: var(--graphite);
+}
+
+/* ---- Buttons --------------------------------------------------------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 9px 16px;
+  border: 2px solid var(--graphite);
+  border-radius: var(--radius);
+  background: var(--sheet);
+  color: var(--graphite);
+  font: inherit;
+  font-weight: 650;
+  cursor: pointer;
+  box-shadow: 2px 2px 0 var(--graphite);
+  transition: transform 0.08s ease, box-shadow 0.08s ease;
+}
+
+.btn svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.btn:hover:not(:disabled) {
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0 var(--graphite);
+}
+
+.btn:active:not(:disabled) {
+  transform: translate(2px, 2px);
+  box-shadow: 0 0 0 var(--graphite);
+}
+
+.btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: #fff;
+  box-shadow: 2px 2px 0 #13286f;
+}
+
+.btn-primary:hover:not(:disabled) {
+  box-shadow: 3px 3px 0 #13286f;
+}
+
+.btn-primary .i-play {
+  fill: currentColor;
+}
+
+.btn-primary.is-running .i-play {
+  display: none;
+}
+
+.btn:focus-within {
+  outline: 3px solid var(--ink);
+  outline-offset: 2px;
+}
+
+.linkish {
+  border: 0;
+  background: none;
+  padding: 0;
+  font: inherit;
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+/* ---- Home ------------------------------------------------------------ */
+
+main {
+  padding: 0 clamp(16px, 4vw, 40px) 40px;
+}
+
+.home {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+  gap: clamp(20px, 4vw, 56px);
+  align-items: center;
+  padding-top: clamp(8px, 3vw, 36px);
+}
+
+.hero-copy {
+  max-width: 34rem;
+}
+
+.lede {
+  font-size: 1.2rem;
+  margin: 0 0 1.4em;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.fine {
+  margin-top: 1.2em;
+  font-size: 0.95rem;
+  color: var(--graphite-soft);
+  max-width: 32rem;
+}
+
+.home-error {
+  color: var(--red);
+  font-weight: 600;
+}
+
+.hero-figure {
+  margin: 0;
+  position: relative;
+}
+
+.hero-figure canvas,
+.stage-wrap canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  background: #fff;
+  box-shadow:
+    0 1px 0 var(--line),
+    0 18px 40px -22px rgba(30, 50, 30, 0.55);
+}
+
+.hero-figure {
+  transform: rotate(0.6deg);
+}
+
+.hero-figure figcaption {
+  margin-top: 10px;
+  font-size: 0.92rem;
+  color: var(--graphite-soft);
+  font-variation-settings: 'CASL' 1;
+}
+
+.samples {
+  grid-column: 1 / -1;
+  margin-top: clamp(8px, 2vw, 20px);
+}
+
+.sample-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 14px;
+}
+
+.sample {
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  text-align: left;
+  font: inherit;
+  color: inherit;
+}
+
+.sample img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 3px;
+  box-shadow: 0 8px 18px -12px rgba(30, 50, 30, 0.7);
+  transition: transform 0.12s ease;
+}
+
+.sample span {
+  display: block;
+  margin-top: 6px;
+  font-weight: 600;
+  font-size: 0.97rem;
+}
+
+.sample:hover img,
+.sample:focus-visible img {
+  transform: rotate(-1deg) translateY(-2px);
+}
+
+/* ---- How it works ------------------------------------------------------ */
+
+.how {
+  margin-top: clamp(36px, 6vw, 72px);
+  max-width: 72rem;
+}
+
+.steps {
+  list-style: none;
+  counter-reset: step;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.steps li {
+  counter-increment: step;
+  background: var(--sheet);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+}
+
+.steps li::before {
+  content: counter(step);
+  display: inline-grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border: 2px solid var(--graphite);
+  border-radius: 50%;
+  font-weight: 800;
+  margin-bottom: 10px;
+  font-variation-settings: 'CASL' 1;
+}
+
+.steps p {
+  margin: 0;
+  font-size: 0.98rem;
+}
+
+.how-foot {
+  margin-top: 18px;
+}
+
+/* ---- Draw pad ---------------------------------------------------------- */
+
+.pad-head p {
+  margin: 0 0 12px;
+  color: var(--graphite-soft);
+}
+
+.pad-tools {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.tool {
+  min-height: 40px;
+  padding: 6px 14px;
+  border: 1.5px solid var(--graphite);
+  border-radius: 999px;
+  background: var(--sheet);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.tool[aria-pressed='true'] {
+  background: var(--graphite);
+  color: var(--sheet);
+}
+
+.spacer {
+  flex: 1;
+}
+
+.pad-surface {
+  position: relative;
+  max-width: 1100px;
+}
+
+.pad-surface canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  touch-action: none;
+  cursor: crosshair;
+  border-radius: 4px;
+  box-shadow: 0 18px 40px -22px rgba(30, 50, 30, 0.55);
+}
+
+.pad-label {
+  position: absolute;
+  transform: translateY(-50%);
+  font: inherit;
+  font-size: 1.1rem;
+  width: 9rem;
+  padding: 4px 8px;
+  border: 2px solid var(--ink);
+  border-radius: 4px;
+  background: #fff;
+}
+
+/* ---- Lab ----------------------------------------------------------------- */
+
+.lab {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 400px);
+  gap: clamp(16px, 3vw, 32px);
+  align-items: start;
+  padding-top: 8px;
+}
+
+.stage-wrap {
+  position: relative;
+}
+
+.stage-wrap canvas {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.stage-wrap.is-predicting canvas {
+  cursor: crosshair;
+  outline: 4px solid var(--mark);
+  outline-offset: 3px;
+}
+
+.scan {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  border-radius: 4px;
+  background: rgba(36, 72, 200, 0.05);
+}
+
+.scan-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--ink);
+  box-shadow: 0 0 18px 6px rgba(36, 72, 200, 0.35);
+  animation: scan 2.2s ease-in-out infinite alternate;
+}
+
+@keyframes scan {
+  from {
+    top: 0;
+  }
+  to {
+    top: calc(100% - 3px);
+  }
+}
+
+.stage-status {
+  min-height: 1.6em;
+  margin: 12px 0 8px;
+  font-weight: 600;
+}
+
+.stage-status[data-tone='error'] {
+  color: var(--red);
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.95rem;
+  min-height: 44px;
+  cursor: pointer;
+}
+
+.toggle input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--ink);
+}
+
+#predict[aria-pressed='true'] {
+  background: var(--mark);
+}
+
+.readouts {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 12px 24px;
+  margin-top: 18px;
+  padding: 14px 16px;
+  background: var(--sheet);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.clock {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.energy-bar {
+  display: flex;
+  height: 16px;
+  border-radius: 3px;
+  overflow: hidden;
+  background: var(--pad-deep);
+}
+
+.energy-bar span {
+  display: block;
+  height: 100%;
+}
+
+.energy-key {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 16px;
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 0;
+  font-size: 0.88rem;
+}
+
+.energy-key i {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  margin-right: 6px;
+}
+
+.graph {
+  grid-column: 1 / -1;
+}
+
+.graph canvas {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.graph-label {
+  margin: 4px 0 0;
+  font-size: 0.9rem;
+}
+
+/* ---- Lab sheet ------------------------------------------------------------- */
+
+.sheet {
+  background: var(--sheet);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px 18px 20px;
+  font-size: 0.97rem;
+  position: sticky;
+  top: 12px;
+  max-height: calc(100vh - 24px);
+  overflow: auto;
+}
+
+.sheet h2 {
+  color: var(--ink);
+}
+
+.sheet h3 {
+  margin-top: 1.3em;
+}
+
+.what {
+  font-size: 1.05rem;
+  margin: 0 0 4px;
+  color: var(--ink);
+  font-variation-settings: 'CASL' 1;
+}
+
+.meta {
+  margin: 0 0 14px;
+  font-size: 0.88rem;
+  color: var(--graphite-soft);
+}
+
+table.objects {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10px 0 6px;
+  font-size: 0.9rem;
+}
+
+table.objects caption {
+  text-align: left;
+  font-weight: 700;
+  padding-bottom: 4px;
+}
+
+table.objects th,
+table.objects td {
+  text-align: left;
+  vertical-align: top;
+  padding: 6px 4px;
+  border-top: 1px solid var(--line);
+}
+
+table.objects thead th {
+  font-weight: 600;
+  font-size: 0.8rem;
+  color: var(--graphite-soft);
+  border-top: 0;
+}
+
+table.objects tbody th small {
+  display: block;
+  font-weight: 400;
+  color: var(--ink);
+  font-variation-settings: 'CASL' 1;
+}
+
+table.objects input {
+  width: 4.6rem;
+  min-height: 34px;
+  padding: 3px 6px;
+  font: inherit;
+  font-variation-settings: 'MONO' 1;
+  border: 1.5px solid var(--line);
+  border-radius: 4px;
+  background: #fff;
+}
+
+table.objects input:focus {
+  border-color: var(--ink);
+}
+
+.kind {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 6px;
+  border: 2px solid var(--graphite);
+}
+
+.kind-ball {
+  border-radius: 50%;
+}
+
+.tag {
+  display: block;
+  width: fit-content;
+  margin-top: 2px;
+  font-size: 0.72rem;
+  padding: 0 5px;
+  border-radius: 3px;
+  background: var(--pad-deep);
+  color: var(--graphite-soft);
+}
+
+.tag-read {
+  background: var(--ink-soft);
+  color: var(--ink);
+}
+
+.scale-row .tag {
+  display: inline-block;
+  margin-left: 6px;
+}
+
+.fixed-list {
+  margin: 6px 0;
+}
+
+.scale-row {
+  margin: 10px 0;
+}
+
+.scale-row input {
+  width: 5rem;
+  min-height: 34px;
+  font: inherit;
+  padding: 3px 6px;
+  border: 1.5px solid var(--line);
+  border-radius: 4px;
+}
+
+.notes {
+  margin: 0;
+  padding-left: 1.1em;
+}
+
+.notes li {
+  margin-bottom: 6px;
+}
+
+.notes li[data-level='problem'] {
+  color: var(--red);
+}
+
+.checks .check {
+  border: 1.5px solid var(--ink);
+  border-radius: var(--radius);
+  padding: 10px 12px;
+  margin-bottom: 10px;
+  background: var(--ink-soft);
+}
+
+.check p {
+  margin: 0 0 4px;
+}
+
+.check-title {
+  font-weight: 700;
+}
+
+.formula {
+  font-size: 1.15rem;
+  font-variation-settings: 'CASL' 1;
+}
+
+.measured {
+  color: var(--red);
+  font-weight: 600;
+}
+
+.check-guess {
+  border-color: #b59a00 !important;
+  background: #fbf1b8 !important;
+}
+
+.raw {
+  margin-top: 16px;
+}
+
+.raw summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.raw pre {
+  max-height: 320px;
+  overflow: auto;
+  font-size: 0.78rem;
+  background: #f1f4ef;
+  padding: 10px;
+  border-radius: 4px;
+  font-variation-settings: 'MONO' 1;
+}
+
+.sheet-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+/* ---- Footer ---------------------------------------------------------------- */
+
+.foot {
+  padding: 22px clamp(16px, 4vw, 40px) 36px;
+  font-size: 0.9rem;
+  color: var(--graphite-soft);
+}
+
+/* ---- Small screens ----------------------------------------------------------- */
+
+@media (max-width: 900px) {
+  .home,
+  .lab {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .hero-figure {
+    order: -1;
+  }
+  .sheet {
+    position: static;
+    max-height: none;
+  }
+  .steps {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .readouts {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 520px) {
+  .top nav a[href='#how'] {
+    display: none;
+  }
+  .controls .spacer {
+    display: none;
+  }
+  table.objects thead {
+    display: none;
+  }
+  table.objects tr {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-top: 1px solid var(--line);
+    padding: 6px 0;
+  }
+  table.objects th,
+  table.objects td {
+    border: 0;
+  }
+  table.objects tbody th {
+    grid-column: 1 / -1;
+  }
+  table.objects td[data-label]::before {
+    content: attr(data-label);
+    display: block;
+    font-size: 0.78rem;
+    color: var(--graphite-soft);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition: none !important;
+  }
+}
+
+/* ---- Test report ------------------------------------------------------------- */
+
+.report {
+  max-width: 76rem;
+}
+
+.report section {
+  margin-bottom: 36px;
+}
+
+.report-intro p {
+  max-width: 48rem;
+}
+
+.table-wrap {
+  overflow-x: auto;
+  background: var(--sheet);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 4px 12px;
+}
+
+.report-table {
+  font-size: 0.95rem;
+}
+
+.report-table td {
+  white-space: nowrap;
+}
+
+.tested li {
+  margin-bottom: 10px;
+  max-width: 54rem;
+}
+
+.legend {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sw {
+  display: inline-block;
+  width: 28px;
+  height: 0;
+  border-top: 4px solid;
+}
+
+.sw-truth {
+  border-top: 4px dashed #1f7a3f;
+}
+
+.sw-ai {
+  border-color: var(--ink);
+  margin-left: 12px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 18px;
+}
+
+.case {
+  margin: 0;
+  background: var(--sheet);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 8px;
+}
+
+.case canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 3px;
+}
+
+.case figcaption {
+  font-size: 0.88rem;
+  padding: 8px 4px 2px;
+}
+
+.case figcaption ul {
+  margin: 6px 0 0;
+  padding-left: 1.1em;
+}
+
+.case-fail strong {
+  color: var(--red);
+}
+
+.case-pass strong {
+  color: #1f7a3f;
+}
+
+.report select {
+  font: inherit;
+  min-height: 40px;
+  margin: 0 16px 0 6px;
+}
+
+code {
+  font-variation-settings: 'MONO' 1;
+  font-size: 0.95em;
+}

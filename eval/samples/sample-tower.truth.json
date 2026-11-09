@@ -1,0 +1,102 @@
+{
+ "id": "sample-tower",
+ "title": "A ball rolling at a tower of blocks",
+ "tests": "several stacked boxes, one arrow",
+ "split": "dev",
+ "hard": false,
+ "physics": true,
+ "sample": true,
+ "width": 1280,
+ "height": 960,
+ "truth": {
+  "isPhysicsSketch": true,
+  "whatIsIt": "A ball rolling at a tower of blocks",
+  "objects": [
+   {
+    "id": "floor",
+    "kind": "surface",
+    "label": "",
+    "points": [
+     [
+      865,
+      58
+     ],
+     [
+      889,
+      930
+     ]
+    ]
+   },
+   {
+    "id": "box1",
+    "kind": "box",
+    "label": "",
+    "box_2d": [
+     794,
+     635,
+     883,
+     721
+    ],
+    "angleDeg": -1.2
+   },
+   {
+    "id": "box2",
+    "kind": "box",
+    "label": "",
+    "box_2d": [
+     699,
+     632,
+     796,
+     716
+    ],
+    "angleDeg": -1.2
+   },
+   {
+    "id": "box3",
+    "kind": "box",
+    "label": "",
+    "box_2d": [
+     608,
+     643,
+     701,
+     718
+    ],
+    "angleDeg": -1.2
+   },
+   {
+    "id": "box4",
+    "kind": "box",
+    "label": "",
+    "box_2d": [
+     525,
+     643,
+     610,
+     724
+    ],
+    "angleDeg": -1.2
+   },
+   {
+    "id": "ball",
+    "kind": "ball",
+    "label": "2 kg",
+    "box_2d": [
+     801,
+     167,
+     869,
+     217
+    ],
+    "massKg": 2,
+    "arrow": {
+     "tip": [
+      839,
+      338
+     ],
+     "speedMps": 5
+    }
+   }
+  ],
+  "links": [],
+  "measurements": [],
+  "unreadable": []
+ }
+}

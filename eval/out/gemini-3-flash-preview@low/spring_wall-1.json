@@ -1,0 +1,73 @@
+{
+ "model": "gemini-3-flash-preview@low",
+ "ms": 19644,
+ "raw": {
+  "isPhysicsSketch": true,
+  "whatIsIt": "A block attached to a spring on a horizontal surface, moving away from a wall.",
+  "balls": [],
+  "boxes": [
+   {
+    "id": "block1",
+    "box_2d": [
+     783,
+     577,
+     874,
+     676
+    ],
+    "angleDeg": 0,
+    "label": "1 kg",
+    "massKg": 1,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false,
+    "arrow": {
+     "tip": [
+      831,
+      472
+     ],
+     "speedMps": 4
+    }
+   }
+  ],
+  "surfaces": [
+   {
+    "id": "floor_wall",
+    "points": [
+     [
+      893,
+      78
+     ],
+     [
+      873,
+      901
+     ],
+     [
+      517,
+      892
+     ]
+    ],
+    "label": ""
+   }
+  ],
+  "anchors": [],
+  "links": [
+   {
+    "kind": "spring",
+    "from": "floor_wall",
+    "fromPoint": [
+     817,
+     901
+    ],
+    "to": "block1",
+    "toPoint": [
+     828,
+     676
+    ],
+    "stiffnessNpm": 50,
+    "label": "k = 50 N/m"
+   }
+  ],
+  "measurements": [],
+  "unreadable": []
+ }
+}

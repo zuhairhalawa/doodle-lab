@@ -1,0 +1,85 @@
+{
+ "model": "gemini-3.5-flash-lite@low",
+ "ms": 3275,
+ "raw": {
+  "isPhysicsSketch": true,
+  "whatIsIt": "A block of mass 5 kg on a horizontal surface connected to a vertical wall by a spring, moving left at 2 m/s.",
+  "balls": [],
+  "boxes": [
+   {
+    "id": "block",
+    "box_2d": [
+     738,
+     584,
+     846,
+     681
+    ],
+    "angleDeg": 0,
+    "label": "5 kg",
+    "massKg": 5,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false,
+    "arrow": {
+     "tip": [
+      762,
+      481
+     ],
+     "speedMps": 2
+    }
+   }
+  ],
+  "surfaces": [
+   {
+    "id": "floor",
+    "points": [
+     [
+      846,
+      50
+     ],
+     [
+      846,
+      868
+     ]
+    ],
+    "label": "",
+    "friction": -1
+   },
+   {
+    "id": "wall",
+    "points": [
+     [
+      501,
+      868
+     ],
+     [
+      846,
+      868
+     ]
+    ],
+    "label": "",
+    "friction": -1
+   }
+  ],
+  "anchors": [],
+  "links": [
+   {
+    "kind": "spring",
+    "from": "wall",
+    "fromPoint": [
+     792,
+     868
+    ],
+    "to": "block",
+    "toPoint": [
+     792,
+     681
+    ],
+    "stiffnessNpm": 50,
+    "label": "k = 50 N/m"
+   }
+  ],
+  "measurements": [],
+  "unreadable": []
+ }
+}

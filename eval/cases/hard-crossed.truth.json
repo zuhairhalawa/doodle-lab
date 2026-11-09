@@ -1,0 +1,66 @@
+{
+ "id": "hard-crossed",
+ "title": "Two balls about to collide on the floor",
+ "tests": "a crossed-out ball that must be ignored",
+ "split": "test",
+ "hard": true,
+ "physics": true,
+ "sample": false,
+ "width": 1280,
+ "height": 960,
+ "truth": {
+  "isPhysicsSketch": true,
+  "whatIsIt": "Two balls about to collide on the floor",
+  "objects": [
+   {
+    "id": "floor",
+    "kind": "surface",
+    "label": "",
+    "points": [
+     [
+      869,
+      75
+     ],
+     [
+      832,
+      948
+     ]
+    ]
+   },
+   {
+    "id": "ball1",
+    "kind": "ball",
+    "label": "1 kg",
+    "box_2d": [
+     789,
+     250,
+     861,
+     304
+    ],
+    "massKg": 1,
+    "arrow": {
+     "tip": [
+      818,
+      425
+     ],
+     "speedMps": 4
+    }
+   },
+   {
+    "id": "ball2",
+    "kind": "ball",
+    "label": "5 kg",
+    "box_2d": [
+     751,
+     654,
+     843,
+     723
+    ],
+    "massKg": 5
+   }
+  ],
+  "links": [],
+  "measurements": [],
+  "unreadable": []
+ }
+}

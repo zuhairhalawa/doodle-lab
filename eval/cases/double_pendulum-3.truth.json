@@ -1,0 +1,88 @@
+{
+ "id": "double_pendulum-3",
+ "title": "A double pendulum",
+ "tests": "a rod between two moving bodies (chaotic motion)",
+ "split": "test",
+ "hard": false,
+ "physics": true,
+ "sample": false,
+ "width": 1280,
+ "height": 960,
+ "truth": {
+  "isPhysicsSketch": true,
+  "whatIsIt": "A double pendulum",
+  "objects": [
+   {
+    "id": "ceiling",
+    "kind": "surface",
+    "label": "",
+    "points": [
+     [
+      122,
+      275
+     ],
+     [
+      122,
+      725
+     ]
+    ]
+   },
+   {
+    "id": "bob1",
+    "kind": "ball",
+    "label": "",
+    "box_2d": [
+     361,
+     596,
+     417,
+     638
+    ]
+   },
+   {
+    "id": "bob2",
+    "kind": "ball",
+    "label": "",
+    "box_2d": [
+     606,
+     561,
+     660,
+     601
+    ]
+   }
+  ],
+  "links": [
+   {
+    "kind": "rod",
+    "from": "ceiling",
+    "fromPoint": [
+     122,
+     500
+    ],
+    "to": "bob1",
+    "toPoint": [
+     365,
+     606
+    ],
+    "stiffnessNpm": -1,
+    "label": ""
+   },
+   {
+    "kind": "rod",
+    "from": "bob1",
+    "fromPoint": [
+     416,
+     613
+    ],
+    "to": "bob2",
+    "toPoint": [
+     607,
+     585
+    ],
+    "stiffnessNpm": -1,
+    "label": ""
+   }
+  ],
+  "measurements": [],
+  "unreadable": []
+ }
+}

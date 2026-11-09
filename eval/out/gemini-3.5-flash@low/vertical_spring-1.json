@@ -1,0 +1,62 @@
+{
+ "model": "gemini-3.5-flash@low",
+ "ms": 14178,
+ "raw": {
+  "isPhysicsSketch": true,
+  "whatIsIt": "A 500 g mass hanging from a ceiling by a spring with stiffness k = 10 N/m.",
+  "balls": [],
+  "boxes": [
+   {
+    "id": "block",
+    "box_2d": [
+     518,
+     438,
+     605,
+     521
+    ],
+    "angleDeg": 0,
+    "label": "500 g",
+    "massKg": 0.5,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false
+   }
+  ],
+  "surfaces": [
+   {
+    "id": "ceiling",
+    "points": [
+     [
+      176,
+      260
+     ],
+     [
+      171,
+      682
+     ]
+    ],
+    "label": ""
+   }
+  ],
+  "anchors": [],
+  "links": [
+   {
+    "kind": "spring",
+    "from": "ceiling",
+    "fromPoint": [
+     175,
+     471
+    ],
+    "to": "block",
+    "toPoint": [
+     518,
+     479
+    ],
+    "stiffnessNpm": 10,
+    "label": "k = 10 N/m"
+   }
+  ],
+  "measurements": [],
+  "unreadable": []
+ }
+}

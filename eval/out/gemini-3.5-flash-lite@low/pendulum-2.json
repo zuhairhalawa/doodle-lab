@@ -1,0 +1,75 @@
+{
+ "model": "gemini-3.5-flash-lite@low",
+ "ms": 3351,
+ "raw": {
+  "isPhysicsSketch": true,
+  "whatIsIt": "A pendulum hanging from a ceiling with a length measurement and a mass label.",
+  "balls": [
+   {
+    "id": "ball1",
+    "box_2d": [
+     495,
+     660,
+     560,
+     712
+    ],
+    "label": "5 kg",
+    "massKg": 5,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false
+   }
+  ],
+  "boxes": [],
+  "surfaces": [
+   {
+    "id": "ceiling",
+    "points": [
+     [
+      100,
+      290
+     ],
+     [
+      100,
+      740
+     ]
+    ],
+    "label": "",
+    "friction": -1
+   }
+  ],
+  "anchors": [],
+  "links": [
+   {
+    "kind": "rope",
+    "from": "",
+    "fromPoint": [
+     100,
+     530
+    ],
+    "to": "ball1",
+    "toPoint": [
+     527,
+     686
+    ],
+    "stiffnessNpm": -1,
+    "label": ""
+   }
+  ],
+  "measurements": [
+   {
+    "from": [
+     100,
+     480
+    ],
+    "to": [
+     530,
+     640
+    ],
+    "meters": 1,
+    "label": "1 m"
+   }
+  ],
+  "unreadable": []
+ }
+}

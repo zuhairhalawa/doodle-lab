@@ -1,0 +1,68 @@
+{
+ "model": "gemini-3.1-flash-lite@high",
+ "ms": 42815,
+ "raw": {
+  "isPhysicsSketch": true,
+  "whatIsIt": "A 4 kg box resting on an inclined plane with a coefficient of friction of 0.2.",
+  "balls": [],
+  "boxes": [
+   {
+    "id": "box1",
+    "box_2d": [
+     585,
+     226,
+     663,
+     297
+    ],
+    "angleDeg": -33,
+    "label": "4 kg",
+    "massKg": 4,
+    "friction": 0.2,
+    "bounce": -1,
+    "fixed": false
+   }
+  ],
+  "surfaces": [
+   {
+    "id": "ramp",
+    "points": [
+     [
+      570,
+      150
+     ],
+     [
+      840,
+      150
+     ],
+     [
+      840,
+      560
+     ],
+     [
+      570,
+      150
+     ]
+    ],
+    "label": ""
+   },
+   {
+    "id": "ground",
+    "points": [
+     [
+      840,
+      150
+     ],
+     [
+      840,
+      950
+     ]
+    ],
+    "label": "μ = 0.2"
+   }
+  ],
+  "anchors": [],
+  "links": [],
+  "measurements": [],
+  "unreadable": []
+ }
+}

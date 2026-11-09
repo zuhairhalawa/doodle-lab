@@ -1,0 +1,15 @@
+{
+ "model": "gemini-3.5-flash-lite@low",
+ "ms": 2033,
+ "raw": {
+  "isPhysicsSketch": false,
+  "whatIsIt": "A shopping list.",
+  "balls": [],
+  "boxes": [],
+  "surfaces": [],
+  "anchors": [],
+  "links": [],
+  "measurements": [],
+  "unreadable": []
+ }
+}

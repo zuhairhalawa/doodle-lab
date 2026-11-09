@@ -1,0 +1,73 @@
+{
+ "id": "sample-collision",
+ "title": "Two balls about to collide on the floor",
+ "tests": "two bodies, two masses, arrows in opposite directions",
+ "split": "dev",
+ "hard": false,
+ "physics": true,
+ "sample": true,
+ "width": 1280,
+ "height": 960,
+ "truth": {
+  "isPhysicsSketch": true,
+  "whatIsIt": "Two balls about to collide on the floor",
+  "objects": [
+   {
+    "id": "floor",
+    "kind": "surface",
+    "label": "",
+    "points": [
+     [
+      865,
+      58
+     ],
+     [
+      889,
+      930
+     ]
+    ]
+   },
+   {
+    "id": "ball1",
+    "kind": "ball",
+    "label": "1 kg",
+    "box_2d": [
+     803,
+     213,
+     870,
+     264
+    ],
+    "massKg": 1,
+    "arrow": {
+     "tip": [
+      841,
+      385
+     ],
+     "speedMps": 4
+    }
+   },
+   {
+    "id": "ball2",
+    "kind": "ball",
+    "label": "1 kg",
+    "box_2d": [
+     805,
+     598,
+     881,
+     655
+    ],
+    "massKg": 1,
+    "arrow": {
+     "tip": [
+      839,
+      493
+     ],
+     "speedMps": 2
+    }
+   }
+  ],
+  "links": [],
+  "measurements": [],
+  "unreadable": []
+ }
+}

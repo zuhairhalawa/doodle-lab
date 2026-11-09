@@ -1,0 +1,84 @@
+{
+ "model": "gemini-3.5-flash@low",
+ "ms": 14249,
+ "raw": {
+  "isPhysicsSketch": true,
+  "whatIsIt": "A 5 kg ball resting at the top of an inclined ramp of height 1 m, leading onto a horizontal floor.",
+  "balls": [
+   {
+    "id": "ball1",
+    "box_2d": [
+     515,
+     116,
+     599,
+     181
+    ],
+    "label": "5 kg",
+    "massKg": 5,
+    "friction": -1,
+    "bounce": -1,
+    "fixed": false
+   }
+  ],
+  "boxes": [],
+  "surfaces": [
+   {
+    "id": "ramp",
+    "points": [
+     [
+      556,
+      92
+     ],
+     [
+      556,
+      92
+     ],
+     [
+      876,
+      432
+     ],
+     [
+      876,
+      92
+     ],
+     [
+      556,
+      92
+     ]
+    ],
+    "label": ""
+   },
+   {
+    "id": "floor",
+    "points": [
+     [
+      876,
+      57
+     ],
+     [
+      876,
+      917
+     ]
+    ],
+    "label": ""
+   }
+  ],
+  "anchors": [],
+  "links": [],
+  "measurements": [
+   {
+    "from": [
+     556,
+     60
+    ],
+    "to": [
+     876,
+     60
+    ],
+    "meters": 1,
+    "label": "1 m"
+   }
+  ],
+  "unreadable": []
+ }
+}
