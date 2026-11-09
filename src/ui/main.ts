@@ -242,7 +242,11 @@ function setScene(sc: Scene, fresh: boolean) {
       };
       requestAnimationFrame(step);
     }
-  } else stage.setScene(sc);
+  } else {
+    // A changed experiment needs a new guess.
+    stage.prediction = null;
+    stage.setScene(sc);
+  }
   renderSheet();
   setControls(sc.runnable);
   $('readouts').hidden = !sc.runnable;
@@ -273,6 +277,7 @@ $('play').addEventListener('click', () => {
   else {
     if (predicting) togglePredict(false);
     stage.play();
+    if (stage.running) status(stage.prediction ? 'Running. Watch where it ends up.' : 'Running. Tap a moving object to follow its speed.');
   }
   playLabel(stage.running);
 });
