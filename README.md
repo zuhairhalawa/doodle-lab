@@ -10,7 +10,7 @@ The AI only reads. The engine computes every bit of motion.
 
 **Test report with every failure:** https://doodle-lab.pages.dev/report
 
-**Demo video:** _(added after upload)_
+**Demo video (2:25):** https://youtu.be/EpLo6ND3B1g
 
 ![A block sliding down a pencil ramp, with strobe copies every eighth of a second](docs/screenshots/run-end.png)
 
